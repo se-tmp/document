@@ -18,15 +18,15 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: main.pdf
-          path: tmp.pdf
+          path: main.pdf
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.SK_TOKEN }}
         with:
-          tag_name: v0.1-${{ github.run_number }}
-          release_name: Latex build v0.1-${{ github.run_number }}
+          tag_name: v0.1.${{ github.run_number }}
+          release_name: Latex build v0.1.${{ github.run_number }}
           draft: false
           prerelease: false
       - name: Upload Release Asset
@@ -36,6 +36,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SK_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} 
-          asset_path: tmp.pdf
+          asset_path: main.pdf
           asset_name: main.pdf
           asset_content_type: application/pdf
