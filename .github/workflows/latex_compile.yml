@@ -22,8 +22,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SK_TOKEN }}
         with:
           tag_name: v0.1-${{ github.run_number }}
-          release_name: Automated build v0.1-${{ github.run_number }}
-          draft: true
+          release_name: Latex build v0.1-${{ github.run_number }}
+          draft: false
           prerelease: false
       - name: Upload Release Asset
         id: upload-release-asset 
