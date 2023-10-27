@@ -161,91 +161,121 @@ We propose a platform to address the necessary issues for consumers to utilize I
     \end{enumerate}
 
 \section{\Large{Requirement Analysis}}
-\begin{enumerate}[label=\arabic*]
+\begin{enumerate}[label=\arabic*.]
     \item {\large{Login}}\\
-    1-1. The user must log in to their own account, which contains their personal information. 
-    
-    1-2. This application should be customizable for homeowners, so user’s personal information need to be stored in his/her own account. 
-    
-    1-3. If the user manages multiple devices, the information is required for connecting to several devices.
-    
-    1-4. User can add and remove devices he/she manages through QR code(It is also possible without the QR code).
-    
-    1-5. For the login process, user inputs their ID and password within the app, with the option to use the auto-login feature when needed. 
-    
-    1-6. Alternatively, users can utilize an external ID, like a Google or Apple ID, to conveniently sign in without having to register.\\
 
-    1-7. ID must include at least 5 English or English and numbers both.
-
-    1-8. Password must include alphabetic uppercase letters, special characters, and numbers.
-
-    \item {\large{Logs and Statistics}}\\
-    2-1. The application records user activities, including events such as login and logout, device control actions, and account management operations. 
+    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+    \setlength{\itemindent}{0.5cm}
+        \item The user must log in to their own account, which contains their personal information.\\
+        
+        \item This application should be customizable for homeowners, so user’s personal information need to be stored in his/her own account.\\
+        
+        \item If the user manages multiple devices, the information is required for connecting to several devices.\\
+        
+        % \item User can add and remove devices he/she manages through QR code(It is also possible without the QR code).\\
+        
+        \item For the login process, user inputs their ID and password within the app, with the option to use the auto-login feature when needed.\\
+        
+        \item Alternatively, users can utilize an external ID, like a Google or Apple ID, to conveniently sign in without having to register.\\
     
-    2-2. It maintains device interaction logs, tracking device status changes, usage patterns, and scheduled events or automations triggered by the user. 
+        \item ID must include at least 5 English or English and numbers both.\\
     
-    2-3. The application logs errors and exceptions, facilitating the identification of issues with error messages and timestamps. 
-    
-    2-4. User behavior, preferences, and usage patterns are monitored to enhance this service. 
-    
-    2-5. To achieve this, it stores a history of device status data, allowing users to review past device activities and monitor trends.\\
-
-    \item {\large{Dashboard}}
-    \begin{enumerate}[label=\alph*]
-        \item {\large{Device connection}}\\
-        The application stores and manages device connection information, including events such as device pairing and disconnection. It maintains logs of the connected devices, tracking the date and time of connection, the type of device, and the user responsible for the connection.\\
-    
-        \item {\large{Device Status Check}}\\
-        The application logs device status, including the monitoring of device health, information about whether devices are connected or not and operational status. It maintains records of when status checks were performed, the specific devices checked, and the results, indicating whether devices were operational or reported issues.\\
-    
-        \item {\large{Device Control}}\\
-        The application could control actions manually initiated by user. This events contain turning devices on or off, adjusting settings, and triggering automation sequences. It maintains logs of these control actions, capturing the user responsible, the devices affected, and the specific actions taken. Additionally, it tracks the timestamp of each control action for reference.\\
-
-
-
+        \item Password must include alphabetic uppercase letters, special characters, and numbers.\\
     \end{enumerate}
 
-    \item {\large{Routine Managemant}}
-    \begin{enumerate}[label=\alph*]
-        \item [4-1]{\large{Trigger Settings}}
-            \begin{enumerate}
-              \item {\large{Sound Trigger}}\\
-              Users can set conditions to trigger accessories or scenes based on sound intensity. For example, when a loud noise is detected at home, a message can be sent to the user. Or trigger a camera to capture what's going on. For speakers that can recognize voice, the response action can be completed according to the user's voice instructions.\\
-              \item {\large{Sensor Trigger}}\\
-              Response functions are triggered based on various sensors such as smoke alarms, flood alarms, motion sensor, air monitoring sensor. For example, if smoke is detected at home, a message can be sent to the user. Another example, The air purifier can be triggered automatically when the air quality declines.\\
-              \item {\large{Time Trigger}}\\
-              Accessories or scenes can be triggered based on a fixed time of day, certain days, or based on sunrise and sunset. For example, turn on the curtains and music at 6 a.m. every morning, or turn off all lights 15 minutes after sunset.\\
-              \item {\large{Posture Recognition Trigger}}\\
-              By obtaining images or videos through a camera and using OpenPose to recognize body posture, it is also possible to recognize body movements and trigger different functions based on different movements.\\
-              \item {\large{Position Trigger}}\\
-              The user's location can be determined based on the location information of the user's mobile phone, and corresponding functions can be triggered based on the user's location. For example, when the user returns home, they automatically turn on the lights and automatically start the air conditioner.\\
+    \item {\large{Logs and Statistics}}\\
+    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+    \setlength{\itemindent}{0.5cm}
+        \item The application records user activities, including events such as login and logout, device control actions, and account management operations. \\
+        
+        \item It maintains device interaction logs, tracking device status changes, usage patterns, and scheduled events or automations triggered by the user. \\
+        
+        \item The application logs errors and exceptions, facilitating the identification of issues with error messages and timestamps. \\
+        
+        \item User behavior, preferences, and usage patterns are monitored to enhance this service. \\
+        
+        \item To achieve this, it stores a history of device status data, allowing users to review past device activities and monitor trends.\\
+    \end{enumerate}
+
+
+% need to be modify
+    \item {\large{Dashboard}}
+    \begin{enumerate}[label=\arabic*.]
+        \item {\large{Device connection}}\\
+        \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+        \setlength{\itemindent}{0.5cm}
+            \item The application stores and manages device connection information, including events such as device pairing and disconnection. It maintains logs of the connected devices, tracking the date and time of connection, the type of device, and the user responsible for the connection.\\
+        \end{enumerate}
+        
+        \item {\large{Device Status Check}}\\
+        \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+        \setlength{\itemindent}{0.5cm}
+            \item The application logs device status, including the monitoring of device health, information about whether devices are connected or not and operational status. It maintains records of when status checks were performed, the specific devices checked, and the results, indicating whether devices were operational or reported issues.\\
+        \end{enumerate}
+        
+        \item {\large{Device Control}}\\
+        \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+        \setlength{\itemindent}{0.5cm}
+            \item The application could control actions manually initiated by user. This events contain turning devices on or off, adjusting settings, and triggering automation sequences. It maintains logs of these control actions, capturing the user responsible, the devices affected, and the specific actions taken. Additionally, it tracks the timestamp of each control action for reference.\\
+        \end{enumerate}
+    \end{enumerate}
+
+    \item {\large{Routine Managemant}}\\
+    \begin{enumerate}[label*={\arabic*.}]
+        \item {\large{Trigger Settings}}\\
+            \begin{enumerate}[label*={\alph*.},ref=\theenumi.\arabic*]
+            \setlength{\itemindent}{0.5cm}
+                \item {\large{Sound Trigger}}\\
+                \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                \setlength{\itemindent}{0.5cm}
+                    \item Users can set conditions to trigger accessories or scenes based on sound intensity. For example, when a loud noise is detected at home, a message can be sent to the user. Or trigger a camera to capture what's going on. For speakers that can recognize voice, the response action can be completed according to the user's voice instructions.\\
+                \end{enumerate}
+                
+                \item {\large{Sensor Trigger}}\\
+                \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                \setlength{\itemindent}{0.5cm}
+                    \item Response functions are triggered based on various sensors such as smoke alarms, flood alarms, motion sensor, air monitoring sensor. For example, if smoke is detected at home, a message can be sent to the user. Another example, The air purifier can be triggered automatically when the air quality declines.\\
+                \end{enumerate}
+                
+                \item {\large{Time Trigger}}\\
+                \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                \setlength{\itemindent}{0.5cm}
+                    \item Accessories or scenes can be triggered based on a fixed time of day, certain days, or based on sunrise and sunset. For example, turn on the curtains and music at 6 a.m. every morning, or turn off all lights 15 minutes after sunset.\\
+                \end{enumerate}
+                
+                \item {\large{Posture Recognition Trigger}}\\
+                \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                \setlength{\itemindent}{0.5cm}
+                    \item By obtaining images or videos through a camera and using OpenPose to recognize body posture, it is also possible to recognize body movements and trigger different functions based on different movements.\\
+                \end{enumerate}
+
+                \item {\large{Position Trigger}}\\
+                \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                \setlength{\itemindent}{0.5cm}
+                    \item The user's location can be determined based on the location information of the user's mobile phone, and corresponding functions can be triggered based on the user's location. For example, when the user returns home, they automatically turn on the lights and automatically start the air conditioner.\\
             \end{enumerate}
     
-        \item [4-2]{\large{Behavior Settings}}\\
+        \end{enumerate}
+        \item {\large{Behavior Settings}}\\
 
-        
-        b.1. The user must set the action to trigger through a specific trigger Action through gesture recognition in opencv above. \\
-        
-        For example, you have to be able to set the behavior of turning on the light, controlling the brightness, and how long the time interval is,\\
+        \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+        \setlength{\itemindent}{0.5cm}
+            \item The user must set the action to trigger through a specific trigger Action through gesture recognition in opencv above. For example, you have to be able to set the behavior of turning on the light, controlling the brightness, and how long the time interval is,\\
 
-        b.2. More than one action light can be set with a single trigger, it must support collaboration between multiple devices, it must be user-generated,
-        voice, sensor, time, and posture recognition should edit and delete the routine required for each trigger, and each user should be able to set the name of the routine and enable/disable the routine.\\
+            \item More than one action light can be set with a single trigger, it must support collaboration between multiple devices, it must be user-generated, voice, sensor, time, and posture recognition should edit and delete the routine required for each trigger, and each user should be able to set the name of the routine and enable/disable the routine.\\
     \end{enumerate}
 
     \item {\large{Application Settings}}\\
+    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+    \setlength{\itemindent}{0.5cm}
+        \item App Settings section, the user can set up the app. We need to implement this to initialize the setup data.\\
 
+        \item A push alarm on/off button must be implemented to determine whether or not to receive an alarm that alerts you when the routine is started by a particular trigger.\\
 
-    5-1. App Settings section, the user can set up the app. We need to implement this to initialize the setup data\\
+        \item Each time each user logs in, backup and restore routes should be implemented without the need to create a new routine.\\
 
-
-    5-2. A push alarm on/off button must be implemented to determine whether or not to receive an alarm that alerts you when the routine is started by a particular trigger\\
-
-
-    5-3. Each time each user logs in, backup and restore routes should be implemented without the need to create a new routine\\
-
-
-    5-4. The logout button should be implemented to enable account changes and a refresh function that allows users to set their own username
-    
+        \item The logout button should be implemented to enable account changes and a refresh function that allows users to set their own username.\\
+    \end{enumerate}
 \end{enumerate}
 
 \section{\Large{Development Environment}}
@@ -257,7 +287,8 @@ We propose a platform to address the necessary issues for consumers to utilize I
     \toprule
     Roles & Name & Task description \& etc.\\
     \midrule
-    Project\ management & Jo Taesik & The project manager assumes numerous responsibilities throughout the planning and execution stages of a project. Specifically, they establish project objectives, delegate weekly tasks and define corresponding roles, monitor team members' work output and progress, and make pertinent adaptations and assignments to ensure that the project abides by established deadlines. Additionally, they collect all team members' project documentation and edit it to fashion a comprehensive manuscript. \\\\
+    \\
+    Project management & Jo Taesik & The project manager assumes numerous responsibilities throughout the planning and execution stages of a project. Specifically, they establish project objectives, delegate weekly tasks and define corresponding roles, monitor team members' work output and progress, and make pertinent adaptations and assignments to ensure that the project abides by established deadlines. Additionally, they collect all team members' project documentation and edit it to fashion a comprehensive manuscript. \\\\
     \bottomrule
     \end{tabular}
     \end{table}
