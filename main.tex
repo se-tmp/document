@@ -1,6 +1,6 @@
 \documentclass[11pt, conference]{IEEEtran}
 \IEEEoverridecommandlockouts
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
@@ -20,10 +20,13 @@
 \usepackage{graphics}
 \usepackage{subfigure}
 \usepackage{float}
-%\usepackage[outdir=./]{epstopdf}
-
+\hbadness=99999  % or any number >=10000
+\vbadness=99999  % or any number >=10000
+\hfuzz=20pt
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
+
+\setcounter{figure}{0}
 
 \title{IOT Home Heroes\\
 \small{Seamless home automation based on posture/position detection\\}
@@ -89,293 +92,19 @@ Roles & Name & Task description \& etc.\\
 User & Bae Hyojeong & He expects that he will be able to use them to make his life easier by operating IOT devices, However, He is hesitant because of the negative reviews from people who have already used them, or he is afraid that it will be too difficult to install and set them up. \\\\
 Customer & Kwon Jongin & Created a product that can be controlled using IOT, but consumers rarely use the feature because it's not as convenient as expected. He is looking for ways to make his product more convenient to use in order to get consumers to use product. \\\\
 Software developer & Lee Hyunsuk, Nan Haixu & Designs and implements a solution to a given problem. Able to troubleshoot problems that may arise during development and complete assigned tasks within a given timeframe. \\\\
-Development manager & Jo Taesik & Breaking down a given task into solvable problems and distributing them appropriately among team members. They also coordinate schedules to ensure that tasks are completed within a given timeframe. \\\\
+Development manager & Jo Taesik & Breaking down a given task into solvable problems and distributing them appropriately among team members. They also coordinate schedules to ensure that tasks are completed within a given timeframe. \\
 \bottomrule
 \end{tabular}
 \end{table}
 \newpage
 
-\section{\Large{Introduction}}
-% \begin{enumerate}[label=\arabic*]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection {\large{Motivation}} 
-The IOT market has been growing rapidly in recent years. According to IOT Analytics, the IOT device market, which was valued at \$120 billion in 2019, is growing at a staggering rate, reaching \$100 billion in the first quarter of 2023. This market is also expected to grow at a CAGR of 20\% in the future. According to the same organization, there are currently an estimated 14.4 billion connected IOT devices, which is also expected to grow at a CAGR of 16\%. \\\\
+\input{pt1_introduction}
+\input{pt2_requirement_analysis}
+\input{pt3_development_environment}
+\input{pt4_specification}
 
-\includegraphics[width=8cm]{imgs/iot_market_growing.png}\\\\
-
-In response to this market growth, many electronics manufacturers have begun to include IOT-related technologies in their products, ranging from passive technologies that allow you to control your device through an application on your phone, to technologies that allow you to control multiple devices with a single device in conjunction with devices such as smart speakers, to more advanced technologies such as air quality sensors and motion recognition sensors that allow you to operate your device automatically without human command. \\
-
-Consumer interest in IOT technologies is on the rise, and according to OpenSurvey, the number of consumers who own a home appliance with these technologies has grown from 29.5\% in 2022 to 48.3\% in 2023, an increase of 18.8 percentage points over the previous year. \\\\
-
-\includegraphics[width=8cm]{imgs/reason_why_not_use_iot.png}\\\\
-
-However, consumers who have tried these technologies are often disappointed with devices that don't deliver on their pre-purchase expectations and stop using them. There are a few main reasons why this happens. According to OpenSurvey, these are the top reasons consumers have IOT devices but don't use them.\\
-\begin{enumerate}
-    \item They are more comfortable operating them manually (59.1\%)\\
-    \item They have different apps/devices for each device they own and don't want to use multiple devices at the same time (28.6\%)\\
-    \item They have tried the apps/devices but don't like the usability (14.6\%)\\
-    \item The apps/devices don't work well with their devices (11.0\%)\\
-\end{enumerate}
-
-We propose a platform to address the necessary issues for consumers to utilize IoT technologies. Our integrated IoT platform employs posture recognition to activate desired functions.\\\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection {\large{Problem Statement}}
-    \begin{enumerate}[label=\alph*]
-        \item Uncomfortable Automation\\
-        There is a gap between what users think home automation should be and what current platforms offer. Users assume that machines will interpret their intentions and complete tasks without any input, but the reality is quite the opposite. The machines can only perform specific procedures that have already been entered, and they lack the ability to determine when those procedures should be executed. Currently, the sole means of inducing a machine to execute a task is through summoning a voice assistant with a designated command and directing it to execute a specific procedure. This hindrance fosters the belief that it is more convenient to manually operate a device than to avail oneself of automation. Consequently, users will avail themselves of IOT features only under highly restricted circumstances.\\
-        
-        \item Complexity of Use\\
-        Currently, IOT devices from manufacturers and platforms can only be controlled through voice recognition. However, this method is too limited for users who desire a fully-fledged smart home. Third-party platforms exist for these users, which provide more detailed and advanced features. Although these platforms are not officially supported by the manufacturers, users who encounter problems must solve them on their own. Connecting devices to the platform and building the server are required tasks. Additionally, these platforms these platforms describe their behavior in code, which means users have to get used to it. These factors increase complexity and may present a barrier to entry for the users.\\
-        
-        \item Security Concerns\\
-        Devices that use a manufacturer's platform can pose security risks by sending all user and device information to the manufacturer's servers. This compromise exposes sensitive personal information and lifestyle details to potential exploitation. Additionally, it opens up the possibility for malicious actors to manipulate and misuse devices in the home remotely.\\
-        
-        \item Disjointed communication methods\\
-        Numerous communication methods are utilized in IoT devices these days, encompassing traditional WiFi and Bluetooth as well as UWB, RFID, Zigbee, Z-WAVE, XBee, LoRa, SigFox, and many others. Device manufacturers have selected one or more communication methods to construct their devices, resulting in consumers being limited to devices that use a specific communication method based on the hub they utilize.\\
-        
-        \includegraphics[width=8cm]{imgs/iot-protocols-1.png}\\\\
-        
-        \item Fragmented Platforms\\
-        IOT device manufacturers maintain distinctive platforms and require navigating their platforms and hubs for using a specific device of a manufacturer. This limitation restricts the full functionality of devices to the manufacturer's designated platform, rendering interoperability difficult. Some manufacturer hubs do not allow devices from other manufacturers to connect, causing consumers to lean towards one manufacturer for their smart home devices and discouraging the use of products from different manufacturers at the same time. It also creates challenges when replacing a product line that is not made by a particular manufacturer, thus limiting consumer options.\\
-        
-    \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection {\large{Related Software}}
-    \begin{enumerate}[label=\alph*]
-    \item Google Home\\
-    This is a smart home platform offered by Google. It is compatible with a variety of devices, including lights, thermometers, speakers, and more. Additionally, it works with the Google Assistant, which allows you to check the status of your devices or control them. The same can be done through the accompanying application. Routines tailored to specific circumstances can be created and activated via voice commands. Easily add family members to share routines and jointly control devices. In addition to setting things up in the application, user can automate the details using YAML scripts.\\\\
-
-    \item Apple Home\\
-    This is a smart home platform offered by Apple that is compatible with a variety of devices including lights, thermometers, and speakers, among others. It works with the Siri, which allows you to check the status of your devices or control them. The same can be done through the accompanying application. One can conveniently monitor device status via Control Center or widgets on other Apple devices. An Apple TV can also serve as a hub and automatically regulate devices based on circumstance, including weather, motion, or humidity. However, an Apple device is required.\\\\
-
-    \item Samsung Smartthings\\
-    This is a smart home platform offered by Samsung. This platform is compatible with a variety of devices, including lights, thermometers, and speakers. Users can access and manage device status via Bixby or the application. To take full advantage of the IOT capabilities of their Samsung home appliances, users need this platform. User can utilize their Samsung devices as sensors. Unlike platforms offered by other manufacturers, Smartthings is an open platform, allowing for connection of even unsanctioned products through various actions. The hub permits connection of third-party sensors and setup of automation routines.\\\\
-
-    \item LG ThinQ\\
-    This is a smart home platform designed by LG that is necessary for full utilization of the IOT features of LG appliances. Users can receive notifications when their appliances finish their tasks, diagnose problems with their appliances, and schedule after-sales services. They can also integrate with Apple HomeKit to monitor or control their HomeKit-connected devices using this application.\\\\
-
-    \item Home Assistant\\
-    This is the sole mainstream smart home platform founded on open-source principles. The software can be installed and run on various hardware, including Raspberry Pi or Odroid. Devices with Home Assistant behave as hubs once the software is installed. It supports a diverse range of protocols and easily connects to devices unsupported by it through multiple actions. It is more difficult to configure than other platforms, but after mastering it, scripts can be utilized to access any data from linked devices and automate actions in numerous ways.\\
-
-    \includegraphics[width=8cm]{imgs/ha_script_example.png}\\\\
-    \end{enumerate}
-
-\section{\Large{Requirement Analysis}}
-\begin{enumerate}[label=\arabic*.]
-    \item {\large{Login}}\\
-
-    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-    \setlength{\itemindent}{0.5cm}
-        \item The user must log in to their own account, which contains their personal information.\\
-        
-        \item This application should be customizable for homeowners, so user’s personal information need to be stored in his/her own account.\\
-        
-        \item If the user manages multiple devices, the information is required for connecting to several devices.\\
-        
-        % \item User can add and remove devices he/she manages through QR code(It is also possible without the QR code).\\
-        
-        \item For the login process, user inputs their ID and password within the app, with the option to use the auto-login feature when needed.\\
-        
-        \item Alternatively, users can utilize an external ID, like a Google or Apple ID, to conveniently sign in without having to register.\\
-    
-        \item ID must include at least 5 English or English and numbers both.\\
-    
-        \item Password must include alphabetic uppercase letters, special characters, and numbers.\\
-    \end{enumerate}
-
-    \item {\large{Logs and Statistics}}\\
-    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-    \setlength{\itemindent}{0.5cm}
-        \item The application records user activities, including events such as login and logout, device control actions, and account management operations. \\
-        
-        \item It maintains device interaction logs, tracking device status changes, usage patterns, and scheduled events or automations triggered by the user. \\
-        
-        \item The application logs errors and exceptions, facilitating the identification of issues with error messages and timestamps. \\
-        
-        \item User behavior, preferences, and usage patterns are monitored to enhance this service. \\
-        
-        \item To achieve this, it stores a history of device status data, allowing users to review past device activities and monitor trends.\\
-    \end{enumerate}
-
-
-% need to be modify
-    \item {\large{Dashboard}}
-    \begin{enumerate}[label=\arabic*.]
-        \item {\large{Device connection}}\\
-        \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-        \setlength{\itemindent}{0.5cm}
-            \item The application stores and manages device connection information, including events such as device pairing and disconnection. It maintains logs of the connected devices, tracking the date and time of connection, the type of device, and the user responsible for the connection.\\
-        \end{enumerate}
-        
-        \item {\large{Device Status Check}}\\
-        \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-        \setlength{\itemindent}{0.5cm}
-            \item The application logs device status, including the monitoring of device health, information about whether devices are connected or not and operational status. It maintains records of when status checks were performed, the specific devices checked, and the results, indicating whether devices were operational or reported issues.\\
-        \end{enumerate}
-        
-        \item {\large{Device Control}}\\
-        \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-        \setlength{\itemindent}{0.5cm}
-            \item The application could control actions manually initiated by user. This events contain turning devices on or off, adjusting settings, and triggering automation sequences. It maintains logs of these control actions, capturing the user responsible, the devices affected, and the specific actions taken. Additionally, it tracks the timestamp of each control action for reference.\\
-        \end{enumerate}
-    \end{enumerate}
-
-    \item {\large{Routine Managemant}}\\
-    \begin{enumerate}[label*={\arabic*.}]
-        \item {\large{Trigger Settings}}\\
-            \begin{enumerate}[label*={\alph*.},ref=\theenumi.\arabic*]
-            \setlength{\itemindent}{0.5cm}
-                \item {\large{Sound Trigger}}\\
-                \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                \setlength{\itemindent}{0.5cm}
-                    \item Users can set conditions to trigger accessories or scenes based on sound intensity. For example, when a loud noise is detected at home, a message can be sent to the user. Or trigger a camera to capture what's going on. For speakers that can recognize voice, the response action can be completed according to the user's voice instructions.\\
-                \end{enumerate}
-                
-                \item {\large{Sensor Trigger}}\\
-                \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                \setlength{\itemindent}{0.5cm}
-                    \item Response functions are triggered based on various sensors such as smoke alarms, flood alarms, motion sensor, air monitoring sensor. For example, if smoke is detected at home, a message can be sent to the user. Another example, The air purifier can be triggered automatically when the air quality declines.\\
-                \end{enumerate}
-                
-                \item {\large{Time Trigger}}\\
-                \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                \setlength{\itemindent}{0.5cm}
-                    \item Accessories or scenes can be triggered based on a fixed time of day, certain days, or based on sunrise and sunset. For example, turn on the curtains and music at 6 a.m. every morning, or turn off all lights 15 minutes after sunset.\\
-                \end{enumerate}
-                
-                \item {\large{Posture Recognition Trigger}}\\
-                \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                \setlength{\itemindent}{0.5cm}
-                    \item By obtaining images or videos through a camera and using OpenPose to recognize body posture, it is also possible to recognize body movements and trigger different functions based on different movements.\\
-                \end{enumerate}
-
-                \item {\large{Position Trigger}}\\
-                \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                \setlength{\itemindent}{0.5cm}
-                    \item The user's location can be determined based on the location information of the user's mobile phone, and corresponding functions can be triggered based on the user's location. For example, when the user returns home, they automatically turn on the lights and automatically start the air conditioner.\\
-            \end{enumerate}
-    
-        \end{enumerate}
-        \item {\large{Behavior Settings}}\\
-
-        \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-        \setlength{\itemindent}{0.5cm}
-            \item The user must set the action to trigger through a specific trigger Action through gesture recognition in opencv above. For example, you have to be able to set the behavior of turning on the light, controlling the brightness, and how long the time interval is,\\
-
-            \item More than one action light can be set with a single trigger, it must support collaboration between multiple devices, it must be user-generated, voice, sensor, time, and posture recognition should edit and delete the routine required for each trigger, and each user should be able to set the name of the routine and enable/disable the routine.\\
-    \end{enumerate}
-\end{enumerate}
-
-    \item {\large{Application Settings}}\\
-    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-    \setlength{\itemindent}{0.5cm}
-        \item App Settings section, the user can set up the app. We need to implement this to initialize the setup data.\\
-
-        \item A push alarm on/off button must be implemented to determine whether or not to receive an alarm that alerts you when the routine is started by a particular trigger.\\
-
-        \item Each time each user logs in, backup and restore routes should be implemented without the need to create a new routine.\\
-
-        \item The logout button should be implemented to enable account changes and a refresh function that allows users to set their own username.\\
-    \end{enumerate}
-\end{enumerate}
-
-\section{\Large{Development Environment}}
-\begin{enumerate}[label=\arabic*]
-    \item {\large{Task distribution}}
-    \begin{table}[H]
-    \center
-    \begin{tabular}{m{1.4cm} m{1.5cm} m{4cm}}
-    \toprule
-    Roles & Name & Task description \& etc.\\
-    \midrule
-    \\
-    Project management & Jo Taesik & The project manager assumes numerous responsibilities throughout the planning and execution stages of a project. Specifically, they establish project objectives, delegate weekly tasks and define corresponding roles, monitor team members' work output and progress, and make pertinent adaptations and assignments to ensure that the project abides by established deadlines. Additionally, they collect all team members' project documentation and edit it to fashion a comprehensive manuscript. \\\\
-    \bottomrule
-    \end{tabular}
-    \end{table}
-    
-    \begin{table}[H]
-    \center
-    \begin{tabular}{m{1.4cm} m{1.5cm} m{4cm}}
-    UI/UX design & Jo Taesik & UI/UX designers are accountable for designing the UI and UX. They establish the fundamental layout and functionality of the application, and complete the visual design. They design workflows and pathways for the users and optimize the accessibility of frequently-used features. The objective is to help users use the finalized product effectively and efficiently. \\\\
-    \bottomrule
-    \end{tabular}
-    \end{table}
-
-    \begin{table}[H]
-    \center
-    \begin{tabular}{m{1.4cm} m{1.5cm} m{4cm}}
-    App frontend & Kwon Jongin, Jo Taesik & Front-end developers take the UI/UX designs created by designers and transform them into code that users can directly view and interact with on the application. Through the use of multiple frameworks and technologies, they write code that guarantees a design’s intended appearance on any device. Additionally, they utilize APIs and sockets to communicate with the backend, exchanging and displaying relevant data on the screen. \\\\
-    \bottomrule
-    \end{tabular}
-    \end{table}
-
-    \begin{table}[H]
-    \center
-    \begin{tabular}{m{1.4cm} m{1.5cm} m{4cm}}
-    App backend & Nan Haixu, Bae Hyojeong & Application backend developers develop and manage the server-side part of the application. They design and develop databases to manage the necessary data and process user data effectively. They develop APIs to communicate with clients and servers so they can interact. They manage data by encrypting it to keep user data secure. \\\\
-    \bottomrule
-    \end{tabular}
-    \end{table}
-
-    \begin{table}[H]
-    \center
-    \begin{tabular}{m{1.4cm} m{1.5cm} m{4cm}}
-    Computer vision & Lee Hyunsuk & Computer vision developers create programs for image and video processing and interpretation using libraries like OpenCV and OpenPose. They design and implement algorithms to extract desired information from visual data. \\\\
-    \bottomrule
-    \end{tabular}
-    \end{table}
-    
-\end{enumerate}
-
-\section{\Large{Specifications}}
-\begin{enumerate}[label=\arabic*]
-    \item {\large{Login Page}}
-    \begin{enumerate}[label=\alph*]
-        \item There are two buttons on login page, 'Continue with Google' and 'Continue with Apple'. When the user click the button, login is success and move to the main page.
-        \item On the main page, there is 'plus' button which makes the page move to 'add Device' page. The user can add Matter devices through QR code on this page. There is also the button, 'Connect without the QR code'. 
-    \end{enumerate}
-    \item {\large{Log Page}}
-    \begin{enumerate}[label=\alph*]
-        \item At the Bottom of the page, there is the menu named 'Log'. When the user click the 'Log' button, He/She can see their routine logs. This application records and stores information such as the user's location, posture, and sensors by time period 
-    \end{enumerate}
-    \item {\large{Routine Page}}\\
-    Here you can view all plans that the user has set. You can click on them to view the status, or click the start button to start them manually. If you need to create a new plan yourself, you can also click the plus sign in the lower right corner to customize the plan by setting triggers and activities.\\
-    \begin{enumerate}[label=\alph*]
-        \item Create new routine\\
-            Click the plus sign in the lower right corner of the page to create your own routine. Enter the name of the desired routine in the pop-up window and click "Add" to enter the routine setting page.\\
-        \item Routine Setting Page\\
-            Click the set routine page to adjust the set routine. In the settings page, you can modify the name of the routine, share the routine, and delete the routine. On the right side you can select the switch for this routine. Below is the setting of trigger type. Different conditions can be selected according to different triggers. After selecting, click the check mark in the upper right corner to save.\\
-            \begin{enumerate}
-                \item  Location Trigger Settings\\
-                    To do.\\
-                \item  Posture Trigger Settings\\
-                    After clicking on the pose trigger settings, first select the camera you want to use, and then you can select the action you want to trigger. There is now a choice of three recognized postures, sitting, standing and lying down. You can choose to perform the following actions after the camera recognizes which posture it is. Such as turning on a light or turning on a switch. The actions performed can also be set by yourself.\\
-                \item  Voice Assistant Trigger Settings\\
-                    After clicking the voice assistant trigger setting, you can choose the voice command when you want to execute the command. Different triggers can be triggered based on the recognized voice command.\\
-                \item  Schedule Trigger Settings\\
-                    After clicking on the scheduled trigger setting, you can select the time to be set in the prompt box below, and the trigger will be automatically executed after this time.\\
-            \end{enumerate}
-            
-        \item behavior routine
-        \begin{enumerate}
-            \item It was implemented to adjust the intensity of the light through the light-on motion bulk sldier, and the switch on/off function was implemented\\
-            
-
-            \item In the routine item, a todo list was implemented for each trigger, such as construct detect and schedule, and actions to be performed for each todo were implemented. Switch off time delay
-        \end{enumerate}
-        \item setting
-            \begin{enumerate}
-            \item The on/off button that alerts you when the routine is started by a particular trigger has implemented a button that can be turned on and off according to touch, with the 'push alarm on route starts' written in the notification-shaped column\\
-
-            \item Each user created a Backup/Restore column to back up and import routines, and Backup routes implemented it with the download shape and Restore routes with the upload shape\\
-
-            \item username in a pencil shape so that intuitively see that it can be modified, and created a logout button at the bottom and implemented it so that easily change my account\\
-
-            \item Implemented 'Delete all settings' with trash bin shape to delete all settings
-    \end{enumerate}
-\end{enumerate}
-\end{enumerate}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
 
 %     \item {\large{Choice of software development platform}}
 %     \begin{enumerate}[label=\alph*]
@@ -814,10 +543,5 @@ We propose a platform to address the necessary issues for consumers to utilize I
 %     \end{enumerate}
 % \end{enumerate}
 
-% \begin{thebibliography}{00}
-
-% \bibitem{b1} KOSTAT, Statistics Korea (https://kosis.kr/statisticsList/statistics\\ListIndex.do?vwcd=MT\_ZTITLE\&menuId=M\_01\_01\#content-group)
-% \bibitem{b2} Korea Meteorological Administration (https://data.kma.go.kr/\\stcs/grnd/grndTaList.do\?pgmNo=70)
-% \end{thebibliography}
 
 \end{document}
