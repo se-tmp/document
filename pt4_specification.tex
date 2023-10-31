@@ -1,102 +1,230 @@
 \section{\Large{Specifications}}
 \begin{enumerate}[label=\arabic*.]
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \item {\large{Example}}
-    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-    \setlength{\itemindent}{0.5cm}
-        \item
-            \begin{table}[H]
+    % function
+    % make requirement table
+    % usage:
+    % \requirementTable{
+    %     # of req & Requirement1 desc.\\\\
+    %     # of req & Requirement1 desc.\\\\
+    % }
+    \newcommand{\requirementTable}[1]{
+        \begin{table}[H]
             \center
-                \begin{tabular}{m{1.4cm} m{5.5cm}}
+            \begin{tabular}{m{1.4cm} m{5.5cm}}
                 \toprule
-                \# of Req. & Description\\
+                \# of Req. & Description \\
                 \midrule
-                Req 1.1. & The user must log in to their own account, which contains their personal information.\\\\
-                Req 1.5. & Alternatively, users can utilize an external ID, like a Google or Apple ID, to conveniently sign in without having to register.\\\\
+                #1
                 \bottomrule
-                \end{tabular}
-            \end{table}
-            
-                \begin{figure}[ht]
-                    \begin{center}
-                    \includegraphics[width=3.5cm]{imgs/specification/login_page.png}
-                    \caption{Login page}
-                    \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
-                    \end{center}
-                \end{figure}
-            There are two buttons on login page, 'Continue with Google' and 'Continue with Apple'. When the user click the button, login is success and move to the main page.\\\\
+            \end{tabular}
+        \end{table}
+    }
 
-        \item
-            \begin{table}[H]
-            \center
-                \begin{tabular}{m{1.4cm} m{5.5cm}}
-                \toprule
-                \# of Req. & Description\\
-                \midrule
-                Req 1.1. & The user must log in to their own account, which contains their personal information.\\\\
-                \bottomrule
-                \end{tabular}
-            \end{table}
-            
+    % function
+    % add new image
+    % usage:
+    % \addImage{
+    %     imgs/specification/login_page.png
+    % }{
+    %     description to image
+    % }
+    \newcommand{\addImage}[2]{
+        \begin{figure}[ht]
             \begin{center}
-                \begin{figure}[ht]
-                    \begin{center}
-                    \includegraphics[width=3.5cm]{imgs/specification/login_page.png}
-                    \caption{Login page}
-                    \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
-                    \end{center}
-                \end{figure}
+                \includegraphics[width=3.5cm]{#1}
+                \caption{#2} % description to image
+                \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
             \end{center}
-            There are two buttons on login page, 'Continue with Google' and 'Continue with Apple'. When the user click the button, login is success and move to the main page.\\\\
-    \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
+        \end{figure}
+    }
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
     \item {\large{Login Page}}
-    \begin{enumerate}[label=\alph*]
-        \item There are two buttons on login page, 'Continue with Google' and 'Continue with Apple'. When the user click the button, login is success and move to the main page.
-        \item On the main page, there is 'plus' button which makes the page move to 'add Device' page. The user can add Matter devices through QR code on this page. There is also the button, 'Connect without the QR code'. 
-    \end{enumerate}
+          \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+              \setlength{\itemindent}{0.5cm}
+              \item
+                    \requirementTable{
+                        Req 1.1. & The user must log in to their own account, which contains their personal information.\\\\
+                        Req 1.5. & Alternatively, users can utilize an external ID, like a Google or Apple ID, to conveniently sign in without having to register.\\\\
+                    }
+                    \addImage{
+                        imgs/specification/login_page.png
+                    }{
+                        Login page
+                    }
+                    There are two buttons on login page, 'Continue with Google' and 'Continue with Apple'. When the user click the button, login is success and move to the main page.\\\\
+          \end{enumerate}
+
     \item {\large{Log Page}}
-    \begin{enumerate}[label=\alph*]
-        \item At the Bottom of the page, there is the menu named 'Log'. When the user click the 'Log' button, He/She can see their routine logs. This application records and stores information such as the user's location, posture, and sensors by time period 
-    \end{enumerate}
+          \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+              \setlength{\itemindent}{0.5cm}
+              \item
+                    \begin{table}[H]
+                        \center
+                        \begin{tabular}{m{1.4cm} m{5.5cm}}
+                            \toprule
+                            \# of Req. & Description                                                                                                                   \\
+                            \midrule
+                            Req 2.1.   & The application records user activities, including events such as trigger activation time, routine name, and user's location. \\\\
+                            Req 2.2.   & It maintains device interation logs, pattrens, and scheduled events or automations triggered by the user.                     \\\\
+                            Req 2.4.   & To achieve this, it stores a history of device status data, allowing users to review past device activities.                  \\\\
+                            \bottomrule
+                        \end{tabular}
+                    \end{table}
+                    At the Bottom of the page, there is the menu named 'Log'. When the user click the 'Log' button, He/She can see their routine logs. This application records and stores information such as the user's location, posture, and sensors by time period. \\\\
+
+          \end{enumerate}
+
+    \item {\large{Device Page}}\\
+          On the device main page, the user will be able to manage and interact with their devices that are currently connected to your home automation system. \\
+          \begin{enumerate}[label=\alph*]
+              \item You can manually start devices or perform actions with the toggle switch or the slider bar under the connected device name. The slider control is used to adjust settings like brightness or volume for devices such as bulbs. The toggle switch is used to toggle devices on and off for devices that don't require continuouos adjustment.  \\
+              \item To add a device, click on the plus sign on the bottom right corner of the page. Here you can choose to scan the QR code to connect to the matter device with the '+ Scan' button on the middle. If you do not have the QR code, you can click on the 'connect without QR code' button right below the '+ Scan' button. \\
+              \item To view the status of the device, click on the specific device and the user will be proceeded to a page to view the connectivity status of the device and for a device such as the camera, the live feed of the recording device. \\
+              \item To change the name of the connected device, click on the 'Rename' button and a pop up will appear on the middle of the page for the user to change the device's name and once the user has decided its name, click on the change button to save its settings. \\
+              \item To delete a device from the user's saved devices, click on the 'Delete' button and a pop up
+                    will appear on the middle of the page and to permanently delete, click on the 'delete button' to execute the action. \\
+          \end{enumerate}
+
     \item {\large{Routine Page}}\\
-    Here you can view all plans that the user has set. You can click on them to view the status, or click the start button to start them manually. If you need to create a new plan yourself, you can also click the plus sign in the lower right corner to customize the plan by setting triggers and activities.\\
-    \begin{enumerate}[label=\alph*]
-        \item Create new routine\\
-            Click the plus sign in the lower right corner of the page to create your own routine. Enter the name of the desired routine in the pop-up window and click "Add" to enter the routine setting page.\\
+          Here you can view all plans that the user has set. You can click on them to view the status, or click the start button to start them manually. If you need to create a new plan yourself, you can also click the plus sign in the lower right corner to customize the plan by setting triggers and activities.\\
+          \begin{enumerate}[label=\alph*]
+              \item Create new routine\\
+                    Click the plus sign in the lower right corner of the page to create your own routine. Enter the name of the desired routine in the pop-up window and click "Add" to enter the routine setting page.\\
 
-            
-        \item Routine Setting Page\\
-            Click the set routine page to adjust the set routine. In the settings page, you can modify the name of the routine, share the routine, and delete the routine. On the right side you can select the switch for this routine. Below is the setting of trigger type. Different conditions can be selected according to different triggers. After selecting, click the check mark in the upper right corner to save.\\
-            \begin{enumerate}
-                \item  Location Trigger Settings\\
-                    To do.\\
-                \item  Posture Trigger Settings\\
-                    After clicking on the pose trigger settings, first select the camera you want to use, and then you can select the action you want to trigger. There is now a choice of three recognized postures, sitting, standing and lying down. You can choose to perform the following actions after the camera recognizes which posture it is. Such as turning on a light or turning on a switch. The actions performed can also be set by yourself.\\
-                \item  Voice Assistant Trigger Settings\\
-                    After clicking the voice assistant trigger setting, you can choose the voice command when you want to execute the command. Different triggers can be triggered based on the recognized voice command.\\
-                \item  Schedule Trigger Settings\\
-                    After clicking on the scheduled trigger setting, you can select the time to be set in the prompt box below, and the trigger will be automatically executed after this time.\\
-            \end{enumerate}
-            
-        \item behavior routine
-        \begin{enumerate}
-            \item It was implemented to adjust the intensity of the light through the light-on motion bulk sldier, and the switch on/off function was implemented\\
-            
 
-            \item In the routine item, a todo list was implemented for each trigger, such as construct detect and schedule, and actions to be performed for each todo were implemented. Switch off time delay
-        \end{enumerate}
-        \item setting
-            \begin{enumerate}
-            \item The on/off button that alerts you when the routine is started by a particular trigger has implemented a button that can be turned on and off according to touch, with the 'push alarm on route starts' written in the notification-shaped column\\
+              \item Routine Setting Page\\
+                    Click the set routine page to adjust the set routine. In the settings page, you can modify the name of the routine, share the routine, and delete the routine. On the right side you can select the switch for this routine. Below is the setting of trigger type. Different conditions can be selected according to different triggers. After selecting, click the check mark in the upper right corner to save.\\
+                    \begin{enumerate}
+                        \item  Location Trigger Settings\\
+                              To do.\\
+                        \item  Posture Trigger Settings\\
+                              After clicking on the pose trigger settings, first select the camera you want to use, and then you can select the action you want to trigger. There is now a choice of three recognized postures, sitting, standing and lying down. You can choose to perform the following actions after the camera recognizes which posture it is. Such as turning on a light or turning on a switch. The actions performed can also be set by yourself.\\
 
-            \item Each user created a Backup/Restore column to back up and import routines, and Backup routes implemented it with the download shape and Restore routes with the upload shape\\
+                        \item  Voice Assistant Trigger Settings\\
+                              After clicking the voice assistant trigger setting, you can choose the voice command when you want to execute the command. Different triggers can be triggered based on the recognized voice command.\\
+                        \item  Schedule Trigger Settings\\
+                              After clicking on the scheduled trigger setting, you can select the time to be set in the prompt box below, and the trigger will be automatically executed after this time.\\
+                    \end{enumerate}
+          \end{enumerate}
 
-            \item username in a pencil shape so that intuitively see that it can be modified, and created a logout button at the bottom and implemented it so that easily change my account\\
+    \item {\large{Behavior Routine}}
+          \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+              \setlength{\itemindent}{0.5cm}
+              \item
+                    \requirementTable{
+                        Req 4.2.1 & The user shall be able to set the behavior in accordance with the trigger if it is triggered from a specific setting, such as sound, sensor, time, posture, etc.\\\\
+                        Req 4.2.2 & Actions are required to turn the lights off and on, to control the intensity of the light, and to control the time.\\\\
+                        Req 4.2.3 & To set these actions, a button is required to add the desired action.\\\\
+                    }
+                    \addImage{
+                        imgs/specification/Behavior_Routines.png
+                    }{
+                        Behavior Routines
+                    }
+                    Press detect for each of posture, location, schedule, voice, and sensor to move to a configurable screen. Here, each trigger can be turned off and turned on according to the settings. Each routine can be shared through Drive/Messages/Bluetooth/Gmail by the sharing button. In addition, unnecessary routines can be deleted through the delete routine button.\\\\
 
-            \item Implemented 'Delete all settings' with trash bin shape to delete all settings
-    \end{enumerate}
-\end{enumerate}
+              \item
+                    \requirementTable{
+                        Req 4.2.4 & The user shall be able to set the behavior in accordance with the trigger if it is triggered from a specific setting, such as sound, sensor, time, posture, etc.\\\\
+                        Req 4.2.5 & Actions are required to turn the lights off and on, to control the intensity of the light, and to control the time.\\\\
+                        Req 4.2.6 & To set these actions, a button is required to add the desired action.\\\\
+                    }
+                    \addImage{
+                        imgs/specification/Add_Action.png
+                    }{
+                        Add_Action
+                    }
+                    Press detect for each of posture, location, schedule, voice, and sensor to move to a configurable screen. Here, each trigger can be turned off and turned on according to the settings. Each routine can be shared through Drive/Messages/Bluetooth/Gmail by the sharing button. In addition, unnecessary routines can be deleted through the delete routine button.\\\\
+          \end{enumerate}
+
+    \item {\large{Application Settings}}
+          \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+              \setlength{\itemindent}{0.5cm}
+              \item
+                    \begin{table}[H]
+                        \center
+                        \begin{tabular}{m{1.4cm} m{5.5cm}}
+                            \toprule
+                            \# of Req. & Description                               \\
+                            \midrule
+                            Req 5.1.   & App settings section, the user can set up
+                            the app.                                               \\\\
+                            Req 5.2.   & App need to implement this to initialize
+                            the setup data.                                        \\
+                            \bottomrule
+                        \end{tabular}
+                    \end{table}
+
+                    \addImage{
+                        imgs/specification/Settings.png
+                    }{
+                        Settings page
+                    }
+                    By implementing the x button with the Delete all settings button, the saved settings can be initialized when pressed.\\\\
+          \end{enumerate}
+
+          \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+              \setlength{\itemindent}{0.5cm}
+              \item
+                    \begin{table}[H]
+                        \center
+                        \begin{tabular}{m{1.8cm} m{4.5cm}}
+                            \toprule
+                            \# of Req. & Description                                     \\
+                            \midrule
+                            Req 5.3.   & If routine is started by a paticular trigger
+                            alarm should alerts to user.                                 \\\\
+                            Req 5.4.   & A push alarm on/off button must be
+                            implemented to determine whether or not to receive an alarm. \\\\
+                            \bottomrule
+                        \end{tabular}
+                    \end{table}
+
+                    \begin{center}
+
+                        \begin{center}
+                        \end{center}
+                    \end{center}
+                    The on/off button that alerts you when the routine is started by a particular trigger has implemented a button that can be turned on and off according to touch, with the 'push alarm on route starts' written in the notification-shaped column.\\\\
+          \end{enumerate}
+
+          \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+              \setlength{\itemindent}{0.5cm}
+              \item
+                    \begin{table}[H]
+                        \center
+                        \begin{tabular}{m{1.4cm} m{5.5cm}}
+                            \toprule
+                            \# of Req. & Description                                                                                                              \\
+                            \midrule
+                            Req 5.5.   & Each time each user logs in, backup and restore routines should be implemented without the need to create a new routine. \\\\
+                            \bottomrule
+                        \end{tabular}
+                    \end{table}
+
+                    Each user created a Backup/Restore column to back up and import routines, and Backup routes implemented it with the download shape and Restore routes with the upload shape.\\\\
+          \end{enumerate}
+
+
+          \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+              \setlength{\itemindent}{0.5cm}
+              \item
+                    \begin{table}[H]
+                        \center
+                        \begin{tabular}{m{1.4cm} m{5.5cm}}
+                            \toprule
+                            \# of Req. & Description                                                                               \\
+                            \midrule
+                            Req 5.6.   & he logout button should be implemented to enable account changes.                         \\\\
+                            Req 5.7.   & User also changes their name, so rename button is implemented for set their own username. \\\\
+                            \bottomrule
+                        \end{tabular}
+                    \end{table}
+
+                    Username in a pencil shape so that I can intuitively see that it can be modified, and I created a logout button at the bottom and implemented it so that I can easily change my account.\\\\
+
+          \end{enumerate}
 \end{enumerate}
