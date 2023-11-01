@@ -2,6 +2,24 @@
 \begin{enumerate}[label=\arabic*.]
 
     % function
+    % add new image
+    % usage:
+    % \addImage{
+    %     imgs/specification/login_page.png
+    % }{
+    %     description to image
+    % }
+    \newcommand{\addImage}[2]{
+        \begin{figure}[ht]
+            \begin{center}
+                \includegraphics[width=5.5cm]{#1}
+                \caption{#2} % description to image
+                \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
+            \end{center}
+        \end{figure}
+    }
+
+    % function
     % make requirement table
     % usage:
     % \requirementTable{
@@ -20,26 +38,6 @@
             \end{tabular}
         \end{table}
     }
-
-    % function
-    % add new image
-    % usage:
-    % \addImage{
-    %     imgs/specification/login_page.png
-    % }{
-    %     description to image
-    % }
-    \newcommand{\addImage}[2]{
-        \begin{figure}[ht]
-            \begin{center}
-                \includegraphics[width=3.5cm]{#1}
-                \caption{#2} % description to image
-                \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
-            \end{center}
-        \end{figure}
-    }
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     \item {\large{Login Page}}
           \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
@@ -101,7 +99,8 @@
                             \bottomrule
                         \end{tabular}
                     \end{table}
-                    \addImage{
+
+                     \addImage{
                         imgs/specification/log.png
                     }{
                         Log page
@@ -111,13 +110,106 @@
           \end{enumerate}
 
     \item {\large{Device Page}}\\
-          On the device main page, the user will be able to manage and interact with their devices that are currently connected to your home automation system. \\
+
+
+
           \begin{enumerate}[label=\alph*]
-              \item You can manually start devices or perform actions with the toggle switch or the slider bar under the connected device name. The slider control is used to adjust settings like brightness or volume for devices such as bulbs. The toggle switch is used to toggle devices on and off for devices that don't require continuouos adjustment.  \\
-              \item To add a device, click on the plus sign on the bottom right corner of the page. Here you can choose to scan the QR code to connect to the matter device with the '+ Scan' button on the middle. If you do not have the QR code, you can click on the 'connect without QR code' button right below the '+ Scan' button. \\
-              \item To view the status of the device, click on the specific device and the user will be proceeded to a page to view the connectivity status of the device and for a device such as the camera, the live feed of the recording device. \\
-              \item To change the name of the connected device, click on the 'Rename' button and a pop up will appear on the middle of the page for the user to change the device's name and once the user has decided its name, click on the change button to save its settings. \\
-              \item To delete a device from the user's saved devices, click on the 'Delete' button and a pop up
+              \item 
+
+                \begin{table}[H]
+                        \center
+                        \begin{tabular}{m{1.4cm} m{5.5cm}}
+                            \toprule
+                            \# of Req. & Description                                                                                                                   \\
+                            \midrule
+                            Req 3.2.1.   & The application records user activities, including events such as trigger activation time, routine name, and user's location. \\\\
+                            Req 3.3.1.   & Implement the ability for users to manually control devices, including actions like turning devices on or off, adjusting settings, and triggering automation sequences.                     \\\\
+                            \bottomrule
+                        \end{tabular}
+                    \end{table}
+                
+                \addImage{
+                        imgs/specification/device_main.png
+                        }{
+                            Dashboard
+                        }
+                        
+                        On the device main page, the user will be able to manage and interact with their devices that are currently connected to your home automation system. You can manually start devices or perform actions with the toggle switch or the slider bar under the connected device name. The slider control is used to adjust settings like brightness or volume for devices such as bulbs. The toggle switch is used to toggle devices on and off for devices that don't require continuouos adjustment.  \\
+              \item
+              \begin{table}[H]
+                        \center
+                        \begin{tabular}{m{1.4cm} m{5.5cm}}
+                            \toprule
+                            \# of Req. & Description                                                                                                                   \\
+                            \midrule
+                            Req 3.1.1.   & This application provide users with the ability to connect devices, including device pairing and disconnection \\\\
+                            Req 3.1.2.   & Implement a QR code-based device connection method, allowing users to easily pair devices by scanning QR codes                     \\\\
+                            Req 3.1.3.   &Offer an alternative method for connecting to devices without the use of QR codes, providing flexibility in device pairing. \\\\
+                            \bottomrule
+                        \end{tabular}
+                    \end{table}
+                
+                \addImage{
+                        imgs/specification/device_add.png
+                        }{
+                            Add Device
+                        }
+              To add a device, click on the plus sign on the bottom right corner of the Dashboard page as shown in Fig. 39. Then the user will be forwarded to the page as shown in Fig. 40. and you can choose to scan the QR code to connect to the matter device with the '+ Scan' button on the middle. If you do not have the QR code, you can click on the 'connect without QR code' button right below the '+ Scan' button. \\
+              \item 
+              \begin{table}[H]
+                        \center
+                        \begin{tabular}{m{1.4cm} m{5.5cm}}
+                            \toprule
+                            \# of Req. & Description                                                                                                                   \\
+                            \midrule
+                            Req 3.2.1.   & This application implements a system to log and monitor the status of connected devices, including health assessments and connectivity information. \\\\
+                            Req 3.3.3.   & Provide users with the capability to view the live feed or recorded content from connected devices like home security cameras.                     \\\\
+                            \bottomrule
+                        \end{tabular}
+                    \end{table}
+                
+                \addImage{
+                        imgs/specification/device_delete.png
+                        }{
+                            Device Status
+                        }
+              To view the status of the device, click on the specific device and the user will be proceeded to a page to view the connectivity status of the device and for a device such as the camera, the live feed of the recording device. \\
+              \item 
+              \begin{table}[H]
+                        \center
+                        \begin{tabular}{m{1.4cm} m{5.5cm}}
+                            \toprule
+                            \# of Req. & Description                                                                                                                   \\
+                            \midrule
+                            Req 3.3.4.   & Allow users to rename devices for personalization. \\\\
+                            \bottomrule
+                        \end{tabular}
+                    \end{table}
+                
+                \addImage{
+                        imgs/specification/device_settings_normal_change_name.png
+                        }{
+                            Rename Device
+                        }
+              To change the name of the connected device, click on the 'Rename' button and a pop up will appear on the middle of the page for the user to change the device's name and once the user has decided its name, click on the change button to save its settings. \\
+              \item 
+              \begin{table}[H]
+                        \center
+                        \begin{tabular}{m{1.4cm} m{5.5cm}}
+                            \toprule
+                            \# of Req. & Description                                                                                                                   \\
+                            \midrule
+                            Req 3.3.4.   & Allow users to rename devices for personalization. \\\\
+                            \bottomrule
+                        \end{tabular}
+                    \end{table}
+                
+                \addImage{
+                        imgs/specification/device_settings_normal_change_name.png
+                        }{
+                            Rename Device
+                        }
+              To delete a device from the user's saved devices, click on the 'Delete' button and a pop up
                     will appear on the middle of the page and to permanently delete, click on the 'delete button' to execute the action. \\
           \end{enumerate}
 
