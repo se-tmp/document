@@ -1,3 +1,4 @@
+\newpage
 \section{\Large{Specifications}}
 \begin{enumerate}[label=\arabic*.]
 
@@ -12,7 +13,7 @@
     \newcommand{\addImage}[2]{
         \begin{figure}[ht]
             \begin{center}
-                \includegraphics[width=5.5cm]{#1}
+                \includegraphics[width=5.3cm]{#1}
                 \caption{#2} % description to image
                 \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
             \end{center}
@@ -39,33 +40,35 @@
         \end{table}
     }
 
-    \item {\large{Login Page}}
+    \item {\large{Login}}\\
           \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
               \setlength{\itemindent}{0.5cm}
-              \item
+              \item Login page
                     \requirementTable{
                         Req 1.1. & The user must log in to their own account, which contains their personal information.\\\\
                         Req 1.5. & Alternatively, users can utilize an external ID, like a Google or Apple ID, to conveniently sign in without having to register.\\\\
                     }
                     \addImage{
-                        imgs/specification/login.png
+                        imgs/lkj/firstPage.png
                     }{
                         Login page
                     }
                     On login page, there are LOGO and 3 buttons, 'Sign in', 'Continue with Google', and 'Continue with Apple'. When the user click 'Sign in', it turns to the Sign-in page. If two others are clicked, login successes and login page is changed to main page.\\\\
+                    \newpage
 
-                \item 
+                \item Signin page
                      \requirementTable{
                         Req 1.4. & For the login process, user inputs their ID and password within the app.\\\\
                     }
                     \addImage{
-                        imgs/specification/signin.png
+                        imgs/lkj/signin.png
                     }{
                         Sign in page
                     }
                     There are LOGO, ID and Password input windows, and sign in/up buttons on sign-in page. If user has already had account, login will success and it turns to main page when they input their ID and password and click sign-in button. If he/she doesn't, he/she clicks sign-up button which pulls sign-up page.\\\\
-                    
-                \item 
+
+                \newpage
+                \item Signup page
                      \requirementTable{
                         Req 1.2. & This application should be customizable for homeowners, so user's personal information need to be stored in his/her own acount.\\\\
                         Req 1.6. & ID must include at least 5 English or English and numbers both.\\\\
@@ -74,19 +77,17 @@
                         Req 1.9. & Username must be unique:Each user must have a unique username within the system to ensure proper identification and to prevent any confusion or conflicts.\\\\
                     }
                     \addImage{
-                        imgs/specification/signup.png
+                        imgs/lkj/signup.png
                     }{
                         Sign up page
                     }
                     4 buttons, such as ID, Nickname, Password, and Confirm Password are included on sign up page. If all statements meet the conditions, when user press the sign-up button, sign-up is complete and it returns to the sign in page. And then, if user enter their ID and password and click the sign-in button, it turns to the main page.\\\\
-
-                    
           \end{enumerate}
-
-    \item {\large{Log Page}}
+    \newpage
+    \item {\large{Log}}\\
           \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
               \setlength{\itemindent}{0.5cm}
-              \item
+              \item Log page
                     \begin{table}[H]
                         \center
                         \begin{tabular}{m{1.4cm} m{5.5cm}}
@@ -101,21 +102,17 @@
                     \end{table}
 
                      \addImage{
-                        imgs/specification/log.png
+                        imgs/lkj/logs.png
                     }{
                         Log page
                     }
-                    At the Bottom of the page, there is the menu named 'Log'. When the user click the 'Log' button, He/She can see their routine logs. This application records and stores information such as the user's location, posture, and sensors by time period. \\\\
+                    At the Bottom of the page, there is the menu named 'Log'. When the user click the 'Log' button, He/She can see their routine logs. This application records and stores information such as the user's location, posture, and sensors by time period. \\
 
           \end{enumerate}
 
-    \item {\large{Device Page}}\\
-
-
-
-          \begin{enumerate}[label=\alph*]
-              \item 
-
+    \item {\large{Device Dashboard}}\\
+          \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+              \item Dashboard page
                 \begin{table}[H]
                         \center
                         \begin{tabular}{m{1.4cm} m{5.5cm}}
@@ -129,13 +126,13 @@
                     \end{table}
                 
                 \addImage{
-                        imgs/specification/device_main.png
+                        imgs/lkj/dashboard.png
                         }{
                             Dashboard
                         }
                         
                         On the device main page, the user will be able to manage and interact with their devices that are currently connected to your home automation system. You can manually start devices or perform actions with the toggle switch or the slider bar under the connected device name. The slider control is used to adjust settings like brightness or volume for devices such as bulbs. The toggle switch is used to toggle devices on and off for devices that don't require continuouos adjustment.  \\
-              \item
+              \item Add device page
               \begin{table}[H]
                         \center
                         \begin{tabular}{m{1.4cm} m{5.5cm}}
@@ -150,12 +147,13 @@
                     \end{table}
                 
                 \addImage{
-                        imgs/specification/device_add.png
+                        imgs/lkj/device_add.png
                         }{
                             Add Device
                         }
               To add a device, click on the plus sign on the bottom right corner of the Dashboard page as shown in Fig. 39. Then the user will be forwarded to the page as shown in Fig. 40. and you can choose to scan the QR code to connect to the matter device with the '+ Scan' button on the middle. If you do not have the QR code, you can click on the 'connect without QR code' button right below the '+ Scan' button. \\
-              \item 
+              \newpage
+              \item Device status page
               \begin{table}[H]
                         \center
                         \begin{tabular}{m{1.4cm} m{5.5cm}}
@@ -169,66 +167,81 @@
                     \end{table}
                 
                 \addImage{
-                        imgs/specification/device_delete.png
+                        imgs/lkj/device_settings_connected.png
                         }{
                             Device Status
                         }
               To view the status of the device, click on the specific device and the user will be proceeded to a page to view the connectivity status of the device and for a device such as the camera, the live feed of the recording device. \\
-              \item 
+
+            \newpage
+              \item Rename device page
               \begin{table}[H]
                         \center
                         \begin{tabular}{m{1.4cm} m{5.5cm}}
                             \toprule
                             \# of Req. & Description                                                                                                                   \\
                             \midrule
+                            Req 3.1.1.   & This application provide users with the ability to connect devices, including device pairing and disconnection. \\\\
                             Req 3.3.4.   & Allow users to rename devices for personalization. \\\\
                             \bottomrule
                         \end{tabular}
                     \end{table}
                 
                 \addImage{
-                        imgs/specification/device_settings_normal_change_name.png
+                        imgs/lkj/device_settings_change_name.png
                         }{
                             Rename Device
                         }
               To change the name of the connected device, click on the 'Rename' button and a pop up will appear on the middle of the page for the user to change the device's name and once the user has decided its name, click on the change button to save its settings. \\
-              \item 
+              \newpage
+              \item Delete device page
               \begin{table}[H]
                         \center
                         \begin{tabular}{m{1.4cm} m{5.5cm}}
                             \toprule
                             \# of Req. & Description                                                                                                                   \\
                             \midrule
-                            Req 3.3.4.   & Allow users to rename devices for personalization. \\\\
+                            Req 3.1.1.   & This application provide users with the ability to connect devices, including device pairing and disconnection. \\\\
+                            Req 3.3.5.   & Enable users to delete devices when they are no longer needed or want to remove them from their account. \\\\
                             \bottomrule
                         \end{tabular}
                     \end{table}
                 
                 \addImage{
-                        imgs/specification/device_settings_normal_change_name.png
+                        imgs/lkj/device_settings_delete.png
                         }{
-                            Rename Device
+                            Delete Device
                         }
               To delete a device from the user's saved devices, click on the 'Delete' button and a pop up
                     will appear on the middle of the page and to permanently delete, click on the 'delete button' to execute the action. \\
           \end{enumerate}
-
-    \item {\large{Routine Page}}\\
+    \newpage
+    \item {\large{Routine}}\\
+      \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+        \item Routine page
          \requirementTable{
                         Req 4.1. & Users can view all the routine they set here here. Click the routine icon to adjust them.\\\\
                         Req 4.1. & Users can add their own routine through the "+" icon in the lower right corner.\\
                     }
-                    (figma-routine-main)\\
+                    \addImage{
+                        imgs/lkj/routine_main.png
+                        }{
+                            Routine Page
+                        }
           In the routine page, each designed routine will be displayed here, and there is a start button on each path that allows users to execute manually. There is an additional button in the lower right corner.\\
-          \begin{enumerate}[label=\alph*]
+              \newpage
               \item Create new routine
               \requirementTable{
                         Req 4.a.1 &In the pop -up prompt box, the user can enter the name of the routine.\\
                     }
-                    (figma-routine-add)\\
+                    \addImage{
+                        imgs/lkj/routine_add.png
+                        }{
+                            Create new routine
+                        }
                     Click the plus sign in the lower right corner of the page to create your own routine. Enter the name of the desired routine in the pop-up window and click "Add" to enter the routine setting page.\\
 
-
+            \newpage
               \item Routine Setting Page
               \requirementTable{
                         Req 4.b.1 &Need a button to let users choose whether to enable this routine.\\\\
@@ -236,28 +249,58 @@
                         Req 4.b.3 &It can be configured to perform actions after a trigger is activated.\\\\
                         Req 4.b.4 &Let users save and return to the previous page.\\
                     }
-                    (figma-default)\\
+                    \addImage{
+                        imgs/lkj/routine_default.png
+                        }{
+                            Routine Setting
+                        }
                     At the top of the page, there is a "←" icon on the left, which allows users to return to the previous page. There is a hook sign on the right to allow users to save the current trigger settings. Then there is the name of the trigger below. Click it to modify the name of the trigger. There is a switch on the right to control whether this routine is activated. \\
-                    (figma-default-share)\\
+                    \addImage{
+                        imgs/lkj/routine_share.png
+                        }{
+                            Routine Sharing
+                        }
                     There are sharing and deletion buttons below the routine name. If you choose to share, you can share it to other software. \\
-                    (figma-default-delete)\\
+                    \addImage{
+                        imgs/lkj/routine_delete_confirm.png
+                        }{
+                            Routine Delete
+                        }
                     If you want to delete, there will be a prompt box to ask the user if you confirm the deletion. Next, you can choose a trigger, and you can choose different conditions according to different triggers.\\
-                    \begin{enumerate}
+                    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
                         \item  Location Trigger Settings
                         \requirementTable{
                         Req 4.b.1.1 &When the user selects the location trigger, the user can select a position on a new page displayed by a map.\\
                     }
-                        (figma-routine-settings-location/selected)\\
-                              After clicking the position trigger button, the user can click the button to display the "Select the Location" button below. Then a new window will pop up for you to choose the location you want to set. After the pop -up window is confirmed in the second time, the address information will be displayed in the trigger settings of the path settings page.\\
+                    \addImage{
+                imgs/lkj/routine_settings_location_selected.png
+                        }{
+                            Location Trigger Settings
+                        }
+                              After clicking the position trigger button, the user can click the button to display the "Select the Location" button below. Then a new window will pop up for you to choose the location you want to set. 
+                         \addImage{
+                imgs/lkj/confirm_location.png
+                        }{
+                            Location Confirm
+                        }
+                              After the pop-up window is confirmed in the second time, the address information will be displayed in the trigger settings of the path settings page.\\
                         \item  Posture Trigger Settings
                         \requirementTable{
                         Req 4.b.2.1 &When the user selects a posture trigger setting, the user can choose the recognition range of the camera they want to use.\\\\
                         Req 4.b.2.2 &The condition that users can choose to judge whether they are sitting, standing or lying.\\
                     }
                             (figma-routine-settings-posture-before-select)\\
+                            \addImage{
+                            imgs/lkj/routine_settings_posture_before_select.png
+                        }{
+                            Posture Trigger
+                        }
                               After clicking the position trigger button, there will be a "selecting camera" button below. After clicking in, the user can choose the camera to be used and determine its recognition range on a new page. \\
-                              (figma-routine-settings-posture-after-select)\\
-
+                              \addImage{
+                            imgs/lkj/routine_settings_posture_after_select.png
+                        }{
+                            Posture Trigger
+                        }
                             After confirmation, users can choose three identified postures, sitting, standing and lying. 
                             You can choose to perform the following actions after the camera recognizes. For example, turn on the lights or turn on the switch. The execution action can also be set by yourself.\\
 
@@ -265,33 +308,42 @@
                         \requirementTable{
                         Req 4.b.3.1 &When the user selects the assistant trigger settings, the user can enter the text that needs to be recognized.\\\\
                     }
-                        (figma-routine-settings-assistant)\\
+                    \addImage{
+                            imgs/lkj/routine_settings_assistant.png
+                        }{
+                            Assistant Trigger
+                        }
                               After clicking the voice assistant trigger setting, you can choose the voice command when you want to execute the command. Different triggers can be triggered based on the recognized voice command.\\
                         \item  Schedule Trigger Settings
                         \requirementTable{
                         Req 4.b.4.1 &After the user chooses to set the trigger, the user can choose the time they need.\\\\
                     }
                     (figma-routine-settings-schedule-set-time)\\
+                    \addImage{
+                            imgs/lkj/routine_settings_schedule_set_time.png
+                        }{
+                            Schedule Trigger
+                        }
                               After clicking on the scheduled trigger setting, you can select the time to be set in the prompt box below, and the trigger will be automatically executed after this time.\\
                     \end{enumerate}
           \end{enumerate}
 
-    \item {\large{Behavior Routine}}
+    \item {\large{Behavior}}
           \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
               \setlength{\itemindent}{0.5cm}
-              \item
+              \item Behavior routines
                     \requirementTable{
                         Req 4.2.1 & The user shall be able to set the behavior in accordance with the trigger if it is triggered from a specific setting, such as sound, sensor, time, posture, etc.\\\\
                         Req 4.2.2 & Actions are required to turn the lights off and on, to control the intensity of the light, and to control the time.\\\\
                     }
                     \addImage{
-                        imgs/specification/Behavior_Routines.png
+                        imgs/lkj/behavior_routines.png
                     }{
                         Behavior Routines
                     }
                     Press detect for each of posture, location, schedule, voice, and sensor to move to a configurable screen. Here, each trigger can be turned off and turned on according to the settings. Each routine can be shared through Drive/Messages/Bluetooth/Gmail by the sharing button. In addition, unnecessary routines can be deleted through the delete routine button.\\\\
 
-              \item
+              \item Add Action and Routines
                     \requirementTable{
                         Req 4.2.3 & To set these actions, a button is
                         required to add the desired action.\\\\
@@ -300,23 +352,33 @@
                         the seconds for minutes and seconds Broadcast should be implemented with a choice of speakers.\\\\
                     }
                     \addImage{
-                        imgs/specification/Add_Action.png
+                        imgs/lkj/add_action.png
                     }{
                         Add Action
                     }
-                    \addImage{
-                        imgs/specification/Add_routines.png
+                                        \addImage{
+                        imgs/lkj/action_device_control.png
                     }{
-                        Add Routines
-                        }
+                        Device control action
+                    }
+                                        \addImage{
+                        imgs/lkj/action_time_delay.png
+                    }{
+                        Time delay action
+                    }
+                                        \addImage{
+                        imgs/lkj/action_broadcast.png
+                    }{
+                        Broadcast action
+                    }
                     When the + button is pressed, it moves to the Add Action screen, where the Control Device, Time Delay, and Broadcast buttons exist, respectively. Control Device allows you to select a device, and the device has a Bulb and Switch implementation. In Time Delay, you can enter the time in minutes/second to put the time delay into the routine as much as you input.Broadcast has implemented a button that allows you to select the AI speaker you want..\\\\
 
           \end{enumerate}
 
-    \item {\large{Application Settings}}
+    \item {\large{Application Settings}}\\
           \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
               \setlength{\itemindent}{0.5cm}
-                \item
+                \item Setting page 1
             \requirementTable{
                 Req 5.1 & Each user is required with a button to
 modify so that the username can be set.\\\\
@@ -327,23 +389,23 @@ implemented to determine whether or not to
 receive an alarm.\\\\
             }
             \addImage{
-            imgs/specification/setting1.png
+                imgs/specification/setting1.png
             }{
-           Application Setting 1
+               Application Setting 1
             }
             The basic user name is set to 'username', and it is implemented so that you can modify it according to your needs by pressing the pencil button It also implemented a function that allows users to log out their accounts when they want to change their accounts or when the device changes through the Logout button. The Notification section allows the user to select whether to turn on or off the alarm when the routine is started by a specific trigger through the on/off switch on the Push alarm on the route strat. \\\\  
 
           \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
               \setlength{\itemindent}{0.5cm}
-              \item
+              \item Setting page 2
             \requirementTable{
                 Req 5.4 & Each time each user logs in, backup and restore routines should be implemented without the need to create a new routine.\\\\
                 Req 5.5 & A button to delete all settings should be implemented so that each person can initialize them.\\\\
             }
             \addImage{
-            imgs/specification/Setting2.png
+                imgs/specification/Setting2.png
             }{
-           Application Setting 2
+                Application Setting 2
             }
             In the Backup/Restore section, "Backup routes" and "Restore routes" buttons were implemented to allow users to save and import their respective routines. In "Backup routes", downloading and uploading to "Restore routes" were implemented together. Finally, the 'Delete all settings' button was implemented so that the user could delete all the set settings at any time. It is implemented with the x mark, so it can be easily deleted. \\\\
           \end{enumerate}

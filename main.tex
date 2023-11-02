@@ -26,6 +26,44 @@
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
+% function
+% add new image with full width
+% usage:
+% \addImageFull{
+%     imgs/specification/login_page.png
+% }{
+%     description to image
+% }
+\newcommand{\addImageFull}[2]{
+    \begin{figure}[ht]
+        \begin{center}
+            \includegraphics[width=8cm]{#1}
+            \caption{#2} % description to image
+            \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
+        \end{center}
+    \end{figure}
+}
+
+% function
+% add new image with specific size
+% usage:
+% \addImageSize{
+%     5cm
+% }{
+%     imgs/specification/login_page.png
+% }{
+%     description to image
+% }
+\newcommand{\addImageSize}[3]{
+    \begin{figure}[ht]
+        \begin{center}
+            \includegraphics[width={#1}]{#2}
+            \caption{#3} % description to image
+            \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
+        \end{center}
+    \end{figure}
+}
+
 \setcounter{figure}{0}
 
 \title{IOT Home Heroes\\
