@@ -141,50 +141,10 @@ Development manager & Jo Taesik & Breaking down a given task into solvable probl
 \input{pt3_development_environment}
 \input{pt4_specification}
 
+\clearpage
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 
-%     \item {\large{Choice of software development platform}}
-%     \begin{enumerate}[label=\alph*]
-%         \item development platform
-%         \begin{enumerate}
-%             \item Windows 10 : Windows are most commonly used operating system in Korea.  Among them, Windows 10, is used since Windows 11, the latest version, currently has stability problems.
-%             \item Mac OS Monterey : It is a Unix-based operating system and it used to use the Xcode. Xcode verifies that the application is operating in an iOS environment. 
-%             \item Android 6.0 \& up (api version 23 \& up) : Application test environment, developed with React Native, which is a cross platform. Minimum version follows Kakao Talk, which is supported in Android 6.0 \& up.
-%             \item iOS 11 \& up : Among the application environments, iOS is used. Minimum version follows Kakao Talk, which is supported in iOS11 \& up.
-%             \item Linux Ubuntu server 20.04 : Server environment which is driven by Amazon ec2 cloud computing service. Linux is optimized for running server in multi user operating system
-%         \end{enumerate}
-%         \item Language / Framework
-%         \begin{enumerate}
-%             \item Python / Django : \\
-%             Python - multi-paradigm programming language that supports both procedure-oriented and object-oriented programming. Also, quick development can be made through simple grammar, dynamic typing and garbage collectors. \\
-%             django - Through the vast amount of libraries that already exist, it is possible to develop repeated core functions quickly. In addition, user can solve problems quickly via official documents and other communities . It reduces the user's workload by creating database tables as classes.
-%             \item Javascript / React Native v0.66 : \\
-%             Javascript - Javascript is an interpreter or JIT compilation programming language that is widely used in script language for pages and non-browser environments such as Node.js. Users can obtain lots of reference materials in that javascript is the most commonly used programming language. \\
-%             React Native : React Native is a cross-platform development tool that satisfies the conditions for supporting both Android and iOS operating systems since the expected application user is a household unit. With the concept of a component that emphasizes V among mvc patterns, fast development through code recycling is possible. Because it is client side rendering, front end developers can easily and actively develop. With large community, it is possible to solve problems quickly.
-%             \item SQL : \\
-%             SQL is created to manage data in a relational database system, which is used to directly access the database and modify data.
-%         \end{enumerate}
-%         \item Software 
-%         \begin{enumerate}
-%             \item Visual Studio Code : Widely used code editor, developed by Microsoft. It is a scalable code editor that provides convenient functions that exceed the level of code editors through a wide variety of extensions. We will be using extensions related to Django, Javascript and React.
-%             \item Android Studio : Integrated development environment for Android development. We don’t use Android studios to write code, but we’re going to use Android simulators to be sure it works in Android. Or if it is necessary to utilize the Android native functions within React Native, we will use Android studio only in that part.
-%             \item Xcode : Collection of OS X’s development tools developed by Apple. It will be used to test code written reactively in an iOS environment using an iOS simulator in it.
-%             \item Git \& Github : Git is a distributed version management system that manages file change and tracking multi user's access, and Github is a web service that hosts these flag stores. Since we are developing both front and back ends by two team members, collaboration is important. So to prevent code collisions, we must check each other’s code. We will periodically integrate and manage code at remote storage through Github. Also, we will use git flow strategy to securely protect the integrated development  code while sustaining concurrency
-%             \item Github Action : Github Action is a tool that automates CI/CD. Currently, we do not need to deploy continuously and thus we will mainly use CI automation. When a commit is detected, the committed code is inspected through a preset process to help continuous code integration management. Also various test sets already existing in Github Action enable CI automation.
-%             \item Swagger :  Swagger is an open source software framework supported by a large tool ecosystem that helps developers design, build, document and consume REST web service. Since REST api does not have standardized conventions, front end developers should always check the specifications of api according to back-end developers. We will define api standards more easily and check api standards through swagger. 
-%             \item Notion : Multipurpose recording tools can create their own systems for knowledgement management, memo writing, data management and project management. We will manage the schedule using our own project schedule management template in Notion. We plan to adopt the agile method and build new sprints every 3 days for speedy development.  
-%             \item MySQL8.0.27 : Relational database system which has a framework for storing data. Since our application stores a large amount of user carbon emissions in format, MySQL has advantages. Also, MySQL is a frequently used program among RDBMS and since we learned this in our major, we can implement it quickly.
-%             \item MySQL workbench : Program that can manage database creation in MySQL and single development integration environment via GUI. It can develop databases easily through graphic based interaction and database schema through reverse engineering.
-%             \item Tensorflow \: Tensorflow is an open-source machine learning system developed by Google in 2015. Python allows you to develop artificial intelligence easily and quickly, and you can easily develop top artificial intelligence models through a large amount of libraries that already exist. It is also suitable for our team, which needs to be developed quickly as a platform that is very good for abstraction and visualization. 
-%             \item NUGU playbuilder : NUGU playbuilder is a tool that helps developing service that executes in NUGU speaker. It enables machine learning by setting indent and entity inside conversation, actions on conversation and expected conversation during the development. Since every procedure of service is in GUI, developers who are not used to AI development can easily work on the service.\\
-%             \end{enumerate}
-%     \end{enumerate}
-    
-%     \item {\large{Software in Use}}\\
-%     capture\\
-%     Capture predicts monthly carbon emission based on car usage and diets and suggests 7\% of deduction. It has similarity with our service in that it predicts the emission and suggests goal deduction. But our service not only proposes goal reduction but also recommends practical actions and provides contents that help put it into action. Also our service communicates with AI speakers in the process, which brings out the action more effectively. \\
-    
 %     \item {\large{Cost}}
 %     \begin{enumerate}[label=\alph*]
 %         \item aws ec2  t2.micro : 0.0116 * 720(hour) = 8.352 dollars per month
