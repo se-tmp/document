@@ -49,12 +49,12 @@
                         Req 1.5. & Alternatively, users can utilize an external ID, like a Google or Apple ID, to conveniently sign in without having to register.\\\\
                     }
                     \addImage{
-                        imgs/specification/firstPage.png
+                        imgs/specification/sign in.jpeg
                     }{
                         Login page
                     }
-                    On login page, there are LOGO and 3 buttons, 'Sign in', 'Continue with Google', and 'Continue with Apple'. When the user click 'Sign in', it turns to the Sign-in page. If two others are clicked, login successes and login page is changed to main page.\\\\
-                    \newpage
+                    On login page, there are LOGO and 2 buttons, 'Sign in' and 'Continue with Google'. When the user click 'Sign in', it turns to the Sign-in page. If other is clicked, login successes and login page is changed to main page.\\\\
+                
 
               \item Signin page
                     \requirementTable{
@@ -76,13 +76,12 @@
                         Req 1.8. & When the user sign up, he/she sets a username.\\\\
                         Req 1.9. & Username must be unique:Each user must have a unique username within the system to ensure proper identification and to prevent any confusion or conflicts.\\\\
                     }
-                    4 buttons, such as ID, Nickname, Password, and Confirm Password are included on sign up page. If all statements meet the conditions, when user press the sign-up button, sign-up is complete and it returns to the sign in page. And then, if user enter their ID and password and click the sign-in button, it turns to the main page.\\\\
-                    \newpage
                     \addImage{
-                        imgs/specification/signup.png
+                        imgs/specification/sign up.jpeg
                     }{
                         Sign up page
                     }
+                    3 buttons, such as ID, Password, and Confirm Password are included on sign up page. If all statements meet the conditions, when user press the sign-up button, sign-up is complete and it returns to the sign in page. And then, if user enter their ID and password and click the sign-in button, it turns to the main page.\\\\
           \end{enumerate}
           \clearpage
     \item {\large{Log}}\\
@@ -101,13 +100,12 @@
                             \bottomrule
                         \end{tabular}
                     \end{table}
-                    At the Bottom of the page, there is the menu named 'Log'. When the user click the 'Log' button, He/She can see their routine logs. This application records and stores information such as the user's location, posture, and sensors by time period. 
-                    \newpage
                     \addImage{
-                        imgs/specification/logs.png
+                        imgs/specification/log.jpeg
                     }{
                         Log page
                     }
+                    At the Bottom of the page, there is the menu named 'Log'. When the user click the 'Log' button, He/She can see their routine logs. This application records and stores information such as the user's location, posture, and sensors by time period. 
           \end{enumerate}
     \clearpage
     \item {\large{Device Dashboard}}\\
@@ -131,7 +129,8 @@
                         Dashboard
                     }
 
-                    On the device main page, the user will be able to manage and interact with their devices that are currently connected to your home automation system. You can manually start devices or perform actions with the toggle switch or the slider bar under the connected device name. The slider control is used to adjust settings like brightness or volume for devices such as bulbs. The toggle switch is used to toggle devices on and off for devices that don't require continuouos adjustment.  \\
+                    On the device main page, the user will be able to manage and interact with their devices that are currently connected to his/her home automation system. He/She can manually start devices or perform actions with the toggle switch or the slider bar under the connected device name. The slider control is used to adjust settings like brightness or volume for devices such as bulbs. The toggle switch is used to toggle devices on and off for devices that don't require continuouos adjustment.  \\\\
+                    \newpage
               \item Add device page
                     \begin{table}[H]
                         \center
@@ -142,22 +141,33 @@
                             Req 3.1.1. & This application provide users with the ability to connect devices, including device pairing and disconnection              \\\\
                             Req 3.1.2. & Implement a QR code-based device connection method, allowing users to easily pair devices by scanning QR codes              \\\\
                             Req 3.1.3. & Offer an alternative method for connecting to devices without the use of QR codes, providing flexibility in device pairing. \\\\
+                            Req 3.1.4. & If the connection to the device is successful, app ask user to register new device information. \\\\
                             \bottomrule
                         \end{tabular}
                     \end{table}
 
                     \addImage{
-                        imgs/specification/device_add.png
+                        imgs/specification/qr code.jpeg
                     }{
                         Add Device
                     }
-                    To add a device, click on the plus sign on the bottom right corner of the Dashboard page as shown in Fig. 39. Then the user will be forwarded to the page as shown in Fig. 40. and you can choose to scan the QR code to connect to the matter device with the '+ Scan' button on the middle. If you do not have the QR code, you can click on the 'connect without QR code' button right below the '+ Scan' button. \\
+                    To add a device, click on the plus sign on the bottom right corner of the Dashboard page as shown in Fig. 47. Then the user will be forwarded to the page as shown in Fig. 48 and he/she can scan the QR on this page. If the user click the 'Set up without QR code', user can add a device without QR code as shown in Fig. 49. If he/she succeed to connect a device, the user can see the page as shown in Fig. 50 and he/she can set the name of the device as shown in Fig. 51.  \\
                     \addImage{
-                        imgs/specification/device_add_alternative.png
+                        imgs/specification/pairing code.jpeg
                     }{
                         Add Device without QR Code
                     }
-                    \newpage
+                    \addImage{
+                        imgs/specification/device connected.jpeg
+                    }{
+                        Device Connected
+                    }
+                    \addImage{
+                        imgs/specification/new device information.jpeg
+                    }{
+                        New Device Information
+                    }
+                    \clearpage
               \item Device status page
                     \begin{table}[H]
                         \center
@@ -176,7 +186,7 @@
                     }{
                         Device Status
                     }
-                    To view the status of the device, click on the specific device and the user will be proceeded to a page to view the connectivity status of the device and for a device such as the camera, the live feed of the recording device. \\
+                    To see the status of the device, the user have to click the specific device on the device dashboard page. Then, he/she can see activation status of the device. \\
                     \newpage
               \item Rename device page
                     \begin{table}[H]
@@ -196,7 +206,7 @@
                     }{
                         Rename Device
                     }
-                    To change the name of the connected device, click on the 'Rename' button and a pop up will appear on the middle of the page for the user to change the device's name and once the user has decided its name, click on the change button to save its settings. \\
+                    To change the name of the connected device, click the 'Rename' button and a pop up will appear on the middle of the page for the user to change the device's name. When the user enters its name and click the 'change' button, the name of the device is changed. \\
                     \newpage
               \item Delete device page
                     \begin{table}[H]
@@ -212,14 +222,13 @@
                     \end{table}
 
                     \addImage{
-                        imgs/specification/device_settings_delete.png
+                        imgs/specification/delete device.jpeg
                     }{
                         Delete Device
                     }
-                    To delete a device from the user's saved devices, click on the 'Delete' button and a pop up
-                    will appear on the middle of the page and to permanently delete, click on the 'delete button' to execute the action. \\
+                    To delete a device, user can click the 'Delete' button on device status page. A pop up will appear on the middle of the page, and he/she can click the 'Confirm' to delete it. If not, the user can click the 'Dismiss' button.\\
           \end{enumerate}
-          \clearpage
+          \newpage
     \item {\large{Routine}}\\
           \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
               \item Routine page
@@ -228,23 +237,22 @@
                         Req 4.1. & Users can add their own routine through the "+" icon in the lower right corner.\\
                     }
                     \addImage{
-                        imgs/specification/routine_main.png
+                        imgs/specification/routine.jpeg
                     }{
                         Routine Page
                     }
-                    In the routine page, each designed routine will be displayed here, and there is a start button on each path that allows users to execute manually. There is an additional button in the lower right corner.\\
+                    In the routine page, the user can see all routines they designed. There is routine activation button on each routine that allows the user to activate it manually. There is also an '+' button in the lower right corner.\\
                     \newpage
               \item Create new routine
                     \requirementTable{
                         Req 4.a.1 &In the pop -up prompt box, the user can enter the name of the routine.\\
                     }
                     \addImage{
-                        imgs/specification/routine_add.png
+                        imgs/specification/add routine.jpeg
                     }{
                         Create new routine
                     }
-                    Click the plus sign in the lower right corner of the page to create your own routine. Enter the name of the desired routine in the pop-up window and click "Add" to enter the routine setting page.\\
-
+                    Click the '+' button in the lower right corner of the page to create a new routine. Then, the user can see the page as shown in Fig. 57.\\
                     \newpage
               \item Routine Setting Page
                     \requirementTable{
@@ -252,25 +260,27 @@
                         Req 4.b.2 &Select a trigger as a startup condition.\\\\
                         Req 4.b.3 &It can be configured to perform actions after a trigger is activated.\\\\
                         Req 4.b.4 &Let users save and return to the previous page.\\
+                        Req 4.2.7 & User can also run the routine you want to run directly by pressing the play button\\\\
                     }
                     \addImage{
-                        imgs/specification/routine_default.png
+                        imgs/specification/routine setting.jpeg
                     }{
                         Routine Setting
                     }
-                    At the top of the page, there is a "←" icon on the left, which allows users to return to the previous page. There is a hook sign on the right to allow users to save the current trigger settings. Then there is the name of the trigger below. Click it to modify the name of the trigger. There is a switch on the right to control whether this routine is activated. \\
+                    At the top of the page, there is a "←" icon on the left, which allows users to return to the previous page. Then there is the name of the trigger below and users can modify its name by click the pencil icon. There is a switch on the right to control whether this routine is activated. There is a play button on the left side of the switch that allows users to run the routine directly.\\
                     \addImage{
                         imgs/specification/routine_share.png
                     }{
                         Routine Sharing
-                    }
-                    There are sharing and deletion buttons below the routine name. If you choose to share, you can share it to other software. \\
+                    }\\
+                    There are sharing and deletion buttons below the routine name. If you choose to share, you can share it to other software.\\
+                    \newpage
                     \addImage{
-                        imgs/specification/routine_delete_confirm.png
+                        imgs/specification/delete routine.jpeg
                     }{
                         Routine Delete
                     }
-                    If you want to delete, there will be a prompt box to ask the user if you confirm the deletion. Next, you can choose a trigger, and you can choose different conditions according to different triggers.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+                    If the user want to delete, there will be a prompt box to ask the user if you confirm the deletion as . Next, the user can choose a trigger, and he/she can choose different conditions according to different triggers as shown in Fig. 57.\\
                     \newpage
                     \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
                         \newpage
@@ -284,8 +294,7 @@
                                   Assistant Trigger
                               }
                               After clicking the voice assistant trigger setting, you can choose the voice command when you want to execute the command. Different triggers can be triggered based on the recognized voice command.\\
-                              \newpage
-                        \clearpage
+                              \clearpage
                         \item Location Trigger Settings
                               \requirementTable{
                                   Req 4.b.1.1 &When the user selects the location trigger, the user can select a position on a new page displayed by a map.\\
@@ -309,26 +318,14 @@
                               \requirementTable{
                                   Req 4.b.2.1 &When the user selects a posture trigger setting, the user can choose the recognition range of the camera they want to use.\\\\
                                   Req 4.b.2.2 &The condition that users can choose to judge whether they are sitting, standing or lying.\\
+                                  Req 4.b.2.3 & Actions are largely divided into Sit/Stand/Lie, and each action is divided and a routine is executed for each user.\\
                               }
                               \addImage{
-                                  imgs/specification/routine_settings_posture_before_select.png
+                                  imgs/usercase/usercase_scenario1_8.jpg
                               }{
-                                  Posture Trigger before select the camera
+                                  Posture Trigger
                               }
-                              After clicking the position trigger button, there will be a "selecting camera" button below. After clicking in, the user can choose the camera to be used and determine its recognition range on a new page. \\
-                              \addImage{
-                                  imgs/specification/routine_settings_posture_set_camera_range_overlay-1.png
-                              }{
-                                  Camera select page
-                              }
-                              \newpage
-                              After confirmation, users can choose three identified postures, sitting, standing and lying.
-                              You can choose to perform the following actions after the camera recognizes. For example, turn on the lights or turn on the switch. The execution action can also be set by yourself.\\
-                              \addImage{
-                                  imgs/specification/routine_settings_posture_after_select.png
-                              }{
-                                  Posture Trigger after select the camera
-                              }\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+                              After clicking the position trigger button, there will be a camera screen. The user can determine its recognition range. After confirmation, users can choose three identified postures, sitting, standing and lying. The execution action can also be set by users themselves.\\
                               \newpage
                         \item  Schedule Trigger Settings
                               \requirementTable{
@@ -351,8 +348,7 @@
                         Req 4.2.1 & The user shall be able to set the behavior in accordance with the trigger if it is triggered from a specific setting, such as sound, sensor, time, posture, etc.\\\\
                         Req 4.2.2 & Actions are required to turn the lights off and on, to control the intensity of the light, and to control the time.\\\\
                     }
-                    Press detect for each of posture, location, schedule, voice, and sensor to move to a configurable screen. Here, each trigger can be turned off and turned on according to the settings. Each routine can be shared through Drive/Messages/Bluetooth/Gmail by the sharing button. In addition, unnecessary routines can be deleted through the delete routine button.\\\\
-                    \newpage
+                    Users can add actions such as device control, time delay, and broadcast according to trigger they set. They can easily delete a action by clicking trash can icon on the right side of each action.\\
                     \addImage{
                         imgs/specification/behavior_routines.png
                     }{
@@ -370,34 +366,36 @@
                     }{
                         Add Action
                     }
-                    \addImage{
-                        imgs/specification/select_device.png
-                    }{
-                        Device select page
-                    }
-                    When the + button is pressed, it moves to the Add Action screen, where the Control Device, Time Delay, and Broadcast buttons exist, respectively.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+                    When the + button is pressed, it moves to the Add Action screen, where the Control Device, Time Delay, and Broadcast buttons exist, respectively.\\
                     \newpage
               \item Actions
                     \requirementTable{
                         Req 4.2.5 & The control device allows you to select a device On the time-delay, you can set the seconds for minutes and seconds Broadcast should be implemented with a choice of speakers.\\\\
                     }
-                    Control Device allows you to select a device, and the device has a Bulb and Switch implementation. In Time Delay, you can enter the time in minutes/second to put the time delay into the routine as much as you input. Broadcast has implemented a button that allows you to select the AI speaker you want.\\
-                    \newpage
+                    \addImage{
+                        imgs/specification/device select.jpeg
+                    }{
+                        Device select page
+                    }
                     \addImage{
                         imgs/specification/action_device_control.png
                     }{
                         Device control action
                     }
+                    In Control Device, users can select a device and they can set its status.
                     \addImage{
                         imgs/specification/action_time_delay.png
                     }{
                         Time delay action
-                    }
+                    }\\
+                    \newpage
+                    In Time Delay, users can enter the time in minutes/seconds to set the time delay for other actions.\\
                     \addImage{
                         imgs/specification/action_broadcast.png
                     }{
                         Broadcast action
-                    }
+                    }\\
+                    In Broadcast, users can select AI speaker and set the message that speaker would say.\\
           \end{enumerate}
     \clearpage
     \item {\large{Application Settings}}\\
@@ -418,7 +416,7 @@
                     }{
                         Application Setting 1
                     }
-                    The basic user name is set to 'username', and it is implemented so that you can modify it according to your needs by pressing the pencil button It also implemented a function that allows users to log out their accounts when they want to change their accounts or when the device changes through the Logout button. The Notification section allows the user to select whether to turn on or off the alarm when the routine is started by a specific trigger through the on/off switch on the Push alarm on the routine start. \\\\
+                    The basic username is set to 'username', and users can modify it by clicking the pencil icon next to it. There is also 'Logout' button under the username and they can log out with this button. There is switch that allows users to set push notification of start of routine, which is set to by 'ON' as default.\\\\
                     \newpage
                       \setlength{\itemindent}{0.5cm}
                       \item Setting page 2
@@ -431,6 +429,6 @@
                           }{
                               Application Setting 2
                           }
-                          In the Backup/Restore section, "Backup routes" and "Restore routes" buttons were implemented to allow users to save and import their respective routines. In "Backup routes", downloading and uploading to "Restore routes" were implemented together. Finally, the 'Delete all settings' button was implemented so that the user could delete all the set settings at any time. It is implemented with the x mark, so it can be easily deleted. \\\\
+                          In the Backup/Restore section, "Backup routines" and "Restore routines" buttons allow users to save or return routine datas. Finally, the 'Delete all settings' button allows users to delete all settings they set.\\\\
           \end{enumerate}
 \end{enumerate}

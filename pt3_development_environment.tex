@@ -38,7 +38,7 @@
 
             \item Microsoft Azure\\
             \addImageSize{6cm}{imgs/development_envirionment/azure.png}{Microsoft Azure}\\
-ㅌ            Azure is a cloud computing platform provided by Microsoft. It offers services such as SaaS, PaaS, and IaaS using their data centers around the world. They also help us to manage and develop these services. We use Azure's IaaS to run our backend server. We deploy virtual machines in Azure's data centers and use them as our servers.\\
+            Azure is a cloud computing platform provided by Microsoft. It offers services such as SaaS, PaaS, and IaaS using their data centers around the world. They also help us to manage and develop these services. We use Azure's IaaS to run our backend server. We deploy virtual machines in Azure's data centers and use them as our servers.\\
 
             \item Matter\\
             \addImageSize{6cm}{imgs/development_envirionment/matter.jpg}{Matter}\\
@@ -74,6 +74,16 @@
                 \item Jetpack Compose\\
                 \addImageSize{6cm}{imgs/development_envirionment/jetpack_compose.png}{Jetpack Compose}\\
                 Jetpack Compose is a toolkit to create native Android user interfaces. Its streamlined code enables a more extensive range of options than traditional XML, making it more manageable and updates user interfaces automatically when app states change. Jetpack Compose integrates seamlessly with existing code compositions, offers live previews and incorporates Android's built-in design themes.\\
+
+                \item Firebase\\
+                \addImageSize{6cm}{imgs/development_envirionment/firebase.png}{Firebase}
+                Firebase is a development platform for mobile and web applications, a set of cloud-based services provided by Google. Firebase includes a wide range of features to help developers get their applications up and running quickly.\\
+                \begin{enumerate}
+                    \item Firebase Authentication\\
+                    Firebase Authenticaion helps developers avoid having to implement OAuth or login logic themselves. Firebase Authentication provides the backend services needed to authenticate users in your app. It helps developers not only log in with a username and password, but also authenticate with Google, Facebook, Twitter, and more.\\
+                    \item Firebase Cloud Messaging\\
+                    Firebase Cloud Messaging is a service that allows you to send messages from a server to a client. Normally, the server needs to know the client's IP to send a message to a specific client, but Firebase Cloud Messaging allows users to log in with Firebase Authentication and send messages directly to the client via Google servers using the User Id obtained through Firebase Authentication.\\
+                \end{enumerate}
             \end{enumerate}
 
         \item {\large{Tech stacks - Backend}}\\
@@ -117,6 +127,11 @@
             \item IntelliJ DataGrip\\
             \addImageSize{5cm}{imgs/development_envirionment/datagrip.png}{IntelliJ DataGrip}\\
             IntelliJ DataGrip is a database and SQL IDE provided by JetBrains. It allows us to explore schemas through a graphical user interface (GUI) and provides information about how queries work and the behavior of the database engine to help us optimize our queries. We will be able to visually inspect and manipulate our database, which will greatly benefit the creation of SQL queries.\\
+
+            \item MediaMtx\\
+            \addImageSize{6cm}{imgs/development_envirionment/mediamtx.png}{MediaMtx}
+            mediaMtx is a real-time media server that receives sources such as RTMP and proxies them to protocols such as HLS and DASH.
+            Since the Matter protocol does not currently support cameras, we designed mediaMtx to receive video from other cameras.\\
         \end{enumerate}
 
         \item {\large{Tech stacks - Computer vision}}\\
@@ -136,6 +151,10 @@
             \item OpenPose\\
             \addImageSize{7cm}{imgs/development_envirionment/openpose.png}{OpenPose}\\
             OpenPose is a library built on top of OpenCV that can detect a total of 135 keypoints on a person's body, hands, face, or feet in real time. These keypoints can be used to analyze a person's posture. Because it uses a bottom-up approach, it is better than other libraries at detecting occluded or overlapping objects. Since the core of our project is to detect which pose the user takes near which object from a user-specified camera, Openpose comes in handy.\\
+
+            \item Ultralytics YOLOv8\\
+            \addImageSize{6cm}{imgs/development_envirionment/yolov8.png}{Ultralytics YOLOv8}
+            \\YOLO (You Only Look Once) is one of the deep learning algorithms that performs object detection. YOLO processes an image in one forward pass while simultaneously predicting the bounding box of an object and the class of that object. This makes it faster than other common object detection algorithms while still maintaining high accuracy. We used YOLOv8, the eighth version of YOLO, to determine the user's pose.\\
         \end{enumerate}
         
     \item {\large{Task distribution}}
@@ -178,7 +197,7 @@
           \begin{table}[H]
               \center
               \begin{tabular}{m{1.4cm} m{1.5cm} m{4cm}}
-                  Computer vision & Lee Hyunsuk & Computer vision developers create programs for image and video processing and interpretation using libraries like OpenCV and OpenPose. They design and implement algorithms to extract desired information from visual data. \\\\
+                  Computer vision & Jo Taesik, Lee Hyunsuk & Computer vision developers create programs for image and video processing and interpretation using libraries like OpenCV and OpenPose. They design and implement algorithms to extract desired information from visual data. \\\\
                   \bottomrule
               \end{tabular}
           \end{table}

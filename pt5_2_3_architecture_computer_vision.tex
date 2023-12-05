@@ -1,0 +1,43 @@
+                    \begin{enumerate}
+                        \item Purpose\\
+                              The computer vision part of TempoMate has a simple job to do.
+                              It receives video information from a connected camera, and then sends it to the client via the backend so that when an event occurs that corresponds to a posture trigger you've set up, the client that has that routine will execute it.\\\\
+
+                        \item Funtionality\\
+                              \begin{enumerate}
+                                  \item Camera connection:\\
+                                        Since Matter doesn't support cameras, we need to get footage directly from the user's own camera in some other way. We get the camera footage from the backend via the RTMP protocol.\\
+
+                                  \item pose recognition:\\
+                                        After fetching the camera footage in real-time, we analyze the camera's screen at 30 frames per second to find out if a person is present and, if so, in what position. The data found is represented by a dot on the top left of the box representing the person, a dot on the bottom right, and finally a pose.\\
+
+                                  \item Normalize the data:\\
+                                        Since different cameras have different resolutions, we represent the coordinates as floating-point points corresponding to 0-1. Also, since people can move, we cluster data in similar locations. Since there is a possibility of model malfunction, we filter out the 30 frames per second that we recognize more than a certain number of times.\\
+
+                                  \item Enable triggers:\\
+                                        Using the normalized data and the trigger data received through the backend, we analyze if there are any triggers that can be activated. If a person's pose remains in one position, it is handled appropriately to prevent multiple triggers.\\\\
+                              \end{enumerate}
+                        \item Location of source code \\
+                              : www.github.com/se-tmp/backend \\\\
+
+                        \item Class Component\\
+                              \begin{enumerate}
+                                  \item processing\\
+                                        The contents of this folder are actually about the services that work for the entire project.\\
+
+                                  \item model.pt\\
+                                        This file is an integral part of the project, allowing us to determine if a person is in a particular frame of a video, and if so, what pose they are in.\\
+
+                                  \item ThreadedCamera.py\\
+                                        This class allows you to receive camera video from the backend via the RTMP protocol. It determines the frames in the video, fetches the frame information back at the time corresponding to each frame, and passes it to another class.\\
+
+                                  \item Processor.py\\
+                                        This class normalizes and clusters the data we get from the model. It uses this data to find out if any of the triggers fetched from the backend should be activated. \\
+
+                                  \item main.py\\
+                                        This file initiates the camera connection, receives frames from the ThreadedCamera, analyzes the frames through the model, and passes the results to the Processor class.\\
+                              \end{enumerate}
+
+                        \item training/train.ipynb\\
+                              This file is where we actually train the model using the dataset.\\
+                    \end{enumerate}

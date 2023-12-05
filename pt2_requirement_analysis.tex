@@ -48,12 +48,13 @@
                         \item This application provide users with the ability to connect devices, including device pairing and disconnection.\\
                         \item Implement a QR code-based device connection method, allowing users to easily pair devices by scanning QR codes.\\
                         \item Offer an alternative method for connecting to devices without the use of QR codes, providing flexibility in device pairing.\\
+                        \item If the connection to the device is successful, app ask user to register new device information\\
                     \end{enumerate}
 
               \item {\large{Device Status Check}}\\
                     \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
                         \setlength{\itemindent}{0.5cm}
-                        \item This application implements a system to log and monitor the status of connected devices, including health assessments and connectivity information.\\
+                        \item This application implements a system to log and monitor the status of connected devices, including connectivity information.\\
                         \item It should create and maintain records of status check activities, recording when these checks were performed, the specific devices involved, and the results indicating device operational status or reported issues.\\
                     \end{enumerate}
 
@@ -102,14 +103,16 @@
                               \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
                                   \setlength{\itemindent}{0.5cm}
                                   \item Capturing images or videos through the camera and utilizing OpenPose for body posture recognition also allows for the identification of body movements.\\
-                                  \item Different actions can trigger various functions based on the recognized movements.\\
+                                  \item Different actions can trigger various functions based on the recognized movements
+                                  \item Actions are largely divided into Sit/ Stand/Lie, and each action is divided and a routine is executed for each user.\\
                               \end{enumerate}
 
-                        \item {\large{Position Trigger}}\\
+                        \item {\large{location Trigger}}\\
                               \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
                                   \setlength{\itemindent}{0.5cm}
                                   \item The user's location can be determined based on the location information of the user's mobile phone, and corresponding functions can be triggered based on the user's location.\\
                                   \item For example, when the user returns home, they automatically turn on the lights and automatically start the air conditioner.\\
+                                  
                               \end{enumerate}
 
                     \end{enumerate}
@@ -127,11 +130,14 @@
                         \item Add items such as devices, time delays, and broadcasts to be controlled by adding actions.A button to delete is also required if the action is not required
                               \\
 
-                        \item The control device allows you to select a device
-                        On the time-delay, you can set the seconds for minutes and seconds Broadcast should be implemented with a choice of speakers
+                        \item The control device allows user to select a device
+                        On the time-delay, user can set the seconds for minutes and seconds Broadcast should be implemented with a choice of speakers
                               \\
 
                         \item Each trigger and each user shall be able to set the name of the routine and select enable/disable the routine.
+                              \\
+
+                        \item user can also run the routine you want to run directly by pressing the play button
                               \\
                     \end{enumerate}
           \end{enumerate}

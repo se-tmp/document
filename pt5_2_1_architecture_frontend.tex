@@ -1,0 +1,167 @@
+\begin{enumerate}
+                        \item Purpose \\
+                              TempoMate's backend serves as the central nervous system, orchestrating seamless communication between users, frontend interfaces, and the intricate web of routines, triggers, and actions within the application. Its overarching purpose is to empower users to effortlessly manage their smart home environment, utilizing real-time video streaming via RTMP to detect user positions and postures, specifically when they are resting in bed. By understanding and interpreting these scenarios, the backend triggers predefined routines, seamlessly executing actions such as turning off room lights. Additionally, the backend administers essential user functionalities, including registration, login, logout, and nickname changes, ensuring a secure and personalized experience for each user. \\\\
+                        \item Functionality \\
+                              TempoMate offers an intuitive interface that empowers users to effortlessly harness the sophisticated capabilities orchestrated by the backend. The frontend serves as the user's gateway to a personalized and responsive smart home environment.\\
+
+                              User Account Management:
+                              The frontend streamlines the user account management process, providing a seamless experience for tasks such as registration, login, logout, and nickname changes. Through clear and user-friendly interfaces, individuals can easily establish and customize their profiles within the TempoMate ecosystem.\\
+
+                              Routines Management:
+                              Users have full control over defining their smart home environment through the frontend's management of routines. They can intuitively add, delete, and share routines, tailoring their automation preferences with simplicity. The frontend visually represents these routines, allowing users to grasp and modify their smart home orchestration effortlessly.\\
+
+                              Action Customization:
+                              The frontend facilitates the addition and deletion of actions, empowering users to specify precise responses to detected video scenarios. Through the frontend interface, users can fine-tune the behavior of their smart home, ensuring that it aligns precisely with their preferences and needs.\\
+
+                              Trigger Activation:
+                              Managing triggers becomes an accessible task through the frontend, enabling users to activate and expand smart home routines effectively. The frontend provides a clear representation of triggers, allowing users to understand and adjust the conditions that initiate specific actions within their smart home environment.\\
+
+                              Real-time Video Streams:
+                              The frontend seamlessly integrates real-time video streams captured via RTMP, providing users with live insights into their smart home environment. Through the frontend, users can monitor and interact with the captured video, enhancing their situational awareness and control.\\
+
+                              In essence, the frontend of TempoMate not only simplifies user management but also empowers users to shape and interact with a smart home environment that is both adaptive and responsive, thanks to the sophisticated functionalities orchestrated by the backend. \\\\
+
+                        \item Location of source code \\
+                              : https://github.com/se-tmp/frontend \\\\
+
+                        \item Class Component \\
+                        \item[-] ActionPage.kt \\
+                              The provided code includes several Jetpack Compose functions for building the user interface of an Android application. These functions handle different aspects of the app's functionality, such as selecting action types, choosing devices, and configuring actions for device control. The code demonstrates the use of Jetpack Compose features, creating a well-structured and maintainable codebase for managing the app's UI and user interactions.\\
+                        \item[-] AddActionSelectDevice.kt \\
+                              The AddActionSelectDevice composable class renders a grid of selectable devices retrieved from a DevicesRepository. Utilizing Jetpack Compose's LazyVerticalGrid, the devices are efficiently displayed in a two-column grid with appropriate spacing. Each device is represented by a DeviceCard with an associated icon and name. When a user selects a device by clicking on its card, the chosen device is stored in the IotViewModel, and the navigation is triggered to go back (onNavigateUp). This composable efficiently handles the presentation of selectable devices, enhancing the user experience for adding actions related to specific devices in the smart home environment\\
+                        \item[-] Dashboard.kt \\
+                              The Dashboard composable function renders a grid of devices, each represented by a DeviceCard, providing an overview of the smart home environment. The list of devices and their states is periodically updated by querying repositories (DevicesRepository and DevicesStateRepository). The devices are displayed in a two-column grid using LazyVerticalGrid, with appropriate spacing and padding. Each DeviceCard includes details such as the device name, icon, switch state, and online status. Users can interact with the cards by adjusting the device state or clicking on them to view more details. The composable uses coroutines to handle periodic updates of device information. This Dashboard composable serves as a central hub for users to monitor and control their smart home devices efficiently.\\
+                        \item[-] DeviceCard.kt \\
+                              The DeviceCard composable is a versatile component designed to represent various types of cards within a smart home application. It supports different card types (DeviceCardType), such as those for the dashboard, routines, and device selection. The card layout includes an icon, device name, and status information, with specific buttons or elements based on the card type. The card may feature an on/off switch (Switch) for the dashboard and routine cards, and it can handle adjustments with the provided onAdjust callback. Additionally, the card may display an "Offline" status for devices in the dashboard that are not currently online.\\
+                        \item[-] DevicePage.kt \\
+                              DevicePage serves as a comprehensive view for managing and interacting with a specific device, encompassing its status, actionable buttons, and a visual representation of the device. This composable enhances the user experience by providing a consolidated interface for device-related actions.\\
+                        \item[-] IotViewModel.kt \\
+                              The ViewModel initializes with user data repository, Gson for JSON serialization/deserialization, and loads initial data when created.\\\\
+                              Loading Initial Data : Retrieves initially saved routines from the user data repository, parsing and updating the UI state accordingly.\\
+
+                              Saving Routines : Asynchronously saves the provided list of routines to the user data repository in JSON format.\\
+
+                              Setting User ID : Updates the UI state with the user ID.\\
+
+                              Setting Device : Updates the UI state with the currently selected device.\\
+
+                              Appending Action on Routine : Adds the current action to the actions list of the current routine in the UI state.\\
+
+                              Appending Routine : Adds or modifies a routine in the UI state based on whether it already exists.\\
+
+                              Deleting Action on Routine by Index : Removes an action from the actions list of the current routine based on the provided index.\\
+
+                              Setting Current Action : Updates the UI state with the current action.\\
+
+                              Setting Actions : Updates the UI state with a list of actions.\\
+
+                              Setting Trigger Type of Current Routine : Updates the UI state with the trigger type of the current routine.\\
+
+                              Setting Trigger of Current Routine : Updates the UI state with the trigger of the current routine.\\
+
+                              Setting Triggers : Updates the UI state with a list of triggers.\\
+
+                              Setting Routines : Updates the UI state with a list of routines.\\
+
+                              Setting Current Routine : Updates the UI state with the current routine.\\
+                        \item[-] LoginPage.kt \\
+                              The provided code comprises three Jetpack Compose functions for user authentication in an IoT application. LoginPage displays a login page, allowing users to sign in with email/password or Google. SignIn handles email/password authentication, while SignUp manages user registration. These functions utilize FirebaseAuth for authentication and seamlessly navigate to the Devices screen upon successful login or signup, enhancing the overall user authentication flow.\\
+                        \item[-] RoutinePage.kt \\
+                              The provided code includes Jetpack Compose functions for creating various UI components related to an IoT application. TitleBar, TitleButtons, TriggerTypes, Trigger, AddActionButton, Action-ControlDevice, Action, Actions, RoutinePage, PointerCircle, and ResizableRectangle contribute to building the user interface for managing routines and actions. These components cover aspects such as displaying routine titles, handling triggers, showing action lists, and providing interactive elements for creating and editing routines.\\
+                        \item[-] Routines.kt \\
+                              Routines is a Composable function that uses Jetpack Compose to display a grid of routine cards. It takes an IotViewModel as a parameter to access the UI state, a function onClickCard to be executed when a routine card is clicked, and an optional modifier for styling. The routine data is collected from the UI state using viewModel.uiState.collectAsState().value.routines.\\
+
+                              The grid is implemented using LazyVerticalGrid with fixed columns, and each routine is represented by a DeviceCard composable. The DeviceCard includes information such as the routine's name, icon, and on/off status. When a routine card is clicked, it updates the current routine in the view model and triggers the onClickCard function.\\
+                        \item[-] Settings.kt \\
+                              Settings is a Composable function that represents a screen displaying user settings, including a title bar, notification settings, backup and restore options, version information, and a delete all settings option. It utilizes Jetpack Compose for UI development and Firebase Authentication (auth: FirebaseAuth) for handling user authentication. The screen layout is organized using various Compose components such as Column, Row, Text, Icon, Switch, and Button.\\
+                        \item[-] LotScreen.kt \\
+                              The App Composable function represents the main structure of your IoT application. It uses Jetpack Compose for UI development and is composed of various screens corresponding to different IotScreen enum values. The app includes features such as user authentication, a dashboard displaying devices, routines management, logs, settings, and various actions. The App Composable orchestrates the navigation flow, state management, and UI structure of your IoT application, providing a cohesive user experience across different screens.\\
+                        \item[-] FCMService.kt \\
+                              The FCMService class extends FirebaseMessagingService and overrides the onMessageReceived method to handle incoming FCM messages. When a message is received, it logs the message details using Timber and extracts a target value from the message data. It then initiates a routine using the startRoutine method of the IotViewModel associated with the FCMManager singleton.
+                              The FCMManager class is a singleton responsible for managing the FCM instance. It holds a reference to an IotViewModel and ensures a single instance of itself is created using the Singleton pattern. The context is initialized when the instance is created.\\
+                        \item[-] Action.kt\\
+                              ActionType: An enumeration defining the types of actions with associated titles, icons, and numerical identifiers.
+                              Action: An interface specifying properties for actions.
+                              ActDevice: A data class representing details about a device-related action. It implements the Action interface, inheriting basic properties for actions.\\
+                        \item[-] AppPreferenceDataStore.kt\\
+                              code defines a custom PreferenceDataStore for managing application settings data. This custom data store interacts with a UserPreferencesRepository, which appears to be a Proto DataStore managing user preferences. The AppPreferenceDataStore class handles storing and retrieving settings, converting between string and boolean values based on certain keys, and updating the underlying data repository accordingly.
+                              The use of coroutines and asynchronous operations demonstrates an approach to managing data interactions without blocking the main thread. The code also utilizes Timber for logging.\\
+                        \item[-] Device.kt\\
+                              DeviceType: An enumeration defining different types of devices, including an unknown type and three specific types (SLIDER-BULB, SWITCH-BULB, SWITCH).
+                              Device: A data class representing device information, including the device's ID, name, type (using the DeviceType enum), switch status, and text information.
+                              The code is relevant to a device table, and the data class makes it convenient to manipulate and utilize device details within the application.\\
+                        \item[-] DevicesRepository.kt\\
+                              DevicesRepository responsible for managing and persisting a set of devices using a DataStore.
+                              The DevicesRepository is a singleton repository that interacts with a DataStore to manage and persist a collection of devices in the homesampleapp fabric. It provides methods to add, update, remove, and retrieve devices, as well as to clear all data. The repository uses coroutines and provides a Flow for observing changes in the stored devices.
+                              The incrementAndReturnLastDeviceId method increments the last device ID and updates the DataStore. The addDevice method adds a new device, updateDevice updates an existing device, removeDevice removes a device, and getDevice retrieves a specific device by ID. Additionally, there are methods to update the device type, get the last device ID, and retrieve all devices.\\
+                        \item[-] DevicesSerializer.kt\\
+                              The DevicesSerializer object implements the Serializer interface for the Devices data type. It specifies how to convert instances of Devices to and from bytes for storage and retrieval. In case of a protocol buffer parsing exception, a CorruptionException is thrown to handle potential data corruption.
+
+                              The extension property devicesDataStore is created as an extension property on the Context class. It provides a convenient way to obtain a DataStore<Devices> instance with the specified file name ("devices-store.proto") and the custom DevicesSerializer. This extension property simplifies the creation of the DataStore for managing instances of the Devices class.\\
+                        \item[-] DevicesStateRepository.kt\\
+                              The DevicesStateRepository is a singleton repository that interacts with a DataStore to manage and persist the dynamic state of devices in the homesampleapp fabric. It provides methods to add, update, and retrieve device states, as well as to clear all data. The repository uses coroutines and provides a Flow for observing changes in the stored devices' dynamic states.
+
+                              The repository maintains a LiveData (lastUpdatedDeviceState) representing the latest device state update. This LiveData is updated whenever a new device state is added or an existing one is updated.
+
+                              The addDeviceState method adds a new device state, and the updateDeviceState method updates an existing device state. The repository ensures that the LiveData reflecting the last updated device state is always kept current.
+
+                              The getAllDevicesState method retrieves the entire dynamic state of devices, and the clearAllData method clears all stored data.\\
+                        \item[-] DevicesStateSerializer.kt\\
+                              The DevicesStateSerializer object implements the Serializer interface for the DevicesState data type. It defines how to convert instances of DevicesState to and from bytes for storage and retrieval. If there's an issue with parsing the protocol buffer during deserialization, a CorruptionException is thrown to handle potential data corruption.
+
+                              The extension property devicesStateDataStore is created as an extension property on the Context class. This property provides a convenient way to obtain a DataStore<DevicesState> instance with the specified file name ("devices-state-store.proto") and the custom DevicesStateSerializer. This extension property simplifies the creation of the DataStore for managing instances of the DevicesState class.\\
+                        \item[-] GsonInterfaceAdapter.kt\\
+                              The GsonInterfaceAdapter class implements both the JsonDeserializer and JsonSerializer interfaces for handling the serialization and deserialization of interface types. It utilizes Gson's functionality to convert JSON elements to Java objects and vice versa.
+
+                              The deserialize method is responsible for deserializing a JSON element into an object of the specified interface type. It extracts the class name and data from the JSON element, resolves the class, and then uses Gson's context to deserialize the data into an object of the resolved class.
+
+                              The serialize method is responsible for serializing an object of an interface type into a JSON element. It creates a JSON object, adds the class name and serialized data to it, and returns the resulting JSON element.
+
+                              The companion object defines constants for the keys used in the JSON representation (CLASSNAME for the class name and DATA for the data).\\
+                        \item[-] IotUiState.kt\\
+                              The IotUiState data class encapsulates various properties that collectively represent the current state of the IoT user interface.\\
+
+                              currentRoutine: The currently selected routine.\\
+                              routines: A list of available routines.\\
+                              actions: A list of actions associated with the IoT application.\\
+                              triggers: A list of triggers for routines.\\
+                              device: Information about a specific device.\\
+                              currentAction: The currently selected action.\\
+                              userId: The user ID associated with the state.\\
+                        \item[-] Routine.kt\\
+                              The TriggerType enum represents different types of triggers, such as Location, Posture, Assistant, Time, and Sensor. Each type is associated with a numeric identifier (num) and an ImageVector icon.
+
+                              The Routine data class represents an IoT routine, including properties such as id, user-id, name, isOn (indicating whether the routine is turned on), trigger-type (the type of trigger), trigger-id, and a list of associated actions (actions). It also contains a reference to the specific trigger (trigger).
+
+                              The PostureEnum enum represents different posture modes (Sit, Stand, Lie) and is used in the TriPosture class.
+
+                              The TriPosture data class implements the Trigger interface, representing a posture trigger. It includes properties like id, type, detectPosture (posture mode), and coordinates for the trigger area.
+
+                              The TriTime data class implements the Trigger interface, representing a time-based trigger. It includes properties like id, type, and time (representing the trigger time).\\
+                        \item[-] UserDataRepository.kt\\
+                              The UserDataRepository class provides functionality to save and retrieve user routines using a DataStore<Preferences> instance.\\
+                        \item[-] UserPreferencesRepository.kt\\
+                              This repository provides methods to update and retrieve user preferences using a DataStore instance.
+
+                              userPreferencesDataStore: A DataStore instance for managing user preferences.\\
+
+                              userPreferencesFlow: A Flow property that emits user preferences. It catches exceptions during data reading, emitting the default instance if an IOException occurs.\\
+                              userPreferencesLiveData: Converts userPreferencesFlow to LiveData for use in Android's LiveData-based components.\\
+
+                              updateHideCodelabInfo(hide: Boolean): Updates the preference for hiding codelab information.\\
+                              updateHideOfflineDevices(hide: Boolean): Updates the preference for hiding offline devices.\\
+                              shouldShowHalfsheetNotification(): Retrieves whether to show the half-sheet notification.\\
+                              updateShowHalfsheetNotification(show: Boolean): Updates the preference for showing the half-sheet notification.\\
+                              isHideCodelabInfo(): Retrieves whether codelab information should be hidden.\\
+                              getData(): Retrieves the current user preferences.\\
+                        \item[-] UserPreferencesSerializer.kt\\
+                              UserPreferencesDataStore: A DataStore instance for managing user preferences.
+                              It uses the user-prefs-store.proto file as the serialized data storage format.
+                              The serialization and deserialization logic is implemented in the UserPreferencesSerializer object.\\
+                              defaultValue: The default value for the UserPreferences if deserialization fails.\\
+                              readFrom(input: InputStream): Deserializes the protobuf data from the input stream.\\
+                              writeTo(t: UserPreferences, output: OutputStream): Serializes the UserPreferences to the output stream.\\
+                        \item[-] GoogleSignInHelper.kt\\
+                              GoogleSignInHelper class encapsulates the logic for initiating and handling Google Sign-In operations. It integrates with Firebase Authentication and utilizes the Identity API for a streamlined sign-in experience. The class is designed to work with Flows, making it suitable for use in coroutine-based Android applications.\\
+
+                    \end{enumerate}

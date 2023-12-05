@@ -1,210 +1,36 @@
+\newcommand{\addImage}[2]{
+    \begin{figure}[!htb]
+        \begin{center}
+            \includegraphics[width=5.5cm]{#1}
+            \caption{#2} % description to image
+            \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
+        \end{center}
+    \end{figure}
+}
+
 \newpage
 \section{\Large{Architecture Design \& Implementation}}
 
 \begin{enumerate}[label=\arabic*]
-
-\newcommand{\addImage}[2]{
-        \begin{figure}[!htb]
-            \begin{center}
-                \includegraphics[width=5.5cm]{#1}
-                \caption{#2} % description to image
-                \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
-            \end{center}
-        \end{figure}
-        
-    }
     \item {\large{Overall Architecture}}\\
-        % todo
+          % todo
 
     \item {\large{Directory Organization}}\\
-    % add directory structure table
-    % simply explain which directory is for what
-    
-    \begin{enumerate}[label=\alph*]
-        \item Frontend\\
-        \item Backend
-\begin{table}[H]
-    \centering
-    \begin{tabular}{m{3cm} m{4.5cm}}
-        \toprule
-        Directory & File Name \\
-        \midrule
-        se-tmp/ backend/ & src/ main \newline pom.xml  \\
-        \midrule
-        se-tmp/ backend/ src/ \newline main/ & java/ com/ tempomate/ \newline resources/ \\
-        \midrule
-        se-tmp/ backend/ src/ \newline main/ resource/ & application.properties \\
-        \midrule
-        se-tmp/ backend/ src/ \newline main/ java/ com/ \newline tempomate/ & controller/ \newline exception/ \newline mapper/ \newline pojo/ \newline service/ \newline SebackendApplication.java\\
-        \midrule
-        se-tmp/ backend/ src/ \newline main/ java/ com/ \newline tempomate/  controller/ & ActionController.java \newline DeviceController.java \newline LogController.java \newline RoutineController.java \newline TriggerController.java \newline UserController.java \\
-        \midrule
-        se-tmp/ backend/ src/ \newline main/ java/ com/ \newline tempomate/ exception/ & GlobalExceptionHandler.java \\
-        \midrule
-        se-tmp/ backend/ src/ \newline main/ java/ com/ \newline tempomate/ mapper/ & ActionMapper.java \newline DeviceMapper.java \newline LogMapper.java \newline RoutineMapper.java \newline TriggerMapper.java \newline UserMapper.java  \\
-        \midrule
-        se-tmp/ backend/ src/ \newline main/ java/ com/ \newline tempomate/ pojo/ & entity/ \newline Result.java\\
-        \midrule
-        se-tmp/ backend/ src/ \newline main/ java/ com/ \newline tempomate/ pojo/ \newline entity/ & action/ \newline trigger/ \newline Device.java \newline Log.java \newline Routine.java \newline User.java\\
-        \midrule
-        se-tmp/ backend/ src/ \newline main/ java/ com/ \newline tempomate/ pojo/ \newline entity/ action/ & ActDevice.java \newline ActTime.java \newline Action.java \\
-        \midrule
-        se-tmp/ backend/ src/ \newline main/ java/ com/ \newline tempomate/ pojo/ \newline entity/ trigger/ & TriAssistant.java \newline TriLocation.java \newline TriPosture.java \newline TriTime.java \\
-        \midrule
-        se-tmp/ backend/ src/ \newline main/ java/ com/ \newline tempomate/ service/ & impl/ \newline UserService.java\\
-        \midrule
-        se-tmp/ backend/ src/ \newline main/ java/ com/ \newline tempomate/service/ impl/ & UserServiceImpl.java \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-        \item Computer vision\\
-    \end{enumerate}
+        \input{pt5_1_directory_organization}
 
+    \newpage
     \item {\large{Architecture Implementation}}\\
-    \begin{enumerate}[label=\alph*]
-        \item Frontend\\
-        \begin{enumerate}
-            \item Purpose \\
-            TempoMate's backend serves as the central nervous system, orchestrating seamless communication between users, frontend interfaces, and the intricate web of routines, triggers, and actions within the application. Its overarching purpose is to empower users to effortlessly manage their smart home environment, utilizing real-time video streaming via WebRTC to detect user positions and postures, specifically when they are resting in bed. By understanding and interpreting these scenarios, the backend triggers predefined routines, seamlessly executing actions such as turning off room lights. Additionally, the backend administers essential user functionalities, including registration, login, logout, and nickname changes, ensuring a secure and personalized experience for each user. \\\\
-            \item Functionality \\
-            TempoMate offers an intuitive interface that empowers users to effortlessly harness the sophisticated capabilities orchestrated by the backend. The frontend serves as the user's gateway to a personalized and responsive smart home environment.\\
+          \begin{enumerate}[label=\alph*]
+              \item Frontend\\
+                \input{pt5_2_1_architecture_frontend}
 
-            User Account Management:
-            The frontend streamlines the user account management process, providing a seamless experience for tasks such as registration, login, logout, and nickname changes. Through clear and user-friendly interfaces, individuals can easily establish and customize their profiles within the TempoMate ecosystem.\\
+                \newpage
+              \item Backend\\
+                \input{pt5_2_2_architecture_backend}
 
-            Routines Management:
-            Users have full control over defining their smart home environment through the frontend's management of routines. They can intuitively add, delete, and share routines, tailoring their automation preferences with simplicity. The frontend visually represents these routines, allowing users to grasp and modify their smart home orchestration effortlessly.\\
+                \newpage
+              \item Computer vision\\
+                \input{pt5_2_3_architecture_computer_vision}
 
-            Action Customization:
-            The frontend facilitates the addition and deletion of actions, empowering users to specify precise responses to detected video scenarios. Through the frontend interface, users can fine-tune the behavior of their smart home, ensuring that it aligns precisely with their preferences and needs.\\
-
-            Trigger Activation:
-            Managing triggers becomes an accessible task through the frontend, enabling users to activate and expand smart home routines effectively. The frontend provides a clear representation of triggers, allowing users to understand and adjust the conditions that initiate specific actions within their smart home environment.\\
-
-            Real-time Video Streams:
-            The frontend seamlessly integrates real-time video streams captured via WebRTC, providing users with live insights into their smart home environment. Through the frontend, users can monitor and interact with the captured video, enhancing their situational awareness and control.\\
-
-            In essence, the frontend of TempoMate not only simplifies user management but also empowers users to shape and interact with a smart home environment that is both adaptive and responsive, thanks to the sophisticated functionalities orchestrated by the backend. \\\\
-            
-            \item Location of source code \\
-            
-            : https://github.com/se-tmp/frontend \\\\
-            
-            \item Class Component \\
-                \item[-] ActionPage.kt \\
-                The provided code includes several Jetpack Compose functions for building the user interface of an Android application. These functions handle different aspects of the app's functionality, such as selecting action types, choosing devices, and configuring actions for device control. The code demonstrates the use of Jetpack Compose features, creating a well-structured and maintainable codebase for managing the app's UI and user interactions.\\
-                \item[-] AddActionSelectDevice.kt \\
-                The AddActionSelectDevice composable class renders a grid of selectable devices retrieved from a DevicesRepository. Utilizing Jetpack Compose's LazyVerticalGrid, the devices are efficiently displayed in a two-column grid with appropriate spacing. Each device is represented by a DeviceCard with an associated icon and name. When a user selects a device by clicking on its card, the chosen device is stored in the IotViewModel, and the navigation is triggered to go back (onNavigateUp). This composable efficiently handles the presentation of selectable devices, enhancing the user experience for adding actions related to specific devices in the smart home environment\\
-                \item[-] Dashboard.kt \\
-                The Dashboard composable function renders a grid of devices, each represented by a DeviceCard, providing an overview of the smart home environment. The list of devices and their states is periodically updated by querying repositories (DevicesRepository and DevicesStateRepository). The devices are displayed in a two-column grid using LazyVerticalGrid, with appropriate spacing and padding. Each DeviceCard includes details such as the device name, icon, switch state, and online status. Users can interact with the cards by adjusting the device state or clicking on them to view more details. The composable uses coroutines to handle periodic updates of device information. This Dashboard composable serves as a central hub for users to monitor and control their smart home devices efficiently.\\
-                \item[-] DeviceCard.kt \\
-                The DeviceCard composable is a versatile component designed to represent various types of cards within a smart home application. It supports different card types (DeviceCardType), such as those for the dashboard, routines, and device selection. The card layout includes an icon, device name, and status information, with specific buttons or elements based on the card type. The card may feature an on/off switch (Switch) for the dashboard and routine cards, and it can handle adjustments with the provided onAdjust callback. Additionally, the card may display an "Offline" status for devices in the dashboard that are not currently online.\\
-                \item[-] DevicePage.kt \\
-                DevicePage serves as a comprehensive view for managing and interacting with a specific device, encompassing its status, actionable buttons, and a visual representation of the device. This composable enhances the user experience by providing a consolidated interface for device-related actions.\\
-                \item[-] IotViewModel.kt \\
-                The ViewModel initializes with user data repository, Gson for JSON serialization/deserialization, and loads initial data when created.\\\\
-                Loading Initial Data : Retrieves initially saved routines from the user data repository, parsing and updating the UI state accordingly.\\
-
-                Saving Routines : Asynchronously saves the provided list of routines to the user data repository in JSON format.\\
-
-                Setting User ID : Updates the UI state with the user ID.\\
-
-                Setting Device : Updates the UI state with the currently selected device.\\
-
-                Appending Action on Routine : Adds the current action to the actions list of the current routine in the UI state.\\
-
-                Appending Routine : Adds or modifies a routine in the UI state based on whether it already exists.\\
-
-                Deleting Action on Routine by Index : Removes an action from the actions list of the current routine based on the provided index.\\
-
-                Setting Current Action : Updates the UI state with the current action.\\
-
-                Setting Actions : Updates the UI state with a list of actions.\\
-
-                Setting Trigger Type of Current Routine : Updates the UI state with the trigger type of the current routine.\\
-
-                Setting Trigger of Current Routine : Updates the UI state with the trigger of the current routine.\\
-
-                Setting Triggers : Updates the UI state with a list of triggers.\\
-
-                Setting Routines : Updates the UI state with a list of routines.\\
-
-                Setting Current Routine : Updates the UI state with the current routine.\\
-                \item[-] LoginPage.kt \\
-               The provided code comprises three Jetpack Compose functions for user authentication in an IoT application. LoginPage displays a login page, allowing users to sign in with email/password or Google. SignIn handles email/password authentication, while SignUp manages user registration. These functions utilize FirebaseAuth for authentication and seamlessly navigate to the Devices screen upon successful login or signup, enhancing the overall user authentication flow.\\
-               \item[-] RoutinePage.kt \\
-               The provided code includes Jetpack Compose functions for creating various UI components related to an IoT application. TitleBar, TitleButtons, TriggerTypes, Trigger, AddActionButton, Action-ControlDevice, Action, Actions, RoutinePage, PointerCircle, and ResizableRectangle contribute to building the user interface for managing routines and actions. These components cover aspects such as displaying routine titles, handling triggers, showing action lists, and providing interactive elements for creating and editing routines.\\
-               \item[-] Routines.kt \\
-               Routines is a Composable function that uses Jetpack Compose to display a grid of routine cards. It takes an IotViewModel as a parameter to access the UI state, a function onClickCard to be executed when a routine card is clicked, and an optional modifier for styling. The routine data is collected from the UI state using viewModel.uiState.collectAsState().value.routines.\\
-
-               The grid is implemented using LazyVerticalGrid with fixed columns, and each routine is represented by a DeviceCard composable. The DeviceCard includes information such as the routine's name, icon, and on/off status. When a routine card is clicked, it updates the current routine in the view model and triggers the onClickCard function.\\
-               \item[-] Settings.kt \\
-               Settings is a Composable function that represents a screen displaying user settings, including a title bar, notification settings, backup and restore options, version information, and a delete all settings option. It utilizes Jetpack Compose for UI development and Firebase Authentication (auth: FirebaseAuth) for handling user authentication. The screen layout is organized using various Compose components such as Column, Row, Text, Icon, Switch, and Button.\\
-               \item[-] LotScreen.kt \\
-               The App Composable function represents the main structure of your IoT application. It uses Jetpack Compose for UI development and is composed of various screens corresponding to different IotScreen enum values. The app includes features such as user authentication, a dashboard displaying devices, routines management, logs, settings, and various actions. The App Composable orchestrates the navigation flow, state management, and UI structure of your IoT application, providing a cohesive user experience across different screens.\\
-        \end{enumerate}
-
-        \item {\large{Database Implementation}}\\
-        % \begin{enumerate}[label=\alph*]
-        \addImage{
-            imgs/architecture_design_and_implementation/database-erd.png
-        }{
-            Database Diagram
-        }
-        This is the database that our architecture is currently using. This database consists of 11 tables. By using the structure of these tables, the data generated by the project can be stored.\\
-            % \item Frontend\\
-            % % \begin{enumerate}
-            % % \end{enumerate}
-        % \end{enumerate}
-        
-        \item Backend\\
-        \begin{enumerate}
-            \item Purpose \\
-            TempoMate's backend serves as the central nervous system, orchestrating seamless communication between users, frontend interfaces, and the intricate web of routines, triggers, and actions within the application. Its overarching purpose is to empower users to effortlessly manage their smart home environment, utilizing real-time video streaming via WebRTC to detect user positions and postures, specifically when they are resting in bed. By understanding and interpreting these scenarios, the backend triggers predefined routines, seamlessly executing actions such as turning off room lights. Additionally, the backend administers essential user functionalities, including registration, login, logout, and nickname changes, ensuring a secure and personalized experience for each user. \\\\
-            \item Functionality \\
-            The backend of TempoMate enhances user experience and enables various functionalities for smart home automation. It efficiently handles user account management tasks, including user registration, authentication (login/logout), and user nickname changes. The core of the app lies in its capability to manage routines, allowing users to define their smart home environment easily through features such as adding, deleting, and sharing routines. Similarly, the backend manages the addition and deletion of actions, enabling users to define specific responses to detected video scenarios. Additionally, the backend facilitates the effective activation of smart home routines by managing the addition and expansion of triggers. Lastly, the backend seamlessly processes real-time video streams captured via WebRTC, forwarding them to the frontend and AI components to perform their respective functions. In summary, the multifaceted functionalities of the backend not only ensure a robust user management system but also establish a responsive and adaptive smart home environment based on AI and routines. \\\\
-            \item Location of source code \\
-            : www.github.com/se-tmp/backend \\\\
-            \item Class Component \\
-                \item[-] pom.xml: This file is associated with the Maven build management tool commonly used in Java projects. It contains project configuration information and is written in XML format. It is used to define project settings, dependencies, plugins, and other build-related information. This Maven POM (Project Object Model) file defines and configures a Spring Boot-based web application. The project has dependencies on `spring-boot-starter-web` for initiating a Spring Boot web application, `mybatis-spring-boot-starter` for integrating MyBatis with Spring Boot to support database access, `mysql-connector-j` for connecting to a MySQL database, `lombok` for increased code conciseness, and `spring-boot-starter-test` for supporting testing in a Spring Boot application. The build is configured using the `spring-boot-maven-plugin`, excluding Lombok from compilation. The project inherits from the `spring-boot-starter-parent` with a version of 2.7.17 and is set to Java version 11. This architecture is centered around building a Spring Boot web application with MyBatis integration for efficient database access. \\
-                \item[-] src/main/resources/application.properties : This configuration file defines settings for a Spring Boot application, specifying the context path as "/api" and providing connection details for a MySQL database.\\
-                \item[-] src/main/java/com.tempomate/controller: This is the folder that contains controllers which handle user input and return the results to the user. \\
-                \item[-] ActionController: This class handles API operations related to actions using POST, GET, and DELETE mappings. The "/actDevice\_add" and "/actTime\_add" endpoints use POST requests to respectively add device actions and time delay actions. The "/get\_all\_action/{userId}" endpoint retrieves all actions stored in the database using a GET request, where {userId} is the user identifier. The "/delete/{id}" endpoint deletes the action corresponding to the provided ID from the database using a DELETE request.\\
-                \item[-] DeviceController: This class handles various mappings related to devices, including POST, DELETE, GET, and PUT. The "/add" endpoint uses POST to add a device to the database. The "/delete/{id}" endpoint, using DELETE, removes the device with the specified ID from the database. The "/get\_all\_device/{userId}" endpoint, with GET, returns all devices associated with the given user ID. The "/rename\_device" endpoint, using PUT and receiving a new device name in the request body, updates the device name. Lastly, the "/change\_status" endpoint, through PUT, receives a request to change the device's switch within the range of 0 to 100. \\
-                \item[-] LogController: This class handles logging, and the "/user/{userId}" endpoint, through a GET mapping, returns a list of all logs for the user corresponding to the user ID in the endpoint. \\
-                \item[-] RoutineController: This class handles various mappings related to routines, encompassing POST, DELETE, GET, and PUT methods. The "/add" endpoint is used to create a new routine using a POST request. The "/delete/{id}" endpoint, through a DELETE mapping, processes the deletion of the routine associated with the provided ID. The "/share/{id}" endpoint provides an API for sharing a specific routine. The "/get\_all\_routine/{userId}" endpoint, utilizing the GET method, returns a list of all routines associated with the specified `{userId}` value. The "/rename\_routine" endpoint, receiving a request for a new routine name, updates the routine's name using a PUT request. The "/backup/{id}" endpoint is utilized to back up a specific routine. This endpoint performs the logic to back up the routine, and upon successful completion of the backup process, it returns a response accordingly. The "/restore" endpoint is employed for restoring a routine using previously backed-up information. This endpoint executes the restoration logic, and upon successful restoration of the routine, it returns a response indicating the successful outcome. Finally, the "/change\_status" endpoint, taking the routine's ID and on/off status in the request body, updates the routine's push notification status using a PUT request. \\
-                \item[-] TriggerController: This class uses POST mappings to add triggers and GET mappings to retrieve them. The endpoints "/loc\_add," "/pos\_add," "/assi\_add," and "/time\_add" are used to respectively add location triggers, posture triggers, assistant triggers, and time triggers through POST requests. The "/get" endpoint receives triggerType and triggerId in the request and returns the corresponding trigger using a POST mapping. Additionally, conditional statements are used to fetch different triggers based on the trigger type of the routine. For each trigger type, it retrieves the appropriate trigger (TriLocation, TriPosture, TriAssistant, TriTime) from the database. \\
-                \item[-] UserController: This class handles user-related information using POST and PUT mappings. The "/signup" endpoint deals with user registration using a POST request. The "/login" endpoint is a POST API that receives the user's ID and password in the request for performing login. The "/rename-nickname" endpoint updates the user's nickname by receiving a new nickname through a PUT request. The "/push\_setting" endpoint manages the user's push notification status using a PUT request. The "/logout" endpoint handles user's logout session.\\
-                \item[-] src/main/java/com.tempomate/exception/ \par GlobalExceptionHandler: This code defines a global exception handler in a Spring Boot application.\\
-                \item[-] src/main/java/com.tempomate/mapper : This is the folder that is employed to define and execute SQL queries for interacting with a database. \\
-                \item[-] ActionMapper: This interface interacts with the database to provide functionality related to actions. The `addAction`, `addActDevice`, and `addActTime` methods are responsible for adding action, device action, and time delay action, respectively, to the database. The `getActDevice` and `getActTime` methods retrieve device actions and time delay actions associated with a user and routine. Lastly, the `deleteAction` method removes all action data from the database. \\
-                \item[-] DeviceMapper: This interface handles database operations for the `Device` entity. It includes methods to add a new device, retrieve all devices associated with a specific user, delete a device based on its ID, rename a device, and update the switch status of a device. \\
-                \item[-] LogMapper : This interface handles database retrieval operations related to the `Log` entity. The `get\_all\_log` method retrieves all logs associated with a specific user ID from the database.\\
-                \item[-] RoutineMapper: This interface manages database operations related to the `Routine` entity. It includes methods for adding a new routine, deleting a routine based on a specific ID, retrieving all routines associated with a particular user, renaming a routine, and updating the active/inactive status of a routine. \\
-                \item[-] TriggerMapper: This interface is responsible for handling database operations related to triggers in the context of routines. This includes methods for adding triggers of different types (location, posture, assistant, and time) and retrieving specific trigger information based on the trigger ID associated with a routine. \\
-                \item[-] UserMapper: This interface handles database operations related to user management. It includes methods for retrieving a list of users (primarily used for testing purposes), inserting a new user, performing user login authentication, changing a user's nickname, and updating the push notification settings for a user. \\
-                \item[-] src/main/java/com.tempomate/pojo/entity : This is the folder that contains all entity files. \\
-                \item[-] ActDevice: This code defines a ‘ActDevice' entity representing device action information, utilizing Lombok annotations for concise code. The entity includes fields for an ID (‘id’), routine ID (‘routineId’), device ID (‘deviceId’), switch status (‘switchStatus’), text (‘text’), and action order ('order1'), allowing for a simplified representation of these attributes.\\
-                \item[-] Action: This code defines a ‘Action' entity representing action information, utilizing Lombok annotations for concise code. The entity includes fields for an ID (‘id’), routine ID (‘routineId’), action type (‘actionType’), and action ID (‘actionId’), allowing for a simplified representation of these attributes. \\
-                \item[-] ActTime: This code defines a ‘ActTime' entity representing time delay action information, utilizing Lombok annotations for concise code. The entity includes fields for an ID (‘id’), routine ID (‘routineId’), timestamp (‘time’), and action order ('order1'), allowing for a simplified representation of these attributes.\\
-                \item[-] TriAssistant: This code defines a ‘TriAssistant' entity representing assistant trigger information, utilizing Lombok annotations for concise code. The entity includes fields for an ID (‘id’), and command (‘command’), allowing for a simplified representation of these attributes.\\
-                \item[-] TriLocation: This code defines a ‘TriLocation' entity representing location trigger information, utilizing Lombok annotations for concise code. The entity includes fields for an ID (‘id’), user action (‘mode’), longitude (‘longitude’), and latitude (‘latitude’), allowing for a simplified representation of these attributes.\\
-                \item[-] TriPosture: This code defines a ‘TriPosture' entity representing posture trigger information, utilizing Lombok annotations for concise code. The entity includes fields for an ID (‘id’), user action (‘mode’), left top-X (‘leftTopX’), left top-Y (‘leftTopY’), right bottom-X ('rightBottomX'), right bottom-Y ('rightBottomY') and IP address (‘ip’), allowing for a simplified representation of these attributes. \\
-                \item[-] TriTime: This code defines a ‘TriTime' entity representing time trigger information, utilizing Lombok annotations for concise code. The entity includes fields for an ID (‘id’), and timestamp (‘time’), allowing for a simplified representation of these attributes.\\
-                \item[-] Device: This code defines a ‘Device' entity representing device information, utilizing Lombok annotations for concise code. The entity includes fields for an ID (‘id’), name (‘name’), device type (‘type’), user ID (‘userId’), switch status (‘switchStatus’), and text (‘text’), allowing for a simplified representation of these attributes.\\
-                \item[-] Log: This code defines a ‘Log' entity representing log information, utilizing Lombok annotations for concise code. The entity includes fields for an ID (‘id’), user ID (‘userId’), timestamp (‘time’), and routine ID (‘routineId’), allowing for a simplified representation of these attributes. \\
-                \item[-] Routine: This code defines a ‘Routine' entity representing routine information, utilizing Lombok annotations for concise code. The entity includes fields for an ID (‘id’), user ID (‘userId’), name (‘name’), switch status (‘onOff’), trigger type (‘’triggerType’) and trigger ID (‘triggerId’), allowing for a simplified representation of these attributes.\\
-                \item[-] User: This code defines a ‘User' entity representing user information, utilizing Lombok annotations for concise code. The entity includes fields for an ID (‘id’), user ID (‘userId’), nickname (‘nickname’), password (‘password’), token (‘token’), and push notification setting (‘pushSetting’), allowing for a simplified representation of these attributes.\\
-                \item[-] src/main/java/com.tempomate/pojo/result: This class provides a standardized method for encapsulating and conveying response results in a unified format across various parts of the application.\\
-                \item[-] src/main/java/com.tempomate/service: This folder is responsible for handling business logic, coordinating data access, and performing various operations.\\
-                \item[-] UserServiceImpl: This code defines the `UserServiceImpl` class, which implements the `UserService` interface. The class encapsulates the logic for user-related services, utilizing the `UserMapper` to interact with the database. Each method takes a `User` object as a parameter, performs the corresponding functionality, and returns the result.\\
-                \item[-] UserService: This code defines the `UserService` interface, specifying methods for user-related operations such as user registration (`userSignup`), user login (`login`), changing a user's nickname (`change\_nickname`), and managing user push notification settings (`push\_setting`).\\
-        \end{enumerate}
-        % add database structures and apis specification
-        % explain how you implemented the database and apis
-            
-        \item Computer vision\\
-    
-    \end{enumerate}
-
+          \end{enumerate}
 \end{enumerate}
