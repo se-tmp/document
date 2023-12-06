@@ -2,161 +2,161 @@
 \section{\Large{Development Environment}}
 \begin{enumerate}[label=\arabic*]
     \item {\large{Development Platform}}\\
-        \begin{enumerate}[label=\alph*.]
-            Our team utilizes two primary development environments: Windows and macOS.\\
-            
-            \item Windows 11\\
-            \addImageSize{4cm}{imgs/development_envirionment/windows_11.png}{Windows 11}\\
-            Windows 11 is an operating system released by Microsoft on June 24, 2021. It was developed to work across all devices and is utilized across personal computers, workstations, servers, tablets, embedded, and more.\\
-            
-            \item macOS Sonoma\\
-            macOS Sonoma is an operating system announced by Apple on September 27, 2023. It was developed to run exclusively on Apple's devices.\\
+          \begin{enumerate}[label=\alph*.]
+              Our team utilizes two primary development environments: Windows and macOS.\\
 
-            The two operating systems differ not only in processor architecture but also in supported APIs. This results in programs with identical code not behaving identically. Hence, we utilize Docker to integrate two distinct development environments.\\
+              \item Windows 11\\
+                    \addImageSize{4cm}{imgs/development_envirionment/windows_11.png}{Windows 11}\\
+                    Windows 11 is an operating system released by Microsoft on June 24, 2021. It was developed to work across all devices and is utilized across personal computers, workstations, servers, tablets, embedded, and more.\\
 
-            \item Docker\\
-            \addImageSize{4cm}{imgs/development_envirionment/docker.png}{Docker}\\
-            Docker manages software in units called containers, which run on top of virtual machines provided by Docker. This allows Docker to unify the execution environment of our program, which means we can guarantee the same behavior no matter which environment we run it in. Unlike traditional virtual machines, containers share resources with the kernel of the host OS, so there is less of a performance penalty.
-            \cite{Docker_2023}
-            \addImageFull{imgs/development_envirionment/docker_container.png}{Struct of Docker}\\
-            Additionally, containers provide their own OS, code, system tools, and configuration to run the software. This speeds up development by allowing the utilization of pre-existing containers for specific software needs.\\
+              \item macOS Sonoma\\
+                    macOS Sonoma is an operating system announced by Apple on September 27, 2023. It was developed to run exclusively on Apple's devices.\\
 
-            \item Android\\
-            \addImageSize{3cm}{imgs/development_envirionment/android.png}{Android}\\
-            Android is a mobile operating system developed by Google based on the Linux kernel. Android is an open source project, which means that device developers can customize it to their liking. As a result of these advantages, Android currently has about a 70\% share of the mobile market.
-            \cite{StatCounter}
-            \addImageFull{imgs/development_envirionment/android_market_share.png}{Mobile Operating System Market Share}\\
-            This market share makes us chose to create an Android application.\\
+                    The two operating systems differ not only in processor architecture but also in supported APIs. This results in programs with identical code not behaving identically. Hence, we utilize Docker to integrate two distinct development environments.\\
 
-            \item Git\\
-            \addImageSize{4cm}{imgs/development_envirionment/git.png}{Git}\\
-            Git is a distributed version control system developed by Linux developer Linus Torvalds and maintained as open source software. It allows for the recording of changes made to computer files over time and retrieval of specific versions. Git can be used for version control of any type of computer file, not only code. It is distributed, meaning that the versioning data is not stored on a single server but on each computer using Git. Almost all commands are executed locally, making it faster than other version control systems. \\
+              \item Docker\\
+                    \addImageSize{4cm}{imgs/development_envirionment/docker.png}{Docker}\\
+                    Docker manages software in units called containers, which run on top of virtual machines provided by Docker. This allows Docker to unify the execution environment of our program, which means we can guarantee the same behavior no matter which environment we run it in. Unlike traditional virtual machines, containers share resources with the kernel of the host OS, so there is less of a performance penalty.
+                    \cite{Docker_2023}
+                    \addImageFull{imgs/development_envirionment/docker_container.png}{Struct of Docker}\\
+                    Additionally, containers provide their own OS, code, system tools, and configuration to run the software. This speeds up development by allowing the utilization of pre-existing containers for specific software needs.\\
 
-            \item Github\\
-            \addImageSize{4cm}{imgs/development_envirionment/github.png}{Github}\\
-            Github is a cloud service provided by Microsoft that allows us to version control our software using Git. In addition to the features of Git, it offers access control to repositories and organization, bug tracking with issues, CI/CD tools, scheduling, and much more.\\
+              \item Android\\
+                    \addImageSize{3cm}{imgs/development_envirionment/android.png}{Android}\\
+                    Android is a mobile operating system developed by Google based on the Linux kernel. Android is an open source project, which means that device developers can customize it to their liking. As a result of these advantages, Android currently has about a 70\% share of the mobile market.
+                    \cite{StatCounter}
+                    \addImageFull{imgs/development_envirionment/android_market_share.png}{Mobile Operating System Market Share}\\
+                    This market share makes us chose to create an Android application.\\
 
-            \item Microsoft Azure\\
-            \addImageSize{6cm}{imgs/development_envirionment/azure.png}{Microsoft Azure}\\
-            Azure is a cloud computing platform provided by Microsoft. It offers services such as SaaS, PaaS, and IaaS using their data centers around the world. They also help us to manage and develop these services. We use Azure's IaaS to run our backend server. We deploy virtual machines in Azure's data centers and use them as our servers.\\
+              \item Git\\
+                    \addImageSize{4cm}{imgs/development_envirionment/git.png}{Git}\\
+                    Git is a distributed version control system developed by Linux developer Linus Torvalds and maintained as open source software. It allows for the recording of changes made to computer files over time and retrieval of specific versions. Git can be used for version control of any type of computer file, not only code. It is distributed, meaning that the versioning data is not stored on a single server but on each computer using Git. Almost all commands are executed locally, making it faster than other version control systems. \\
 
-            \item Matter\\
-            \addImageSize{6cm}{imgs/development_envirionment/matter.jpg}{Matter}\\
-            Matter is an open-source connectivity standard aimed at unifying communication among fragmented smart home and IoT devices by leveraging IP and Threads for device management and connectivity. Matter enables a device to connect with multiple platforms simultaneously, so users can use their devices on other platforms while using ours.\\
+              \item Github\\
+                    \addImageSize{4cm}{imgs/development_envirionment/github.png}{Github}\\
+                    Github is a cloud service provided by Microsoft that allows us to version control our software using Git. In addition to the features of Git, it offers access control to repositories and organization, bug tracking with issues, CI/CD tools, scheduling, and much more.\\
 
-            \item Slack\\
-            \addImageSize{8cm}{imgs/development_envirionment/slack.jpg}{Slack}\\
-            Slack is a cloud-based instant messaging and project management tool. It offers useful messenger features such as chat, channels and workspaces whilst its design also ensures effective collaboration by allowing communication in channels for specific topics. The thread feature makes browsing past conversations easy. We create channels for each part in Slack and use them for things like requests and bug reports.\\
+              \item Microsoft Azure\\
+                    \addImageSize{6cm}{imgs/development_envirionment/azure.png}{Microsoft Azure}\\
+                    Azure is a cloud computing platform provided by Microsoft. It offers services such as SaaS, PaaS, and IaaS using their data centers around the world. They also help us to manage and develop these services. We use Azure's IaaS to run our backend server. We deploy virtual machines in Azure's data centers and use them as our servers.\\
 
-            \item Notion\\
-            \addImageSize{8cm}{imgs/development_envirionment/notion.png}{Notion}\\
-            Notion is a cloud-based platform that integrates note-taking, document management, knowledge organization, and project management. It enables real-time viewing and editing by multiple users, supports intra-page linking to help organize information thematically, and features markdown syntax for greater text variety than traditional notepads. As a tool for organizing data such as database design, We find Notion exceptionally convenient.\\
-        \end{enumerate}
+              \item Matter\\
+                    \addImageSize{6cm}{imgs/development_envirionment/matter.jpg}{Matter}\\
+                    Matter is an open-source connectivity standard aimed at unifying communication among fragmented smart home and IoT devices by leveraging IP and Threads for device management and connectivity. Matter enables a device to connect with multiple platforms simultaneously, so users can use their devices on other platforms while using ours.\\
 
-        \item {\large{Tech stacks - Frontend}}\\
-            \begin{enumerate}[label=\alph*.]
-                \item Figma\\
-                \addImageSize{8cm}{imgs/development_envirionment/figma.png}{Figma project}\\
-                Figma is a cloud-based design tool that offers robust features for UX/UI design and prototyping. Its versatility makes it useful for various industries, including web and application design. Figma enables real-time collaboration via chat and annotations, allowing multiple team members to work together seamlessly. As a designer, We don't have to provide extra information to the developer since all the resources used in the application are contained within a Figma project. These benefits have made Figma a prominent design and development tool with a vast share in the UX/UI field.\\
+              \item Slack\\
+                    \addImageSize{8cm}{imgs/development_envirionment/slack.jpg}{Slack}\\
+                    Slack is a cloud-based instant messaging and project management tool. It offers useful messenger features such as chat, channels and workspaces whilst its design also ensures effective collaboration by allowing communication in channels for specific topics. The thread feature makes browsing past conversations easy. We create channels for each part in Slack and use them for things like requests and bug reports.\\
 
-                \item Android Studio\\
-                \addImageSize{6cm}{imgs/development_envirionment/android_studio.png}{Android Studio}\\
-                Android Studio is an official Integrated Development Environment (IDE) designed for Android app development. It is built on top of JetBrains' IntelliJ IDEA and offers all the features of IntelliJ IDEA. Android Studio comes with a Gradle-based build system and an Android emulator, which enable developers to create apps for any Android device. \\
+              \item Notion\\
+                    \addImageSize{8cm}{imgs/development_envirionment/notion.png}{Notion}\\
+                    Notion is a cloud-based platform that integrates note-taking, document management, knowledge organization, and project management. It enables real-time viewing and editing by multiple users, supports intra-page linking to help organize information thematically, and features markdown syntax for greater text variety than traditional notepads. As a tool for organizing data such as database design, We find Notion exceptionally convenient.\\
+          \end{enumerate}
 
-                \item Kotlin\\
-                \addImageSize{4cm}{imgs/development_envirionment/kotlin.png}{Kotlin}\\
-                Kotlin is a JVM-based language released by JetBrains in 2011. It is similar to Java, but has a significantly simpler syntax and added features compared to Java. It allows us to write more secure code due to features not available in Java, and makes asynchronous programming easier through coroutines. Kotlin is also fully backwards compatible with Java. Google uses Kotlin as the official language for Android.\\
+    \item {\large{Tech stacks - Frontend}}\\
+          \begin{enumerate}[label=\alph*.]
+              \item Figma\\
+                    \addImageSize{8cm}{imgs/development_envirionment/figma.png}{Figma project}\\
+                    Figma is a cloud-based design tool that offers robust features for UX/UI design and prototyping. Its versatility makes it useful for various industries, including web and application design. Figma enables real-time collaboration via chat and annotations, allowing multiple team members to work together seamlessly. As a designer, We don't have to provide extra information to the developer since all the resources used in the application are contained within a Figma project. These benefits have made Figma a prominent design and development tool with a vast share in the UX/UI field.\\
 
-                \item Gradle\\
-                \addImageSize{6cm}{imgs/development_envirionment/gradle.png}{Gradle}\\
-                Gradle is an automation system for building that utilizes Groovy. It automates the compilation and creation of builds, testing, packaging, and deployment. Building can be expedited by rebuilding only the files that have changed, rather than building all files each time. Additionally, the cache can be utilized to prevent rebuilding duplicate files when building the same file in multiple projects. This popular build system is favored for Java/Kotlin projects due to its simple syntax when compared to alternative build systems, and is now the official build system for Android Studio.\\
+              \item Android Studio\\
+                    \addImageSize{6cm}{imgs/development_envirionment/android_studio.png}{Android Studio}\\
+                    Android Studio is an official Integrated Development Environment (IDE) designed for Android app development. It is built on top of JetBrains' IntelliJ IDEA and offers all the features of IntelliJ IDEA. Android Studio comes with a Gradle-based build system and an Android emulator, which enable developers to create apps for any Android device. \\
 
-                \item Jetpack Compose\\
-                \addImageSize{6cm}{imgs/development_envirionment/jetpack_compose.png}{Jetpack Compose}\\
-                Jetpack Compose is a toolkit to create native Android user interfaces. Its streamlined code enables a more extensive range of options than traditional XML, making it more manageable and updates user interfaces automatically when app states change. Jetpack Compose integrates seamlessly with existing code compositions, offers live previews and incorporates Android's built-in design themes.\\
+              \item Kotlin\\
+                    \addImageSize{4cm}{imgs/development_envirionment/kotlin.png}{Kotlin}\\
+                    Kotlin is a JVM-based language released by JetBrains in 2011. It is similar to Java, but has a significantly simpler syntax and added features compared to Java. It allows us to write more secure code due to features not available in Java, and makes asynchronous programming easier through coroutines. Kotlin is also fully backwards compatible with Java. Google uses Kotlin as the official language for Android.\\
 
-                \item Firebase\\
-                \addImageSize{6cm}{imgs/development_envirionment/firebase.png}{Firebase}
-                Firebase is a development platform for mobile and web applications, a set of cloud-based services provided by Google. Firebase includes a wide range of features to help developers get their applications up and running quickly.\\
-                \begin{enumerate}
-                    \item Firebase Authentication\\
-                    Firebase Authenticaion helps developers avoid having to implement OAuth or login logic themselves. Firebase Authentication provides the backend services needed to authenticate users in your app. It helps developers not only log in with a username and password, but also authenticate with Google, Facebook, Twitter, and more.\\
-                    \item Firebase Cloud Messaging\\
-                    Firebase Cloud Messaging is a service that allows you to send messages from a server to a client. Normally, the server needs to know the client's IP to send a message to a specific client, but Firebase Cloud Messaging allows users to log in with Firebase Authentication and send messages directly to the client via Google servers using the User Id obtained through Firebase Authentication.\\
-                \end{enumerate}
-            \end{enumerate}
+              \item Gradle\\
+                    \addImageSize{6cm}{imgs/development_envirionment/gradle.png}{Gradle}\\
+                    Gradle is an automation system for building that utilizes Groovy. It automates the compilation and creation of builds, testing, packaging, and deployment. Building can be expedited by rebuilding only the files that have changed, rather than building all files each time. Additionally, the cache can be utilized to prevent rebuilding duplicate files when building the same file in multiple projects. This popular build system is favored for Java/Kotlin projects due to its simple syntax when compared to alternative build systems, and is now the official build system for Android Studio.\\
 
-        \item {\large{Tech stacks - Backend}}\\
-        \begin{enumerate}[label=\alph*.]
-            \item IntelliJ IDEA\\
-            \addImageSize{6cm}{imgs/development_envirionment/idea.png}{IntelliJ Idea}\\
-            IntelliJ IDEA is a top Java/Kotlin integrated development environment (IDE) offered by JetBrains. The software understands our code by indexing it initially and providing error detection and autocomplete features. It facilitates project refactoring to enhance code readability, simplicity, and maintainability. It facilitates project refactoring to enhance code readability, simplicity, and maintainability. Furthermore, it hastens coding by allowing the insertion of frequently used code fragments via prepared templates. InteliJ IDEA provides a debugger and profiler to assist with troubleshooting program behavior and improving performance.\\
+              \item Jetpack Compose\\
+                    \addImageSize{6cm}{imgs/development_envirionment/jetpack_compose.png}{Jetpack Compose}\\
+                    Jetpack Compose is a toolkit to create native Android user interfaces. Its streamlined code enables a more extensive range of options than traditional XML, making it more manageable and updates user interfaces automatically when app states change. Jetpack Compose integrates seamlessly with existing code compositions, offers live previews and incorporates Android's built-in design themes.\\
 
-            \item Java\\
-            \addImageSize{4cm}{imgs/development_envirionment/java.png}{Java}\\
-            Java is an object-oriented programming language developed by Sun Microsystems in 1995. The Java compiler converts code into a form called bytecode. To run this bytecode, you need the Java Virtual Machine (JVM). This allows Java to write code that works identically and independently on any platform that can install the JVM. \\
+              \item Firebase\\
+                    \addImageSize{6cm}{imgs/development_envirionment/firebase.png}{Firebase}
+                    Firebase is a development platform for mobile and web applications, a set of cloud-based services provided by Google. Firebase includes a wide range of features to help developers get their applications up and running quickly.\\
+                    \begin{enumerate}
+                        \item Firebase Authentication\\
+                              Firebase Authenticaion helps developers avoid having to implement OAuth or login logic themselves. Firebase Authentication provides the backend services needed to authenticate users in your app. It helps developers not only log in with a username and password, but also authenticate with Google, Facebook, Twitter, and more.\\
+                        \item Firebase Cloud Messaging\\
+                              Firebase Cloud Messaging is a service that allows you to send messages from a server to a client. Normally, the server needs to know the client's IP to send a message to a specific client, but Firebase Cloud Messaging allows users to log in with Firebase Authentication and send messages directly to the client via Google servers using the User Id obtained through Firebase Authentication.\\
+                    \end{enumerate}
+          \end{enumerate}
 
-            \item Apache Maven\\
-            \addImageSize{5cm}{imgs/development_envirionment/apache_maven.jpg}{Apache Maven}\\
-            Apache Maven is a build tool for managing the lifecycle of Java-based projects, released in 2004 by the Apache Software Foundation. Maven defines each phase as a build lifecycle, and helps us create, test-build, and deploy projects in each phase. It also automatically manages the libraries used in our project, and even manages the libraries they need, or dependencies.\\
+    \item {\large{Tech stacks - Backend}}\\
+          \begin{enumerate}[label=\alph*.]
+              \item IntelliJ IDEA\\
+                    \addImageSize{6cm}{imgs/development_envirionment/idea.png}{IntelliJ Idea}\\
+                    IntelliJ IDEA is a top Java/Kotlin integrated development environment (IDE) offered by JetBrains. The software understands our code by indexing it initially and providing error detection and autocomplete features. It facilitates project refactoring to enhance code readability, simplicity, and maintainability. It facilitates project refactoring to enhance code readability, simplicity, and maintainability. Furthermore, it hastens coding by allowing the insertion of frequently used code fragments via prepared templates. InteliJ IDEA provides a debugger and profiler to assist with troubleshooting program behavior and improving performance.\\
 
-            \item Spring\\
-            \addImageSize{5cm}{imgs/development_envirionment/spring.png}{Spring}\\
-            Spring is an open-source framework that simplifies Java application development. Spring Boot. It oversees Java libraries and employs Spring containers to handle the lifecycle of Java objects, including their creation and destruction.\\
+              \item Java\\
+                    \addImageSize{4cm}{imgs/development_envirionment/java.png}{Java}\\
+                    Java is an object-oriented programming language developed by Sun Microsystems in 1995. The Java compiler converts code into a form called bytecode. To run this bytecode, you need the Java Virtual Machine (JVM). This allows Java to write code that works identically and independently on any platform that can install the JVM. \\
 
-            \item Springboot\\
-            \addImageSize{5cm}{imgs/development_envirionment/springboot.png}{Springboot}\\
-            Springboot is a framework that simplifies the deployment and setup of projects created using the Spring framework. Instead of Spring, which is complicated to set up, Springboot basically takes care of dependency management and library setup for us by simply entering some information. Springboot also allows us to build our project as a standalone executable jar file, which has the advantage of being easily deployable to cloud services or environments like Docker.\\
+              \item Apache Maven\\
+                    \addImageSize{5cm}{imgs/development_envirionment/apache_maven.jpg}{Apache Maven}\\
+                    Apache Maven is a build tool for managing the lifecycle of Java-based projects, released in 2004 by the Apache Software Foundation. Maven defines each phase as a build lifecycle, and helps us create, test-build, and deploy projects in each phase. It also automatically manages the libraries used in our project, and even manages the libraries they need, or dependencies.\\
 
-            \item Flask\\
-            \addImageSize{5cm}{imgs/development_envirionment/flask.png}{Flask}\\
-            Flask is a micro web framework written in Python. Unlike Django, which is feature-rich but heavy and complex, we use it to easily develop only the features we need. As a micro framework, it has minimal components and requirements, so we can extend it as needed. As flask offers limited functionality, it is an ideal option for establishing communication between the back-end server and the video-processing server.\\
+              \item Spring\\
+                    \addImageSize{5cm}{imgs/development_envirionment/spring.png}{Spring}\\
+                    Spring is an open-source framework that simplifies Java application development. Spring Boot. It oversees Java libraries and employs Spring containers to handle the lifecycle of Java objects, including their creation and destruction.\\
 
-            \item Swagger\\
-            \addImageSize{8cm}{imgs/development_envirionment/swagger.png}{Swagger API page}\\
-            Swagger is a tool for documenting RESTful APIs so that users can easily test and invoke them. With Swagger, back-end developers no longer need to write documents such as requests and responses for their API; they can use API documentation generated by Swagger. This saves communication time between the frontend and backend, as well as documentation time.\\
+              \item Springboot\\
+                    \addImageSize{5cm}{imgs/development_envirionment/springboot.png}{Springboot}\\
+                    Springboot is a framework that simplifies the deployment and setup of projects created using the Spring framework. Instead of Spring, which is complicated to set up, Springboot basically takes care of dependency management and library setup for us by simply entering some information. Springboot also allows us to build our project as a standalone executable jar file, which has the advantage of being easily deployable to cloud services or environments like Docker.\\
 
-            \item MySQL\\
-            \addImageSize{6cm}{imgs/development_envirionment/mysql.png}{MySQL}\\
-            MySQL, released in 1995, is the world's most popular open source relational database management system (RDBMS). It provides the ability to create, store, and manage sets of data called databases. Developers can define, manipulate, control, and query this data using a query language called SQL. \\
+              \item Flask\\
+                    \addImageSize{5cm}{imgs/development_envirionment/flask.png}{Flask}\\
+                    Flask is a micro web framework written in Python. Unlike Django, which is feature-rich but heavy and complex, we use it to easily develop only the features we need. As a micro framework, it has minimal components and requirements, so we can extend it as needed. As flask offers limited functionality, it is an ideal option for establishing communication between the back-end server and the video-processing server.\\
 
-            \item MyBatis\\
-            \addImageSize{5cm}{imgs/development_envirionment/mybatis.jpeg}{MyBatis}\\
-            MyBatis is a persistence framework for Java. A persistence framework is a set of classes and configuration files that deal with storing, retrieving, modifying, and deleting data. They are used to make interfacing with databases easy and hassle-free. MyBatis supports SQL Mapper, which helps developers to objectify and consume the results of the SQL statements they write. Instead of complicated and unwieldy JDBC, MyBatis makes it easy to access the database from our program.\\
+              \item Swagger\\
+                    \addImageSize{8cm}{imgs/development_envirionment/swagger.png}{Swagger API page}\\
+                    Swagger is a tool for documenting RESTful APIs so that users can easily test and invoke them. With Swagger, back-end developers no longer need to write documents such as requests and responses for their API; they can use API documentation generated by Swagger. This saves communication time between the frontend and backend, as well as documentation time.\\
 
-            \item IntelliJ DataGrip\\
-            \addImageSize{5cm}{imgs/development_envirionment/datagrip.png}{IntelliJ DataGrip}\\
-            IntelliJ DataGrip is a database and SQL IDE provided by JetBrains. It allows us to explore schemas through a graphical user interface (GUI) and provides information about how queries work and the behavior of the database engine to help us optimize our queries. We will be able to visually inspect and manipulate our database, which will greatly benefit the creation of SQL queries.\\
+              \item MySQL\\
+                    \addImageSize{6cm}{imgs/development_envirionment/mysql.png}{MySQL}\\
+                    MySQL, released in 1995, is the world's most popular open source relational database management system (RDBMS). It provides the ability to create, store, and manage sets of data called databases. Developers can define, manipulate, control, and query this data using a query language called SQL. \\
 
-            \item MediaMtx\\
-            \addImageSize{6cm}{imgs/development_envirionment/mediamtx.png}{MediaMtx}
-            mediaMtx is a real-time media server that receives sources such as RTMP and proxies them to protocols such as HLS and DASH.
-            Since the Matter protocol does not currently support cameras, we designed mediaMtx to receive video from other cameras.\\
-        \end{enumerate}
+              \item MyBatis\\
+                    \addImageSize{5cm}{imgs/development_envirionment/mybatis.jpeg}{MyBatis}\\
+                    MyBatis is a persistence framework for Java. A persistence framework is a set of classes and configuration files that deal with storing, retrieving, modifying, and deleting data. They are used to make interfacing with databases easy and hassle-free. MyBatis supports SQL Mapper, which helps developers to objectify and consume the results of the SQL statements they write. Instead of complicated and unwieldy JDBC, MyBatis makes it easy to access the database from our program.\\
 
-        \item {\large{Tech stacks - Computer vision}}\\
-        \begin{enumerate}[label=\alph*.]
-            \item Visual Studio Code\\
-            \addImageSize{5cm}{imgs/development_envirionment/vscode.png}{Visual Studio Code}\\
-            Visual Studio Code is a text editor from Microsoft. Unlike an IDE, Visual Studio Code only provides the ability to edit text. However, the beauty of Visual Studio Code is that we can use extensions to extend the functionality of the IDE, or even go further. We can install language extensions to support linting or auto-completion, or we can install a debugger extension to debug like the IDE does. It's an editor that can be customized to our liking with extensions that provide all kinds of convenience.\\
+              \item IntelliJ DataGrip\\
+                    \addImageSize{5cm}{imgs/development_envirionment/datagrip.png}{IntelliJ DataGrip}\\
+                    IntelliJ DataGrip is a database and SQL IDE provided by JetBrains. It allows us to explore schemas through a graphical user interface (GUI) and provides information about how queries work and the behavior of the database engine to help us optimize our queries. We will be able to visually inspect and manipulate our database, which will greatly benefit the creation of SQL queries.\\
 
-            \item Python\\
-            \addImageSize{5cm}{imgs/development_envirionment/python.png}{Python}\\
-            Python is an interpreted programming language that was released in 1991. It has a huge library and ecosystem, and is specialized for collecting and analyzing data. It also has the advantage over other programming languages of providing an intuitive and highly abstract syntax, making it easy to write programs. Python's productivity makes it easy to create the programs we want instead of complicated C++ code.\\
+              \item MediaMtx\\
+                    \addImageSize{6cm}{imgs/development_envirionment/mediamtx.png}{MediaMtx}
+                    mediaMtx is a real-time media server that receives sources such as RTMP and proxies them to protocols such as HLS and DASH.
+                    Since the Matter protocol does not currently support cameras, we designed mediaMtx to receive video from other cameras.\\
+          \end{enumerate}
 
-            \item OpenCV\\
-            \addImageSize{8cm}{imgs/development_envirionment/opencv.png}{OpenCV}\\
-            OpenCV is the most popular open source computer vision library. It supports C++ and Python and is the de facto standard for live image processing. It provides video or image binarization, noise reduction, contour detection, pattern recognition, machine learning, and more. We can use it to recognize and distinguish faces and objects, and to detect people in motion. \\
+    \item {\large{Tech stacks - Computer vision}}\\
+          \begin{enumerate}[label=\alph*.]
+              \item Visual Studio Code\\
+                    \addImageSize{5cm}{imgs/development_envirionment/vscode.png}{Visual Studio Code}\\
+                    Visual Studio Code is a text editor from Microsoft. Unlike an IDE, Visual Studio Code only provides the ability to edit text. However, the beauty of Visual Studio Code is that we can use extensions to extend the functionality of the IDE, or even go further. We can install language extensions to support linting or auto-completion, or we can install a debugger extension to debug like the IDE does. It's an editor that can be customized to our liking with extensions that provide all kinds of convenience.\\
 
-            \item OpenPose\\
-            \addImageSize{7cm}{imgs/development_envirionment/openpose.png}{OpenPose}\\
-            OpenPose is a library built on top of OpenCV that can detect a total of 135 keypoints on a person's body, hands, face, or feet in real time. These keypoints can be used to analyze a person's posture. Because it uses a bottom-up approach, it is better than other libraries at detecting occluded or overlapping objects. Since the core of our project is to detect which pose the user takes near which object from a user-specified camera, Openpose comes in handy.\\
+              \item Python\\
+                    \addImageSize{5cm}{imgs/development_envirionment/python.png}{Python}\\
+                    Python is an interpreted programming language that was released in 1991. It has a huge library and ecosystem, and is specialized for collecting and analyzing data. It also has the advantage over other programming languages of providing an intuitive and highly abstract syntax, making it easy to write programs. Python's productivity makes it easy to create the programs we want instead of complicated C++ code.\\
 
-            \item Ultralytics YOLOv8\\
-            \addImageSize{6cm}{imgs/development_envirionment/yolov8.png}{Ultralytics YOLOv8}
-            \\YOLO (You Only Look Once) is one of the deep learning algorithms that performs object detection. YOLO processes an image in one forward pass while simultaneously predicting the bounding box of an object and the class of that object. This makes it faster than other common object detection algorithms while still maintaining high accuracy. We used YOLOv8, the eighth version of YOLO, to determine the user's pose.\\
-        \end{enumerate}
-        
+              \item OpenCV\\
+                    \addImageSize{8cm}{imgs/development_envirionment/opencv.png}{OpenCV}\\
+                    OpenCV is the most popular open source computer vision library. It supports C++ and Python and is the de facto standard for live image processing. It provides video or image binarization, noise reduction, contour detection, pattern recognition, machine learning, and more. We can use it to recognize and distinguish faces and objects, and to detect people in motion. \\
+
+              \item OpenPose\\
+                    \addImageSize{7cm}{imgs/development_envirionment/openpose.png}{OpenPose}\\
+                    OpenPose is a library built on top of OpenCV that can detect a total of 135 keypoints on a person's body, hands, face, or feet in real time. These keypoints can be used to analyze a person's posture. Because it uses a bottom-up approach, it is better than other libraries at detecting occluded or overlapping objects. Since the core of our project is to detect which pose the user takes near which object from a user-specified camera, Openpose comes in handy.\\
+
+              \item Ultralytics YOLOv8\\
+                    \addImageSize{6cm}{imgs/development_envirionment/yolov8.png}{Ultralytics YOLOv8}
+                    \\YOLO (You Only Look Once) is one of the deep learning algorithms that performs object detection. YOLO processes an image in one forward pass while simultaneously predicting the bounding box of an object and the class of that object. This makes it faster than other common object detection algorithms while still maintaining high accuracy. We used YOLOv8, the eighth version of YOLO, to determine the user's pose.\\
+          \end{enumerate}
+
     \item {\large{Task distribution}}
           \begin{table}[H]
               \center
@@ -203,19 +203,19 @@
           \end{table}
 
     \item Cost estimation
-        \begin{table}[H]
-            \center
-            \begin{tabular}{m{1.4cm} m{4.1cm} m{1.4cm}}
-                \toprule
-                Name & Description & Cost/Month\\
-                \midrule
-                Azure VM & Standard D4s v3(4 Intel® Xeon® Platinum 8370C vcpu, 16GiB Memory) & \$177.62\\
-                Figma & Figma Professional & \$60\\
-                Slack & Pro & \$36.25\\
-                IntelliJ & All Products Pack & \$428.45\\
-                \bottomrule\\
-                Total & & \$702.32\\
-            \end{tabular}
-        \end{table}
+          \begin{table}[H]
+              \center
+              \begin{tabular}{m{1.4cm} m{4.1cm} m{1.4cm}}
+                  \toprule
+                  Name     & Description                                                       & Cost/Month \\
+                  \midrule
+                  Azure VM & Standard D4s v3(4 Intel® Xeon® Platinum 8370C vcpu, 16GiB Memory) & \$177.62   \\
+                  Figma    & Figma Professional                                                & \$60       \\
+                  Slack    & Pro                                                               & \$36.25    \\
+                  IntelliJ & All Products Pack                                                 & \$428.45   \\
+                  \bottomrule                                                                               \\
+                  Total    &                                                                   & \$702.32   \\
+              \end{tabular}
+          \end{table}
 \end{enumerate}
 % \newpage

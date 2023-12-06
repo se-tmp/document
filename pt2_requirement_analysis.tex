@@ -1,159 +1,159 @@
 \newpage
 \section{\Large{Requirement Analysis}}
 \begin{enumerate}[label=\arabic*.]
-    \item {\large{Login}}\\
+      \item {\large{Login}}\\
 
-          \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-              \setlength{\itemindent}{0.5cm}
-              \item The user must log in to their own account, which contains their personal information.\\
+            \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                  \setlength{\itemindent}{0.5cm}
+                  \item The user must log in to their own account, which contains their personal information.\\
 
-              \item This application should be customizable for homeowners, so user’s personal information need to be stored in his/her own account.\\
+                  \item This application should be customizable for homeowners, so user’s personal information need to be stored in his/her own account.\\
 
-              \item If the user manages multiple devices, the information is required for connecting to several devices.\\
+                  \item If the user manages multiple devices, the information is required for connecting to several devices.\\
 
-                    % \item User can add and remove devices he/she manages through QR code(It is also possible without the QR code).\\
+                        % \item User can add and remove devices he/she manages through QR code(It is also possible without the QR code).\\
 
-              \item For the login process, user inputs their ID and password within the app.\\
+                  \item For the login process, user inputs their ID and password within the app.\\
 
-              \item Alternatively, users can utilize an external ID, like a Google or Apple ID, to conveniently sign in without having to register.\\
+                  \item Alternatively, users can utilize an external ID, like a Google or Apple ID, to conveniently sign in without having to register.\\
 
-              \item ID must include at least 5 English or English and numbers both.\\
+                  \item ID must include at least 5 English or English and numbers both.\\
 
-              \item Password must include at least 4 uppercase letters, special characters, and numbers.\\
+                  \item Password must include at least 4 uppercase letters, special characters, and numbers.\\
 
-              \item When the user sign up, he/she sets a username.\\
+                  \item When the user sign up, he/she sets a username.\\
 
-              \item Username must be unique: Each user must have a unique username within the system to ensure proper identification and to prevent any confusion or conflicts.\\
-          \end{enumerate}
+                  \item Username must be unique: Each user must have a unique username within the system to ensure proper identification and to prevent any confusion or conflicts.\\
+            \end{enumerate}
 
-    \item {\large{Logs and Statistics}}\\
-          \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-              \setlength{\itemindent}{0.5cm}
-              \item The application records user activities, including events such as trigger activation time, routine name, and user's location. \\
+      \item {\large{Logs and Statistics}}\\
+            \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                  \setlength{\itemindent}{0.5cm}
+                  \item The application records user activities, including events such as trigger activation time, routine name, and user's location. \\
 
-              \item It maintains device interaction logs, tracking device status changes, usage patterns, and scheduled events or automations triggered by the user. \\
-
-
-              \item User behavior, preferences, and usage patterns are monitored to enhance this service. \\
-
-              \item To achieve this, it stores a history of device status data, allowing users to review past device activities.\\
-          \end{enumerate}
+                  \item It maintains device interaction logs, tracking device status changes, usage patterns, and scheduled events or automations triggered by the user. \\
 
 
-    \item {\large{Dashboard}}\\
-          \begin{enumerate}[label*={\arabic*.}]
-              \item {\large{Device Connection}}\\
-                    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                        \setlength{\itemindent}{0.5cm}
-                        \item This application provide users with the ability to connect devices, including device pairing and disconnection.\\
-                        \item Implement a QR code-based device connection method, allowing users to easily pair devices by scanning QR codes.\\
-                        \item Offer an alternative method for connecting to devices without the use of QR codes, providing flexibility in device pairing.\\
-                        \item If the connection to the device is successful, app ask user to register new device information\\
-                    \end{enumerate}
+                  \item User behavior, preferences, and usage patterns are monitored to enhance this service. \\
 
-              \item {\large{Device Status Check}}\\
-                    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                        \setlength{\itemindent}{0.5cm}
-                        \item This application implements a system to log and monitor the status of connected devices, including connectivity information.\\
-                        \item It should create and maintain records of status check activities, recording when these checks were performed, the specific devices involved, and the results indicating device operational status or reported issues.\\
-                    \end{enumerate}
+                  \item To achieve this, it stores a history of device status data, allowing users to review past device activities.\\
+            \end{enumerate}
 
-              \item {\large{Device Control}}\\
-                    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                        \setlength{\itemindent}{0.5cm}
-                        \item  Implement the ability for users to manually control devices, including actions like turning devices on or off, adjusting settings, and triggering automation sequences.\\
-                        \item Establish a logging system to track these control actions, capturing the date and time of each action, specifying the devices affected, and identifying the responsible user for each action.\\
-                        \item Provide users with the capability to view the live feed or recorded content from connected devices like home security cameras.\\
-                        \item Allow users to rename devices for personalization.\\
-                        \item Enable users to delete devices when they are no longer needed or want to remove them from their account.\\
-                    \end{enumerate}
-          \end{enumerate}
 
-    \item {\large{Routine Managemant}}\\
-          \begin{enumerate}[label*={\arabic*.}]
-              \item {\large{Trigger Settings}}\\
-                    \begin{enumerate}[label*={\alph*.},ref=\theenumi.\arabic*]
-                        \setlength{\itemindent}{0.5cm}
+      \item {\large{Dashboard}}\\
+            \begin{enumerate}[label*={\arabic*.}]
+                  \item {\large{Device Connection}}\\
+                        \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                              \setlength{\itemindent}{0.5cm}
+                              \item This application provide users with the ability to connect devices, including device pairing and disconnection.\\
+                              \item Implement a QR code-based device connection method, allowing users to easily pair devices by scanning QR codes.\\
+                              \item Offer an alternative method for connecting to devices without the use of QR codes, providing flexibility in device pairing.\\
+                              \item If the connection to the device is successful, app ask user to register new device information\\
+                        \end{enumerate}
 
-                        \item {\large{Sound Trigger}}\\
-                              \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                                  \setlength{\itemindent}{0.5cm}
-                                  \item Users can set conditions based on the intensity of sound to trigger accessories or scenes.\\
-                                  \item For example, when a loud sound is detected, it can trigger the application to send notifications or initiate camera recording events.\\
-                                  \item When it comes to speakers that can recognize voice, users can also employ voice recognition to determine what the user has said as a condition to trigger activities. \\
-                                  \item For example, users can perform a series of preset actions after a word.\\
-                              \end{enumerate}
+                  \item {\large{Device Status Check}}\\
+                        \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                              \setlength{\itemindent}{0.5cm}
+                              \item This application implements a system to log and monitor the status of connected devices, including connectivity information.\\
+                              \item It should create and maintain records of status check activities, recording when these checks were performed, the specific devices involved, and the results indicating device operational status or reported issues.\\
+                        \end{enumerate}
 
-                        \item {\large{Sensor Trigger}}\\
-                              \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                                  \setlength{\itemindent}{0.5cm}
-                                  \item It can trigger related functions according to the information of various sensors. For example, connecting smoke and gas sensors.\\
-                                  \item Smoke and gas sensors can detect dangerous conditions, such as fire or gas leakage. Once the problem is detected, the system will trigger alarm, inform users and take necessary measures.\\
-                                  \item It can also connect sensors like ultrasonic sensors to detect the presence of objects in certain areas. If any movement is detected when the user is away, it will send a notification to the user.\\
-                              \end{enumerate}
+                  \item {\large{Device Control}}\\
+                        \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                              \setlength{\itemindent}{0.5cm}
+                              \item  Implement the ability for users to manually control devices, including actions like turning devices on or off, adjusting settings, and triggering automation sequences.\\
+                              \item Establish a logging system to track these control actions, capturing the date and time of each action, specifying the devices affected, and identifying the responsible user for each action.\\
+                              \item Provide users with the capability to view the live feed or recorded content from connected devices like home security cameras.\\
+                              \item Allow users to rename devices for personalization.\\
+                              \item Enable users to delete devices when they are no longer needed or want to remove them from their account.\\
+                        \end{enumerate}
+            \end{enumerate}
 
-                        \item {\large{Time Trigger}}\\
-                              \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                                  \setlength{\itemindent}{0.5cm}
-                                  \item Accessories or scenes can be triggered based on a fixed time of day, certain days, or based on sunrise and sunset. \\
-                                  \item For example, turn on the curtains and music at 6 a.m. every morning, or turn off all lights 15 minutes after sunset.\\
-                              \end{enumerate}
+      \item {\large{Routine Managemant}}\\
+            \begin{enumerate}[label*={\arabic*.}]
+                  \item {\large{Trigger Settings}}\\
+                        \begin{enumerate}[label*={\alph*.},ref=\theenumi.\arabic*]
+                              \setlength{\itemindent}{0.5cm}
 
-                        \item {\large{Posture Recognition Trigger}}\\
-                              \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                                  \setlength{\itemindent}{0.5cm}
-                                  \item Capturing images or videos through the camera and utilizing OpenPose for body posture recognition also allows for the identification of body movements.\\
-                                  \item Different actions can trigger various functions based on the recognized movements
-                                  \item Actions are largely divided into Sit/ Stand/Lie, and each action is divided and a routine is executed for each user.\\
-                              \end{enumerate}
+                              \item {\large{Sound Trigger}}\\
+                                    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                                          \setlength{\itemindent}{0.5cm}
+                                          \item Users can set conditions based on the intensity of sound to trigger accessories or scenes.\\
+                                          \item For example, when a loud sound is detected, it can trigger the application to send notifications or initiate camera recording events.\\
+                                          \item When it comes to speakers that can recognize voice, users can also employ voice recognition to determine what the user has said as a condition to trigger activities. \\
+                                          \item For example, users can perform a series of preset actions after a word.\\
+                                    \end{enumerate}
 
-                        \item {\large{location Trigger}}\\
-                              \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                                  \setlength{\itemindent}{0.5cm}
-                                  \item The user's location can be determined based on the location information of the user's mobile phone, and corresponding functions can be triggered based on the user's location.\\
-                                  \item For example, when the user returns home, they automatically turn on the lights and automatically start the air conditioner.\\
-                                  
-                              \end{enumerate}
+                              \item {\large{Sensor Trigger}}\\
+                                    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                                          \setlength{\itemindent}{0.5cm}
+                                          \item It can trigger related functions according to the information of various sensors. For example, connecting smoke and gas sensors.\\
+                                          \item Smoke and gas sensors can detect dangerous conditions, such as fire or gas leakage. Once the problem is detected, the system will trigger alarm, inform users and take necessary measures.\\
+                                          \item It can also connect sensors like ultrasonic sensors to detect the presence of objects in certain areas. If any movement is detected when the user is away, it will send a notification to the user.\\
+                                    \end{enumerate}
 
-                    \end{enumerate}
-              \item {\large{Behavior Settings}}\\
+                              \item {\large{Time Trigger}}\\
+                                    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                                          \setlength{\itemindent}{0.5cm}
+                                          \item Accessories or scenes can be triggered based on a fixed time of day, certain days, or based on sunrise and sunset. \\
+                                          \item For example, turn on the curtains and music at 6 a.m. every morning, or turn off all lights 15 minutes after sunset.\\
+                                    \end{enumerate}
 
-                    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-                        \setlength{\itemindent}{0.5cm}
-                        \item The user shall be able to set the behavior in accordance with the trigger if it is triggered from a specific setting, such as sound, sensor, time, posture, etc.\\
+                              \item {\large{Posture Recognition Trigger}}\\
+                                    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                                          \setlength{\itemindent}{0.5cm}
+                                          \item Capturing images or videos through the camera and utilizing OpenPose for body posture recognition also allows for the identification of body movements.\\
+                                          \item Different actions can trigger various functions based on the recognized movements
+                                          \item Actions are largely divided into Sit/ Stand/Lie, and each action is divided and a routine is executed for each user.\\
+                                    \end{enumerate}
 
-                        \item Actions are required to turn the lights off and on, to control the intensity of the light, and to control the time.\\
+                              \item {\large{location Trigger}}\\
+                                    \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                                          \setlength{\itemindent}{0.5cm}
+                                          \item The user's location can be determined based on the location information of the user's mobile phone, and corresponding functions can be triggered based on the user's location.\\
+                                          \item For example, when the user returns home, they automatically turn on the lights and automatically start the air conditioner.\\
 
-                        \item To set these actions, a button is required to add the desired action
-                              \\
+                                    \end{enumerate}
 
-                        \item Add items such as devices, time delays, and broadcasts to be controlled by adding actions.A button to delete is also required if the action is not required
-                              \\
+                        \end{enumerate}
+                  \item {\large{Behavior Settings}}\\
 
-                        \item The control device allows user to select a device
-                        On the time-delay, user can set the seconds for minutes and seconds Broadcast should be implemented with a choice of speakers
-                              \\
+                        \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                              \setlength{\itemindent}{0.5cm}
+                              \item The user shall be able to set the behavior in accordance with the trigger if it is triggered from a specific setting, such as sound, sensor, time, posture, etc.\\
 
-                        \item Each trigger and each user shall be able to set the name of the routine and select enable/disable the routine.
-                              \\
+                              \item Actions are required to turn the lights off and on, to control the intensity of the light, and to control the time.\\
 
-                        \item user can also run the routine you want to run directly by pressing the play button
-                              \\
-                    \end{enumerate}
-          \end{enumerate}
+                              \item To set these actions, a button is required to add the desired action
+                                    \\
 
-    \item {\large{Application Settings}}\\
-          \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
-              \setlength{\itemindent}{0.5cm}
-              \item Each user is required with a button to modify so that the username can be set.\\
+                              \item Add items such as devices, time delays, and broadcasts to be controlled by adding actions.A button to delete is also required if the action is not required
+                                    \\
 
-              \item Users should implement a logout button so that they can logout when they want to change their device or account.\\
+                              \item The control device allows user to select a device
+                                    On the time-delay, user can set the seconds for minutes and seconds Broadcast should be implemented with a choice of speakers
+                                    \\
 
-              \item A push alarm on/off button must be implemented to determine whether or not to receive an alarm.\\
+                              \item Each trigger and each user shall be able to set the name of the routine and select enable/disable the routine.
+                                    \\
 
-              \item Each time each user logs in, backup and restore routines should be implemented without the need to create a new routine\\
+                              \item user can also run the routine you want to run directly by pressing the play button
+                                    \\
+                        \end{enumerate}
+            \end{enumerate}
 
-              \item A button to delete all settings should be implemented so that each person can initialize them.\\
+      \item {\large{Application Settings}}\\
+            \begin{enumerate}[label*={\arabic*.},ref=\theenumi.\arabic*]
+                  \setlength{\itemindent}{0.5cm}
+                  \item Each user is required with a button to modify so that the username can be set.\\
 
-          \end{enumerate}
+                  \item Users should implement a logout button so that they can logout when they want to change their device or account.\\
+
+                  \item A push alarm on/off button must be implemented to determine whether or not to receive an alarm.\\
+
+                  \item Each time each user logs in, backup and restore routines should be implemented without the need to create a new routine\\
+
+                  \item A button to delete all settings should be implemented so that each person can initialize them.\\
+
+            \end{enumerate}
 \end{enumerate}

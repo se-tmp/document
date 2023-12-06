@@ -1,459 +1,459 @@
 \begin{enumerate}[label=\alph*]
-              \item Frontend\\
+    \item Frontend\\
 
-\begin{description}
-\renewcommand{\makelabel}[1]{\textbf{\small #1}}
+          \begin{description}
+              \renewcommand{\makelabel}[1]{\textbf{\small #1}}
 
-        \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/] \hfill \\
-    \small
-     - This folder contains the settings to build our project with graddle.\\\\
-     \footnotesize
-        gradle/libs.versions.toml  \\
-        gradle/wrapper/gradle-wrapper.jar  \\
-        gradle/wrapper/gradle-wrapper.properties  \\
-        gradlew  \\
-        build.gradle.kts  \\
-        settings.gradle.kts  \\
-        gradle.properties  \\
-        gradlew.bat  \\\\
+              \vspace{-0.2cm}
+              \hrule
+              \vspace{0.2cm}
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/tempomate/] \hfill \\
-    \small
-    - This folder contains information about connecting to firebase and the dependencies used in our project.\\\\
-    \footnotesize
-        build.gradle.kts  \\
-        google-services.json  \\\\
+              \item[/] \hfill \\
+                    \small
+                    - This folder contains the settings to build our project with graddle.\\\\
+                    \footnotesize
+                    gradle/libs.versions.toml  \\
+                    gradle/wrapper/gradle-wrapper.jar  \\
+                    gradle/wrapper/gradle-wrapper.properties  \\
+                    gradlew  \\
+                    build.gradle.kts  \\
+                    settings.gradle.kts  \\
+                    gradle.properties  \\
+                    gradlew.bat  \\\\
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/tempomate/third\_party/connectedhomeip/libs/] \hfill \\
-    \small
-    - This folder contains the libraries for using the Matter Protocol.\\\\
-    \footnotesize
-        AndroidPlatform.jar  \\
-        CHIPController.jar  \\
-        SetupPayloadParser.jar  \\
-        jniLibs/armeabi-v7a/libSetupPayloadParser.so  \\
-        jniLibs/armeabi-v7a/libCHIPController.so  \\
-        jniLibs/armeabi-v7a/libc++\_shared.so  \\
-        jniLibs/x86/libSetupPayloadParser.so  \\
-        jniLibs/x86/libCHIPController.so  \\
-        jniLibs/x86/libc++\_shared.so  \\
-        jniLibs/arm64-v8a/libSetupPayloadParser.so  \\
-        jniLibs/arm64-v8a/libCHIPController.so  \\
-        jniLibs/arm64-v8a/libc++\_shared.so  \\
-        jniLibs/x86\_64/libSetupPayloadParser.so  \\
-        jniLibs/x86\_64/libCHIPController.so  \\
-        jniLibs/x86\_64/libc++\_shared.so  \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/tempomate/src/main/res/layout/] \hfill \\
-    \small
-    - This folder contains the fragments used by the application.\\\\
-    \footnotesize
-        fragment\_new\_device.xml  \\
-        fragment\_device\_sharing\_commissioning.xml  \\
-        fragment\_thread.xml  \\
-        fragment\_dummy\_device.xml  \\
-        fragment\_info.xml  \\
-        dropdown\_list\_item.xml  \\
-        fragment\_developer\_utilities\_settings.xml  \\
-        fragment\_admin.xml  \\
-        matter\_beacon\_view\_item.xml  \\
-        fragment\_home.xml  \\
-        fragment\_device.xml  \\
-        activity\_commissioning.xml  \\
-        fragment\_splash.xml  \\
-        fragment\_settings.xml  \\
-        fragment\_inspect.xml  \\
-        device\_view\_item.xml  \\
-        fragment\_codelab\_info\_checkbox.xml  \\
-        activity\_main.xml  \\
-        fragment\_commissionable.xml  \\\\
+              \item[/tempomate/] \hfill \\
+                    \small
+                    - This folder contains information about connecting to firebase and the dependencies used in our project.\\\\
+                    \footnotesize
+                    build.gradle.kts  \\
+                    google-services.json  \\\\
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/tempomate/src/main/res/] \hfill \\
-    \small
-    - This folder contains resources such as themes, strings, pictures, icons, etc. that are used in our application.\\\\
-    \footnotesize
-        color/mtrl\_list\_item\_tint.xml  \\
-        values/colors.xml  \\
-        values/dimens.xml  \\
-        values/themes.xml  \\
-        values/strings.xml  \\
-        values/ids.xml  \\
-        navigation/navigation\_commissioning.xml  \\
-        navigation/navigation.xml  \\
-        ic\_playstore.png  \\
-        xml/settings\_developer\_utiltities\_screen.xml  \\
-        xml/settings\_preferences\_screen.xml  \\
-        menu/top\_app\_bar.xml  \\
-        menu/top\_app\_bar\_settings.xml  \\
-        menu/device\_topappbar\_menu.xml  \\
-        menu/home\_menu.xml  \\
-        ic\_playstore\_legacy.png  \\
-        ... \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/tempomate/src/main/proto/] \hfill \\
-    \small
-    - This folder contains prototypes for some of the material types used in our application.\\\\
-    \footnotesize
-        devices.proto  \\
-        devices\_state.proto  \\
-        user\_prefs.proto  \\\\
+              \item[/tempomate/third\_party/connectedhomeip/libs/] \hfill \\
+                    \small
+                    - This folder contains the libraries for using the Matter Protocol.\\\\
+                    \footnotesize
+                    AndroidPlatform.jar  \\
+                    CHIPController.jar  \\
+                    SetupPayloadParser.jar  \\
+                    jniLibs/armeabi-v7a/libSetupPayloadParser.so  \\
+                    jniLibs/armeabi-v7a/libCHIPController.so  \\
+                    jniLibs/armeabi-v7a/libc++\_shared.so  \\
+                    jniLibs/x86/libSetupPayloadParser.so  \\
+                    jniLibs/x86/libCHIPController.so  \\
+                    jniLibs/x86/libc++\_shared.so  \\
+                    jniLibs/arm64-v8a/libSetupPayloadParser.so  \\
+                    jniLibs/arm64-v8a/libCHIPController.so  \\
+                    jniLibs/arm64-v8a/libc++\_shared.so  \\
+                    jniLibs/x86\_64/libSetupPayloadParser.so  \\
+                    jniLibs/x86\_64/libCHIPController.so  \\
+                    jniLibs/x86\_64/libc++\_shared.so  \\\\
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/tempomate/src/main/] \hfill \\
-    \small
-    - This folder contains files that allow you to set permissions and details for our application.\\\\
-    \footnotesize
-        AndroidManifest.xml  \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/] \hfill \\
-    \small
-    - This folder is the entry point for activities and services that run at application startup.\\\\
-    \footnotesize
-        GHSAFM3pEcoApplication.kt  \\
-        MainActivity.kt  \\
-        Utils.kt  \\
-        IotScreen.kt  \\
-        FCMService.kt  \\\\
+              \item[/tempomate/src/main/res/layout/] \hfill \\
+                    \small
+                    - This folder contains the fragments used by the application.\\\\
+                    \footnotesize
+                    fragment\_new\_device.xml  \\
+                    fragment\_device\_sharing\_commissioning.xml  \\
+                    fragment\_thread.xml  \\
+                    fragment\_dummy\_device.xml  \\
+                    fragment\_info.xml  \\
+                    dropdown\_list\_item.xml  \\
+                    fragment\_developer\_utilities\_settings.xml  \\
+                    fragment\_admin.xml  \\
+                    matter\_beacon\_view\_item.xml  \\
+                    fragment\_home.xml  \\
+                    fragment\_device.xml  \\
+                    activity\_commissioning.xml  \\
+                    fragment\_splash.xml  \\
+                    fragment\_settings.xml  \\
+                    fragment\_inspect.xml  \\
+                    device\_view\_item.xml  \\
+                    fragment\_codelab\_info\_checkbox.xml  \\
+                    activity\_main.xml  \\
+                    fragment\_commissionable.xml  \\\\
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/ui/] \hfill \\
-    \small
-    - This folder contains the files for what each page is made up of.\\\\
-    \footnotesize
-        Settings.kt  \\
-        Dashboard.kt  \\
-        DevicePage.kt  \\
-        Routines.kt  \\
-        ActionPage.kt  \\
-        IotViewModel.kt  \\
-        LogPage.kt  \\
-        AddActionSelectDevice.kt  \\
-        LoginPage.kt  \\
-        DeviceCard.kt  \\
-        RoutinePage.kt  \\
-        theme/Color.kt  \\
-        theme/Theme.kt  \\
-        theme/Type.kt  \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/auth/] \hfill \\
-    \small
-    - This folder contains class files to help with the sign in/up process.\\\\
-    \footnotesize
-        GoogleSignInHelper.kt  \\\\
+              \item[/tempomate/src/main/res/] \hfill \\
+                    \small
+                    - This folder contains resources such as themes, strings, pictures, icons, etc. that are used in our application.\\\\
+                    \footnotesize
+                    color/mtrl\_list\_item\_tint.xml  \\
+                    values/colors.xml  \\
+                    values/dimens.xml  \\
+                    values/themes.xml  \\
+                    values/strings.xml  \\
+                    values/ids.xml  \\
+                    navigation/navigation\_commissioning.xml  \\
+                    navigation/navigation.xml  \\
+                    ic\_playstore.png  \\
+                    xml/settings\_developer\_utiltities\_screen.xml  \\
+                    xml/settings\_preferences\_screen.xml  \\
+                    menu/top\_app\_bar.xml  \\
+                    menu/top\_app\_bar\_settings.xml  \\
+                    menu/device\_topappbar\_menu.xml  \\
+                    menu/home\_menu.xml  \\
+                    ic\_playstore\_legacy.png  \\
+                    ... \\\\
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/chip/] \hfill \\
-    \small
-    - This folder contains classes for using the library for using the Matter protocol.\\\\
-    \footnotesize
-        ClustersHelper.kt  \\
-        MatterConstants.kt  \\
-        BaseCompletionListener.kt  \\
-        ChipClient.kt  \\
-        SubscriptionHelper.kt  \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/lifecycle/] \hfill \\
-    \small
-    - This folder contains files that cover the life cycle of the application.\\\\
-    \footnotesize
-        AppLifecycleObserver.kt  \\
-        HalfSheetSuppressionObserver.kt  \\
-        AppLifecycleObserverModule.kt  \\\\
+              \item[/tempomate/src/main/proto/] \hfill \\
+                    \small
+                    - This folder contains prototypes for some of the material types used in our application.\\\\
+                    \footnotesize
+                    devices.proto  \\
+                    devices\_state.proto  \\
+                    user\_prefs.proto  \\\\
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/screens/settings/] \hfill 
-    \footnotesize
-        SettingsDeveloperUtilitiesNestedFragment.kt  \\
-        DeveloperUtilitiesViewModel.kt  \\
-        SettingsFragment.kt  \\
-        SettingsDeveloperUtilitiesFragment.kt  \\
-        SettingsNestedFragment.kt  \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/screens/home/] \hfill \\
-    \footnotesize
-        DevicesAdapter.kt  \\
-        HomeViewModel.kt  \\
-        HomeFragment.kt  \\
-        DeviceViewHolder.kt  \\\\
+              \item[/tempomate/src/main/] \hfill \\
+                    \small
+                    - This folder contains files that allow you to set permissions and details for our application.\\\\
+                    \footnotesize
+                    AndroidManifest.xml  \\\\
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/screens/inspect/] \hfill \\
-    \footnotesize
-        InspectViewModel.kt  \\
-        InspectFragment.kt  \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/screens/commissionable/] \hfill \\
-    \footnotesize
-        wifi/ModuleWifi.kt  \\
-        wifi/MatterBeaconProducerWifi.kt  \\
-        MatterBeaconInject.kt  \\
-        ble/ModuleBle.kt  \\
-        ble/MatterBeaconProducerBle.kt  \\
-        MatterBeaconAdapter.kt  \\
-        MatterBeacon.kt  \\
-        CommissionableViewModel.kt  \\
-        mdns/ModuleMdns.kt  \\
-        mdns/MatterBeaconProducerMdns.kt  \\
-        CommissionableFragment.kt  \\
-        MatterBeaconViewHolder.kt  \\
-        MatterBeaconProducer.kt  \\\\
-        
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/screens/shared/] \hfill \\
-    \footnotesize
-        UserPreferencesViewModel.kt  \\
-        SelectedDeviceViewModel.kt  \\\\
+              \item[/.../setmp/tempomate/] \hfill \\
+                    \small
+                    - This folder is the entry point for activities and services that run at application startup.\\\\
+                    \footnotesize
+                    GHSAFM3pEcoApplication.kt  \\
+                    MainActivity.kt  \\
+                    Utils.kt  \\
+                    IotScreen.kt  \\
+                    FCMService.kt  \\\\
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/screens/device/] \hfill \\
-    \footnotesize
-        DeviceFragment.kt  \\
-        DeviceViewModel.kt  \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/screens/thread/] \hfill \\
-    \footnotesize
-        ServiceDiscovery.kt  \\
-        OtbrHttpClient.kt  \\
-        ThreadViewModel.kt  \\
-        ThreadFragment.kt  \\\\
+              \item[/.../setmp/tempomate/ui/] \hfill \\
+                    \small
+                    - This folder contains the files for what each page is made up of.\\\\
+                    \footnotesize
+                    Settings.kt  \\
+                    Dashboard.kt  \\
+                    DevicePage.kt  \\
+                    Routines.kt  \\
+                    ActionPage.kt  \\
+                    IotViewModel.kt  \\
+                    LogPage.kt  \\
+                    AddActionSelectDevice.kt  \\
+                    LoginPage.kt  \\
+                    DeviceCard.kt  \\
+                    RoutinePage.kt  \\
+                    theme/Color.kt  \\
+                    theme/Theme.kt  \\
+                    theme/Type.kt  \\\\
 
-            \vspace{-0.2cm}
-      \hrule
-      \vspace{0.2cm}
-      
-    \item[/.../setmp/tempomate/data/] \hfill \\
-    \small
-    - This folder contains the data classes, repositories, etc. that will be used in your application.\\\\
-    \footnotesize
-        UserDataRepository.kt  \\
-        UserPreferencesSerializer.kt  \\
-        DevicesStateSerializer.kt  \\
-        DevicesRepository.kt  \\
-        DevicesSerializer.kt  \\
-        UserPreferencesRepository.kt  \\
-        DevicesStateRepository.kt  \\
-        GsonInterfaceAdapter.kt  \\
-        Log.kt  \\
-        IotUiState.kt  \\
-        AppPreferenceDataStore.kt  \\
-        Action.kt  \\
-        Setting.kt  \\
-        Routine.kt  \\
-        Device.kt  \\\\\\
-      
-\end{description}
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-\item Backend\\
+              \item[/.../setmp/tempomate/auth/] \hfill \\
+                    \small
+                    - This folder contains class files to help with the sign in/up process.\\\\
+                    \footnotesize
+                    GoogleSignInHelper.kt  \\\\
 
-\begin{description}
-    \renewcommand{\makelabel}[1]{\textbf{\small #1}}
-    
-    \vspace{-0.2cm}
-    \hrule
-    \vspace{0.2cm}
-          
-    \item[/src/main/resources/static/] \hfill \\
-    \footnotesize
-client.js \\
-index.html \\
-style.css \\\\
-    \vspace{-0.2cm}
-    \hrule
-    \vspace{0.2cm}
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-        \item[/src/main/resources/] \hfill \\
-        \footnotesize
-application.properties \\\\
-    \vspace{-0.2cm}
-    \hrule
-    \vspace{0.2cm}
+              \item[/.../setmp/tempomate/chip/] \hfill \\
+                    \small
+                    - This folder contains classes for using the library for using the Matter protocol.\\\\
+                    \footnotesize
+                    ClustersHelper.kt  \\
+                    MatterConstants.kt  \\
+                    BaseCompletionListener.kt  \\
+                    ChipClient.kt  \\
+                    SubscriptionHelper.kt  \\\\
 
-        \item[/src/main/java/com/tempomate/] \hfill \\
-        \footnotesize
-SebackendApplication.java \\\\
-    \vspace{-0.2cm}
-    \hrule
-    \vspace{0.2cm}
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-        \item[/.../tempomate/mapper/] \hfill \\
-        \footnotesize
-TriggerMapper.java \\
-RoutineMapper.java \\
-DeviceMapper.java \\
-LogMapper.java \\
-ActionMapper.java \\
-UserMapper.java \\\\
-    \vspace{-0.2cm}
-    \hrule
-    \vspace{0.2cm}
+              \item[/.../setmp/tempomate/lifecycle/] \hfill \\
+                    \small
+                    - This folder contains files that cover the life cycle of the application.\\\\
+                    \footnotesize
+                    AppLifecycleObserver.kt  \\
+                    HalfSheetSuppressionObserver.kt  \\
+                    AppLifecycleObserverModule.kt  \\\\
 
-        \item[/.../tempomate/controller/] \hfill \\
-        \footnotesize
-DeviceController.java \\
-TriggerController.java \\
-LogController.java \\
-ActionController.java \\
-UserController.java \\
-RoutineController.java \\\\
-    \vspace{-0.2cm}
-    \hrule
-    \vspace{0.2cm}
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-        \item[/.../tempomate/service/] \hfill \\
-        \footnotesize
-DeviceService.java \\
-UserService.java \\
-RoutineService.java \\\\
-    \vspace{-0.2cm}
-    \hrule
-    \vspace{0.2cm}
+              \item[/.../setmp/tempomate/screens/settings/] \hfill
+                    \footnotesize
+                    SettingsDeveloperUtilitiesNestedFragment.kt  \\
+                    DeveloperUtilitiesViewModel.kt  \\
+                    SettingsFragment.kt  \\
+                    SettingsDeveloperUtilitiesFragment.kt  \\
+                    SettingsNestedFragment.kt  \\\\
 
-        \item[/.../tempomate/service/impl/] \hfill \\
-        \footnotesize
-DeviceServiceImpl.java \\
-RoutineServiceImpl.java \\
-UserServiceImpl.java \\\\
-    \vspace{-0.2cm}
-    \hrule
-    \vspace{0.2cm}
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-        \item[/.../tempomate/webrtc/] \hfill \\
-        \footnotesize
-SocketHandler.java \\
-WebSocketConfig.java \\
-WebConfiguration.java \\\\
-    \vspace{-0.2cm}
-    \hrule
-    \vspace{0.2cm}
+              \item[/.../setmp/tempomate/screens/home/] \hfill \\
+                    \footnotesize
+                    DevicesAdapter.kt  \\
+                    HomeViewModel.kt  \\
+                    HomeFragment.kt  \\
+                    DeviceViewHolder.kt  \\\\
 
-        \item[/.../tempomate/exception/] \hfill \\
-        \footnotesize
-GlobalExceptionHandler.java \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-    \vspace{-0.2cm}
-    \hrule
-    \vspace{0.2cm}
+              \item[/.../setmp/tempomate/screens/inspect/] \hfill \\
+                    \footnotesize
+                    InspectViewModel.kt  \\
+                    InspectFragment.kt  \\\\
 
-        \item[/.../tempomate/pojo/] \hfill \\
-        \footnotesize
-Result.java \\\\
-    \vspace{-0.2cm}
-    \hrule
-    \vspace{0.2cm}
-    
-        \item[/.../tempomate/pojo/entity/] \hfill \\
-        \footnotesize
-trigger/TriTime.java \\
-trigger/TriAssistant.java \\
-trigger/TriPosture.java \\
-trigger/TriLocation.java \\
-User.java \\
-action/ActDevice.java \\
-action/Action.java \\
-action/ActTime.java \\
-Device.java \\
-Log.java \\
-Routine.java \\\\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-\end{description}
+              \item[/.../setmp/tempomate/screens/commissionable/] \hfill \\
+                    \footnotesize
+                    wifi/ModuleWifi.kt  \\
+                    wifi/MatterBeaconProducerWifi.kt  \\
+                    MatterBeaconInject.kt  \\
+                    ble/ModuleBle.kt  \\
+                    ble/MatterBeaconProducerBle.kt  \\
+                    MatterBeaconAdapter.kt  \\
+                    MatterBeacon.kt  \\
+                    CommissionableViewModel.kt  \\
+                    mdns/ModuleMdns.kt  \\
+                    mdns/MatterBeaconProducerMdns.kt  \\
+                    CommissionableFragment.kt  \\
+                    MatterBeaconViewHolder.kt  \\
+                    MatterBeaconProducer.kt  \\\\
 
-\item Computer vision\\
-\begin{description}
-\renewcommand{\makelabel}[1]{\textbf{\small #1}}
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-\vspace{-0.2cm}
-\hrule
-\vspace{0.2cm}
+              \item[/.../setmp/tempomate/screens/shared/] \hfill \\
+                    \footnotesize
+                    UserPreferencesViewModel.kt  \\
+                    SelectedDeviceViewModel.kt  \\\\
 
-\item[/computer-vision/processing/] \hfill \\
-\small
-- This folder contains files about the cv backend.\\\\
-\footnotesize
-se-tmp-pk.json \\
-model.pt \\ 
-ThreadedCamera.py \\
-Processor.py \\
-FcmManager.py \\
-main.py \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
 
-\vspace{-0.2cm}
-\hrule
-\vspace{0.2cm}
+              \item[/.../setmp/tempomate/screens/device/] \hfill \\
+                    \footnotesize
+                    DeviceFragment.kt  \\
+                    DeviceViewModel.kt  \\\\
 
-\item[/computer-vision/training/] \hfill \\
-\small
-- This folder contains files for training the model with our dataset.\\\\
-\footnotesize
-train.ipynb \\\\\\
-      
-\end{description}
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/.../setmp/tempomate/screens/thread/] \hfill \\
+                    \footnotesize
+                    ServiceDiscovery.kt  \\
+                    OtbrHttpClient.kt  \\
+                    ThreadViewModel.kt  \\
+                    ThreadFragment.kt  \\\\
+
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/.../setmp/tempomate/data/] \hfill \\
+                    \small
+                    - This folder contains the data classes, repositories, etc. that will be used in your application.\\\\
+                    \footnotesize
+                    UserDataRepository.kt  \\
+                    UserPreferencesSerializer.kt  \\
+                    DevicesStateSerializer.kt  \\
+                    DevicesRepository.kt  \\
+                    DevicesSerializer.kt  \\
+                    UserPreferencesRepository.kt  \\
+                    DevicesStateRepository.kt  \\
+                    GsonInterfaceAdapter.kt  \\
+                    Log.kt  \\
+                    IotUiState.kt  \\
+                    AppPreferenceDataStore.kt  \\
+                    Action.kt  \\
+                    Setting.kt  \\
+                    Routine.kt  \\
+                    Device.kt  \\\\\\
+
+          \end{description}
+
+    \item Backend\\
+
+          \begin{description}
+              \renewcommand{\makelabel}[1]{\textbf{\small #1}}
+
+              \vspace{-0.2cm}
+              \hrule
+              \vspace{0.2cm}
+
+              \item[/src/main/resources/static/] \hfill \\
+                    \footnotesize
+                    client.js \\
+                    index.html \\
+                    style.css \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/src/main/resources/] \hfill \\
+                    \footnotesize
+                    application.properties \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/src/main/java/com/tempomate/] \hfill \\
+                    \footnotesize
+                    SebackendApplication.java \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/.../tempomate/mapper/] \hfill \\
+                    \footnotesize
+                    TriggerMapper.java \\
+                    RoutineMapper.java \\
+                    DeviceMapper.java \\
+                    LogMapper.java \\
+                    ActionMapper.java \\
+                    UserMapper.java \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/.../tempomate/controller/] \hfill \\
+                    \footnotesize
+                    DeviceController.java \\
+                    TriggerController.java \\
+                    LogController.java \\
+                    ActionController.java \\
+                    UserController.java \\
+                    RoutineController.java \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/.../tempomate/service/] \hfill \\
+                    \footnotesize
+                    DeviceService.java \\
+                    UserService.java \\
+                    RoutineService.java \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/.../tempomate/service/impl/] \hfill \\
+                    \footnotesize
+                    DeviceServiceImpl.java \\
+                    RoutineServiceImpl.java \\
+                    UserServiceImpl.java \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/.../tempomate/webrtc/] \hfill \\
+                    \footnotesize
+                    SocketHandler.java \\
+                    WebSocketConfig.java \\
+                    WebConfiguration.java \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/.../tempomate/exception/] \hfill \\
+                    \footnotesize
+                    GlobalExceptionHandler.java \\\\
+
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/.../tempomate/pojo/] \hfill \\
+                    \footnotesize
+                    Result.java \\\\
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/.../tempomate/pojo/entity/] \hfill \\
+                    \footnotesize
+                    trigger/TriTime.java \\
+                    trigger/TriAssistant.java \\
+                    trigger/TriPosture.java \\
+                    trigger/TriLocation.java \\
+                    User.java \\
+                    action/ActDevice.java \\
+                    action/Action.java \\
+                    action/ActTime.java \\
+                    Device.java \\
+                    Log.java \\
+                    Routine.java \\\\\\
+
+          \end{description}
+
+    \item Computer vision\\
+          \begin{description}
+              \renewcommand{\makelabel}[1]{\textbf{\small #1}}
+
+              \vspace{-0.2cm}
+              \hrule
+              \vspace{0.2cm}
+
+              \item[/computer-vision/processing/] \hfill \\
+                    \small
+                    - This folder contains files about the cv backend.\\\\
+                    \footnotesize
+                    se-tmp-pk.json \\
+                    model.pt \\
+                    ThreadedCamera.py \\
+                    Processor.py \\
+                    FcmManager.py \\
+                    main.py \\\\
+
+                    \vspace{-0.2cm}
+                    \hrule
+                    \vspace{0.2cm}
+
+              \item[/computer-vision/training/] \hfill \\
+                    \small
+                    - This folder contains files for training the model with our dataset.\\\\
+                    \footnotesize
+                    train.ipynb \\\\\\
+
+          \end{description}
 \end{enumerate}

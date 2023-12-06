@@ -1,36 +1,36 @@
 \newcommand{\addImage}[2]{
-    \begin{figure}[!htb]
-        \begin{center}
-            \includegraphics[width=5.5cm]{#1}
-            \caption{#2} % description to image
-            \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
-        \end{center}
-    \end{figure}
+  \begin{figure}[!htb]
+    \begin{center}
+      \includegraphics[width=5.5cm]{#1}
+      \caption{#2} % description to image
+      \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
+    \end{center}
+  \end{figure}
 }
 
 \newpage
 \section{\Large{Architecture Design \& Implementation}}
 
 \begin{enumerate}[label=\arabic*]
-    \item {\large{Overall Architecture}}\\
-          % todo
+  \item {\large{Overall Architecture}}\\
+        % todo
 
-    \item {\large{Directory Organization}}\\
+  \item {\large{Directory Organization}}\\
         \input{pt5_1_directory_organization}
 
-    \newpage
-    \item {\large{Architecture Implementation}}\\
-          \begin{enumerate}[label=\alph*]
-              \item Frontend\\
+        \newpage
+  \item {\large{Architecture Implementation}}\\
+        \begin{enumerate}[label=\alph*]
+          \item Frontend\\
                 \input{pt5_2_1_architecture_frontend}
 
                 \newpage
-              \item Backend\\
+          \item Backend\\
                 \input{pt5_2_2_architecture_backend}
 
                 \newpage
-              \item Computer vision\\
+          \item Computer vision\\
                 \input{pt5_2_3_architecture_computer_vision}
 
-          \end{enumerate}
+        \end{enumerate}
 \end{enumerate}
