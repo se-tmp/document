@@ -13,8 +13,24 @@
 
 \begin{enumerate}[label=\arabic*]
   \item {\large{Overall Architecture}}\\
-        % todo
-
+    \begin{figure*}[!h]
+        \begin{center}
+            \includegraphics[width=14cm]{imgs/architecture.drawio.png}
+            \caption{Architecture diagram} % description to image
+            \renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
+        \end{center}
+    \end{figure*}
+    Our architecture consists of three main parts. IOT devices, an app frontend, and multiple backends.\\
+    
+    The IOT devices are connected to the TempoMate app frontend via the matter protocol. In general, the matter protocol can be remotely controlled externally through a separate hub, but in our project, we don't use a separate hub, but directly connect the smartphone and IOT devices to control them. The original plan was to connect to IOT cameras via matter, but the currently released version of the matter protocol does not support camera connections, so we used a different method.\\
+     
+    Our service uses cameras on both the frontend and backend, so we built a separate server that can connect to the IOT Camera and forward to the frontend and backend. With MEDIAMTX running on a separate server, the front and back end can always get a static IP. We use the RTMP protocol to send video from the IOT camera to the MEDIAMTX server, and the RTMP protocol to send video to the AI Processing server. The HLS protocol is used to receive video from the frontend. The AI Processing server receives the video and analyzes the frames to determine where the person is and what pose they are in, and the frontend actually watches the video to help determine where the person can be recognized.\\
+    
+    In order for the user to log in on the frontend, we use Firebase Authentication to get the user's information and authentication key, which we can then use to identify the user on the backend. Any saved routines, user names, or settings the user has changed on the frontend are passed to the main server via a RESTful API and stored. The saved information is retrieved the first time the user logs in and saved again whenever there are changes. \\
+    
+    To execute the routine through the Posture Trigger, the AI Processing server first gets the video from the Media server and analyzes the frame. If a person is detected after analyzing the frame, it gets the information about the triggers from the Main server and checks if there is a trigger corresponding to the detected information. If there is, it sends the data to the frontend to execute the routine associated with that trigger. This is where Firebase Cloud Messaging comes into play. Since the IP where the user is located is constantly changing and we can't see him in real time on the backend, we use a service provided by Google to send data directly to a specific smartphone. When the frontend receives this data, it runs the corresponding routine.\\
+    
+\newpage
   \item {\large{Directory Organization}}\\
         \input{pt5_1_directory_organization}
 
