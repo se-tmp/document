@@ -4,6 +4,26 @@
 % VIII.Discussion
 % Write one or more paragraph(s) to describe any difficulty and experience you had. No less than 200 words. (e.g., communication difficulties in team, any non-technical difficulties, things to improve, and etc.) 
 
-\newpage
-\section{\Large{Discussion}}
+\clearpage
+\section{\Large{Discussion}}\\
 
+This project started when we heard the topic of matter and AI and wanted to create something new that doesn't exist yet. We are very proud of that with this project, we actually implemented a practical idea that could be seen somewhere in the future. \\
+
+The limitations of this project are
+\begin{enumerate}
+    \item The MATTER protocol does not yet support camera devices, requiring a separate backend server.\\
+    \item No hub is required to connect MATTER devices, but this means that the smartphone running the application must always be in the same network as the MATTER device. \\
+    \item Unstablility and unreliability in recognizing human posture.\\
+\end{enumerate}
+
+While the first limitation is likely to be resolved over time and as versions of MATTER go up, we are concerned that the second limitation, the fact that you can currently only control your device from inside your home, and that you need a hub to control your MATTER device outside of your home, will be a barrier to entry for anyone using this platform. The third limitation is that we used an off-the-shelf model that was not well suited to what we were trying to do, and in an environment where we could not create thousands of datasets ourselves, so we trained it using a combination of datasets that were not well suited. In Next time, we look forward to tuning our own model to fit the project we're trying to do.\\
+
+Also, the architecture is too complex for the size of the service. Due to the short development timeframe and limited manpower, we worked in parts, splitting the service into multiple backends. The main server uses Java SpringBoot, but OpenCV cannot be easily utilized in Java, which is one of the reasons why we separated the AI Processing Server using Python.\\
+
+Since none of us had any experience with Android app development, we felt quite overwhelmed with this project, which was a combination of many things, not just making an app. Due to the short development period, we were not able to implement all the requirements, but it is quite encouraging that we were able to fully implement the UI/UX that we had planned, and the most important part of the project, connecting the device and setting the routine, and actually recognizing the human posture and starting the routine, worked completely. \\
+
+However, we had a foreign student on our team, the language barrier was a bit of a challenge. Not everyone on the team was familiar with English, the common language, so we used Korean as much as possible, but used English or a translator to communicate when things didn't go well. During the development process, there were times when this communication problem led to some misunderstandings about what to do or what the project was about, and it was quite difficult to recognize and correct.\\
+
+We felt a strong need for systematic documentation. While we all understood the concept in the planning stages, we all had different ideas about what features we wanted to implement and how we wanted to implement them, and it wasn't uncommon for us to end up with a deliverable that wasn't what someone expected and had to be reworked. We must not assume that anyone else knows what's going on in my head. Minimizing this confusion by documenting as much detail and clarity as possible, even if it's about a single button, will hopefully speed up the project and reduce the stress of working on it.\\
+
+The process of planning, architecting, and designing a project in a somewhat structured way was refreshing to us, as it was quite a different process than the traditional haphazard development process. The project was very similar to the Waterfall process, and while I was able to see the benefits of using this process for development. I also learned that plans can always change and be pushed back due to various factors. Next time, I'd like to approach the creation and refinement of a minimum viable product through an agile methodology, and I'm hopeful that the trials and tribulations we went through this time will allow us to complete the project more smoothly next time.\\
