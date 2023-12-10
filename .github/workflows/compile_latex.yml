@@ -29,8 +29,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.SK_TOKEN }}
         with:
-          tag_name: v1.0.${{ ${{github.run_number}} - ${{30}} }}
-          release_name: TempoMate document v1.0.${{ ${{github.run_number}} - ${{30}} }}
+          tag_name: v1.0.${{ github.run_number }}
+          release_name: TempoMate document v1.0.${{ github.run_number }}
           draft: false
           prerelease: false
       - name: Upload Release Asset
